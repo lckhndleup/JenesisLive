@@ -1,0 +1,36 @@
+{
+    "nav": {
+        "index": "Inicio",
+        "projects": "Proyectos",
+        "highlights": "Destacados",
+        "portfolio": "Portafolio",
+        "playground": "Zona de juegos",
+        "about": "Acerca de",
+        "contact": "Contacto",
+        "resources": "Recursos",
+        "shortcodes": "Códigos cortos"
+    },
+    "hero": {
+        "title": "Dando vida a las marcas a través de",
+        "subtitle": "soluciones web creativas",
+        "scroll": "Desplázate para explorar",
+        "featured": "Proyectos destacados"
+    },
+    "buttons": {
+        "letstalk": "Hablemos",
+        "language": "Idioma"
+    },
+    "footer": {
+        "copyright": "© 2024 ClaPat Studio. Todos los derechos reservados.",
+        "terms": "Términos de servicio",
+        "privacy": "Política de privacidad"
+    },
+    "meta": {
+        "title": "Sitio web Bennet - Una plantilla de portafolio creativo",
+        "description": "Descarga la mejor plantilla HTML de portafolio creativo de 2025"
+    },
+    "preloader": {
+        "loading": "Cargando",
+        "wait": "espera, espera.."
+    }
+}

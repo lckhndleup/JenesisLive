@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-i18n-lang="en">
 <head>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script>
@@ -12,14 +12,18 @@
 		ga('send', 'pageview');
 	</script>
     
-    <title>Bennet Website - A Creative Portfolio Template</title>
+    <title data-i18n="meta.title">Bennet Website - A Creative Portfolio Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Download the best Creative Portfolio HTML Template in 2025" />
+    <meta name="description" content="Download the best Creative Portfolio HTML Template in 2025" data-i18n-attr="content:meta.description" />
     <meta name="author" content="ClaPat Studio">
     <meta charset="UTF-8" />    
     <link rel="icon" type="image/ico" href="favicon.ico" />
     <link href="style.css" rel="stylesheet" />
     <link href="css/all.min.css" rel="stylesheet" />
+    <link href="assets/css/i18n.css" rel="stylesheet" />
+    
+    <!-- Early Language Detection to Prevent FOUC -->
+    <script src="assets/js/i18n-early.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
@@ -79,23 +83,118 @@
                     <nav class="clapat-nav-wrapper"> 
                         <div class="nav-height">          
                             <ul data-breakpoint="1025" class="flexnav">
-                                <li class="menu-timeline link"><a class="ajax-link" data-type="page-transition" href="index.html"><div class="before-span"><span data-hover="Index">Index</span></div></a></li>
-                                <li class="menu-timeline link"><a class="ajax-link active" data-type="page-transition" href="#"><div class="before-span"><span data-hover="Projects">Projects</span></div></a>
+                                <li class="menu-timeline link"><a class="ajax-link" data-type="page-transition" href="index.html"><div class="before-span"><span data-hover="Index" data-i18n="nav.index" data-i18n-hover="nav.index">Index</span></div></a></li>
+                                <li class="menu-timeline link"><a class="ajax-link active" data-type="page-transition" href="#"><div class="before-span"><span data-hover="Projects" data-i18n="nav.projects" data-i18n-hover="nav.projects">Projects</span></div></a>
                                 	<ul>
                                         <li><a class="ajax-link" href="index-highlights.html" data-type="page-transition">Highlights</a></li>
                                         <li><a class="ajax-link" href="index-portfolio.html" data-type="page-transition">Portfolio</a></li>
                                         <li><a class="ajax-link" href="index-playground.html" data-type="page-transition">Playground</a></li>
                                     </ul>
                                 </li>
-                                <li class="menu-timeline link"><a class="ajax-link" data-type="page-transition" href="about.html"><div class="before-span"><span data-hover="Agency">Agency</span></div></a></li>
-                                <li class="menu-timeline link"><a class="ajax-link" data-type="page-transition" href="resources.html"><div class="before-span"><span data-hover="Resources">Resources</span></div></a></li>
+                                <li class="menu-timeline link"><a class="ajax-link" data-type="page-transition" href="about.html"><div class="before-span"><span data-hover="Agency" data-i18n="nav.about" data-i18n-hover="nav.about">Agency</span></div></a></li>
+                                <li class="menu-timeline link"><a class="ajax-link" data-type="page-transition" href="resources.html"><div class="before-span"><span data-hover="Resources" data-i18n="nav.resources" data-i18n-hover="nav.resources">Resources</span></div></a></li>
                             </ul>
                         </div>          
                     </nav>
                     <!--/Navigation -->
                     
                     
-                    <!-- Header Button -->
+                                        
+                    
+
+              <!-- Header Right Section -->
+              <div class="header-right">
+                <!-- Language Selector -->
+                    <div class="language-selector-modern">
+                      <button
+                        class="language-toggle-btn"
+                        id="languageToggle"
+                        aria-label="Change Language"
+                        title="Dil Değiştir / Change Language"
+                      >
+                        <div class="flag-circle">
+                          <img
+                            id="currentFlag"
+                            src="assets/countryImages/en.svg"
+                            alt="Current Language"
+                          />
+                        </div>
+                      </button>
+
+                      <!-- Language Modal -->
+                      <div class="language-modal" id="languageModal">
+                        <div class="language-modal-content">
+                          <div class="language-options">
+                            <div class="language-option" data-language="en">
+                              <div class="flag-circle">
+                                <img
+                                  src="assets/countryImages/en.svg"
+                                  alt="English"
+                                />
+                              </div>
+                              <span class="language-name">English</span>
+                            </div>
+                            <div class="language-option" data-language="tr">
+                              <div class="flag-circle">
+                                <img
+                                  src="assets/countryImages/tr.svg"
+                                  alt="Türkçe"
+                                />
+                              </div>
+                              <span class="language-name">Türkçe</span>
+                            </div>
+                            <div class="language-option" data-language="ru">
+                              <div class="flag-circle">
+                                <img
+                                  src="assets/countryImages/ru.svg"
+                                  alt="Русский"
+                                />
+                              </div>
+                              <span class="language-name">Русский</span>
+                            </div>
+                            <div class="language-option" data-language="de">
+                              <div class="flag-circle">
+                                <img
+                                  src="assets/countryImages/de.svg"
+                                  alt="Deutsch"
+                                />
+                              </div>
+                              <span class="language-name">Deutsch</span>
+                            </div>
+                            <div class="language-option" data-language="es">
+                              <div class="flag-circle">
+                                <img
+                                  src="assets/countryImages/es.svg"
+                                  alt="Español"
+                                />
+                              </div>
+                              <span class="language-name">Español</span>
+                            </div>
+                            <div class="language-option" data-language="sa">
+                              <div class="flag-circle">
+                                <img
+                                  src="assets/countryImages/sa.svg"
+                                  alt="العربية"
+                                />
+                              </div>
+                              <span class="language-name">العربية</span>
+                            </div>
+                            <div class="language-option" data-language="fr">
+                              <div class="flag-circle">
+                                <img
+                                  src="assets/countryImages/fr.svg"
+                                  alt="Français"
+                                />
+                              </div>
+                              <span class="language-name">Français</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--/Language Selector -->
+
+                <!-- Header Button -->
                     <a class="header-button ajax-link" data-type="page-transition" href="contact.html">
                         <div class="button-icon-link right">                        
                             <div class="icon-wrap-scale">
@@ -105,10 +204,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="button-text sticky right"><span data-hover="Let's Talk">Let's Talk</span></div>                        
+                            <div class="button-text sticky right"><span data-hover="Let's Talk" data-i18n="buttons.letstalk" data-i18n-hover="buttons.letstalk">Let's Talk</span></div>                        
                         </div>
                     </a>
                     <!--/Header Button -->
+              </div>
+              <!--/Header Right Section -->
                     
                     
                     <!-- Menu Burger -->
@@ -382,7 +483,13 @@
     
     <script src="js/common.js"></script>
     <script src="js/contact.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="js/scripts.js"></script>    <!-- I18n System -->
+    <script src="assets/js/i18n.js"></script>
+
+
+
+
+
 
 
 

@@ -248,3 +248,469 @@
 [data-i18n].changing {
   opacity: 0;
 }
+
+/* FOUC Prevention - Hide untranslated content initially */
+html.lang-tr [data-i18n="nav.index"]:not(.i18n-ready)::after {
+  content: "Anasayfa";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: inherit;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html.lang-tr [data-i18n="nav.projects"]:not(.i18n-ready)::after {
+  content: "Projeler";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: inherit;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html.lang-tr [data-i18n="nav.about"]:not(.i18n-ready)::after {
+  content: "Hakkımızda";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: inherit;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html.lang-tr [data-i18n="nav.resources"]:not(.i18n-ready)::after {
+  content: "Kaynaklar";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: inherit;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html.lang-tr [data-i18n="buttons.letstalk"]:not(.i18n-ready)::after {
+  content: "Konuşalım";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: inherit;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Russian FOUC Prevention */
+html.lang-ru [data-i18n="nav.index"]:not(.i18n-ready)::after {
+  content: "Главная";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: inherit;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html.lang-ru [data-i18n="nav.projects"]:not(.i18n-ready)::after {
+  content: "Проекты";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: inherit;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html.lang-ru [data-i18n="nav.about"]:not(.i18n-ready)::after {
+  content: "О нас";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: inherit;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html.lang-ru [data-i18n="nav.resources"]:not(.i18n-ready)::after {
+  content: "Ресурсы";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: inherit;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html.lang-ru [data-i18n="buttons.letstalk"]:not(.i18n-ready)::after {
+  content: "Давайте поговорим";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: inherit;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* German FOUC Prevention */
+html.lang-de [data-i18n="nav.index"]:not(.i18n-ready)::after {
+  content: "Startseite";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: inherit;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html.lang-de [data-i18n="nav.projects"]:not(.i18n-ready)::after {
+  content: "Projekte";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: inherit;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html.lang-de [data-i18n="nav.about"]:not(.i18n-ready)::after {
+  content: "Über uns";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: inherit;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html.lang-de [data-i18n="nav.resources"]:not(.i18n-ready)::after {
+  content: "Ressourcen";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: inherit;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html.lang-de [data-i18n="buttons.letstalk"]:not(.i18n-ready)::after {
+  content: "Sprechen wir";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: inherit;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Spanish FOUC Prevention */
+html.lang-es [data-i18n="nav.index"]:not(.i18n-ready)::after {
+  content: "Inicio";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: inherit;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html.lang-es [data-i18n="nav.projects"]:not(.i18n-ready)::after {
+  content: "Proyectos";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: inherit;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html.lang-es [data-i18n="nav.about"]:not(.i18n-ready)::after {
+  content: "Acerca de";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: inherit;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html.lang-es [data-i18n="nav.resources"]:not(.i18n-ready)::after {
+  content: "Recursos";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: inherit;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html.lang-es [data-i18n="buttons.letstalk"]:not(.i18n-ready)::after {
+  content: "Hablemos";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: inherit;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Arabic FOUC Prevention */
+html.lang-sa [data-i18n="nav.index"]:not(.i18n-ready)::after {
+  content: "الرئيسية";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: inherit;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html.lang-sa [data-i18n="nav.projects"]:not(.i18n-ready)::after {
+  content: "المشاريع";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: inherit;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html.lang-sa [data-i18n="nav.about"]:not(.i18n-ready)::after {
+  content: "حولنا";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: inherit;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html.lang-sa [data-i18n="nav.resources"]:not(.i18n-ready)::after {
+  content: "الموارد";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: inherit;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html.lang-sa [data-i18n="buttons.letstalk"]:not(.i18n-ready)::after {
+  content: "فلنتحدث";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: inherit;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* French FOUC Prevention */
+html.lang-fr [data-i18n="nav.index"]:not(.i18n-ready)::after {
+  content: "Accueil";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: inherit;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html.lang-fr [data-i18n="nav.projects"]:not(.i18n-ready)::after {
+  content: "Projets";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: inherit;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html.lang-fr [data-i18n="nav.about"]:not(.i18n-ready)::after {
+  content: "À propos";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: inherit;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html.lang-fr [data-i18n="nav.resources"]:not(.i18n-ready)::after {
+  content: "Ressources";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: inherit;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html.lang-fr [data-i18n="buttons.letstalk"]:not(.i18n-ready)::after {
+  content: "Parlons";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: inherit;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Make translatable elements positioned to support pseudo elements */
+[data-i18n] {
+  position: relative;
+}
+
+/* Hide original text when showing translation overlay */
+html.lang-tr [data-i18n]:not(.i18n-ready) {
+  color: transparent;
+}
+
+html.lang-ru [data-i18n]:not(.i18n-ready) {
+  color: transparent;
+}
+
+html.lang-de [data-i18n]:not(.i18n-ready) {
+  color: transparent;
+}
+
+html.lang-es [data-i18n]:not(.i18n-ready) {
+  color: transparent;
+}
+
+html.lang-sa [data-i18n]:not(.i18n-ready) {
+  color: transparent;
+}
+
+html.lang-fr [data-i18n]:not(.i18n-ready) {
+  color: transparent;
+}
+
+/* Flag container styling - remove conflicting content rules */
+#currentFlag {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Remove flag flash prevention - let JavaScript handle this */
