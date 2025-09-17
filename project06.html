@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-i18n-lang="en">
 <head>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script>
@@ -12,14 +12,15 @@
 		ga('send', 'pageview');
 	</script>
     
-    <title>Bennet Website - A Creative Portfolio Template</title>
+    <title data-i18n="meta.title">Bennet Website - A Creative Portfolio Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Download the best Creative Portfolio HTML Template in 2025" />
+    <meta name="description" content="Download the best Creative Portfolio HTML Template in 2025" data-i18n-attr="content:meta.description" />
     <meta name="author" content="ClaPat Studio">
     <meta charset="UTF-8" />    
     <link rel="icon" type="image/ico" href="favicon.ico" />
     <link href="style.css" rel="stylesheet" />
     <link href="css/all.min.css" rel="stylesheet" />
+    <link href="assets/css/i18n.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
@@ -95,7 +96,57 @@
                     <!--/Navigation -->
                     
                     
-                    <!-- Header Button -->
+                                        
+                    
+
+              <!-- Header Right Section -->
+              <div class="header-right">
+                <!-- Language Selector -->
+                    <div class="language-selector-modern">
+                      <button
+                        class="language-toggle-btn"
+                        id="languageToggle"
+                        aria-label="Change Language"
+                        title="Dil Değiştir / Change Language"
+                      >
+                        <div class="flag-circle">
+                          <img
+                            id="currentFlag"
+                            src="assets/countryImages/en.svg"
+                            alt="Current Language"
+                          />
+                        </div>
+                      </button>
+
+                      <!-- Language Modal -->
+                      <div class="language-modal" id="languageModal">
+                        <div class="language-modal-content">
+                          <div class="language-options">
+                            <div class="language-option" data-language="en">
+                              <div class="flag-circle">
+                                <img
+                                  src="assets/countryImages/en.svg"
+                                  alt="English"
+                                />
+                              </div>
+                              <span class="language-name">English</span>
+                            </div>
+                            <div class="language-option" data-language="tr">
+                              <div class="flag-circle">
+                                <img
+                                  src="assets/countryImages/tr.svg"
+                                  alt="Türkçe"
+                                />
+                              </div>
+                              <span class="language-name">Türkçe</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--/Language Selector -->
+
+                <!-- Header Button -->
                     <a class="header-button ajax-link" data-type="page-transition" href="contact.html">
                         <div class="button-icon-link right">                        
                             <div class="icon-wrap-scale">
@@ -109,6 +160,8 @@
                         </div>
                     </a>
                     <!--/Header Button -->
+              </div>
+              <!--/Header Right Section -->
                     
                     
                     <!-- Menu Burger -->
@@ -430,7 +483,13 @@
     
     <script src="js/common.js"></script>
     <script src="js/contact.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="js/scripts.js"></script>    <!-- I18n System -->
+    <script src="assets/js/i18n.js"></script>
+
+
+
+
+
 
 
 

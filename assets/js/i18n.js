@@ -291,7 +291,10 @@ class I18n {
 
     if (!toggleBtn || !modal) {
       console.warn("Language selector elements not found! Retrying...");
+      // Try multiple times with longer delays for AJAX-loaded content
       setTimeout(() => this.initLanguageSelector(), 500);
+      setTimeout(() => this.initLanguageSelector(), 1000);
+      setTimeout(() => this.initLanguageSelector(), 2000);
       return;
     }
 
@@ -309,6 +312,14 @@ class I18n {
       console.log("Toggle button clicked! Opening modal...");
       this.toggleLanguageModal();
     });
+
+    // Add explicit button debugging
+    newToggleBtn.style.border = "2px solid red"; // Debug border
+    setTimeout(() => {
+      if (newToggleBtn.style.border) {
+        newToggleBtn.style.border = "";
+      }
+    }, 3000);
 
     // FIX: Event delegation kullanarak language option click'lerini handle et
     // Modal ve modal content'e listener ekle
@@ -557,6 +568,68 @@ if (document.readyState === "loading") {
   console.log("DOM already loaded, initializing immediately...");
   window.i18n = new I18n();
 }
+
+// Additional fallback for AJAX-loaded content - try multiple times
+setTimeout(() => {
+  if (!window.i18n) {
+    console.log("Emergency fallback initialization after 1s...");
+    window.i18n = new I18n();
+  } else if (window.i18n && !document.getElementById("languageToggle")) {
+    console.log("Re-initializing i18n system due to missing elements...");
+    window.i18n.initLanguageSelector();
+  }
+}, 1000);
+
+setTimeout(() => {
+  if (window.i18n && !document.getElementById("languageToggle")) {
+    console.log("Re-initializing i18n system due to missing elements (2s)...");
+    window.i18n.initLanguageSelector();
+  }
+}, 2000);
+
+setTimeout(() => {
+  if (window.i18n && !document.getElementById("languageToggle")) {
+    console.log("Re-initializing i18n system due to missing elements (3s)...");
+    window.i18n.initLanguageSelector();
+  }
+}, 3000);
+
+// Global click handler for debugging
+document.addEventListener("click", function (e) {
+  if (e.target.closest("#languageToggle")) {
+    console.log("GLOBAL: Language toggle clicked!");
+    if (window.i18n) {
+      console.log("GLOBAL: Calling toggleLanguageModal via global handler");
+      window.i18n.toggleLanguageModal();
+    }
+  }
+});
+
+// MutationObserver to detect when language selector is added to DOM
+const observer = new MutationObserver((mutations) => {
+  mutations.forEach((mutation) => {
+    if (mutation.type === "childList") {
+      const toggleBtn = document.getElementById("languageToggle");
+      if (
+        toggleBtn &&
+        window.i18n &&
+        !toggleBtn.hasAttribute("data-i18n-initialized")
+      ) {
+        console.log(
+          "MutationObserver: Language toggle detected, reinitializing..."
+        );
+        toggleBtn.setAttribute("data-i18n-initialized", "true");
+        window.i18n.initLanguageSelector();
+      }
+    }
+  });
+});
+
+// Start observing
+observer.observe(document.body, {
+  childList: true,
+  subtree: true,
+});
 
 // Export for module usage if needed
 if (typeof module !== "undefined" && module.exports) {
