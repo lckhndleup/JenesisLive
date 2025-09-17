@@ -248,3 +248,108 @@
 [data-i18n].changing {
   opacity: 0;
 }
+
+/* FOUC Prevention - Hide untranslated content initially */
+html.lang-tr [data-i18n="nav.index"]:not(.i18n-ready)::after {
+  content: "Anasayfa";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: inherit;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html.lang-tr [data-i18n="nav.projects"]:not(.i18n-ready)::after {
+  content: "Projeler";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: inherit;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html.lang-tr [data-i18n="nav.about"]:not(.i18n-ready)::after {
+  content: "Hakkımızda";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: inherit;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html.lang-tr [data-i18n="nav.resources"]:not(.i18n-ready)::after {
+  content: "Kaynaklar";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: inherit;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html.lang-tr [data-i18n="buttons.letstalk"]:not(.i18n-ready)::after {
+  content: "Konuşalım";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: inherit;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Make translatable elements positioned to support pseudo elements */
+[data-i18n] {
+  position: relative;
+}
+
+/* Hide original text when showing translation overlay */
+html.lang-tr [data-i18n]:not(.i18n-ready) {
+  color: transparent;
+}
+
+/* Flag initial state - prevent flag flash */
+html.lang-tr #currentFlag {
+  content: url("../countryImages/tr.svg");
+}
+
+html.lang-en #currentFlag {
+  content: url("../countryImages/en.svg");
+}
+
+/* Ensure flag container doesn't flash */
+.lang-tr .flag-circle img[src*="en.svg"] {
+  display: none;
+}
+
+.lang-tr .flag-circle::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url("../countryImages/tr.svg");
+  background-size: cover;
+  background-position: center;
+}

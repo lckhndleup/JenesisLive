@@ -20,15 +20,21 @@ class I18n {
   async init() {
     console.log("Initializing i18n system...");
     try {
-      // Detect user's preferred language
-      this.currentLanguage = this.detectLanguage();
-      console.log("Detected language:", this.currentLanguage);
+      // Use early detected language if available
+      if (window.earlyDetectedLanguage) {
+        this.currentLanguage = window.earlyDetectedLanguage;
+        console.log("Using early detected language:", this.currentLanguage);
+      } else {
+        // Fallback to normal detection
+        this.currentLanguage = this.detectLanguage();
+        console.log("Detected language:", this.currentLanguage);
+      }
 
       // Load translations for the detected language
       await this.loadTranslations(this.currentLanguage);
 
-      // Apply translations to the page
-      this.applyTranslations();
+      // Apply translations to the page immediately
+      this.applyTranslationsInstant();
 
       // Update HTML lang attribute
       this.updateHtmlLang();
@@ -44,7 +50,7 @@ class I18n {
       console.error("Failed to initialize i18n:", error);
       // Fallback to English if initialization fails
       await this.loadTranslations(this.fallbackLanguage);
-      this.applyTranslations();
+      this.applyTranslationsInstant();
     }
   }
 
@@ -168,6 +174,63 @@ class I18n {
       } else {
         element.textContent = translation;
       }
+
+      // Mark element as translated to remove CSS overlay
+      element.classList.add("i18n-ready");
+    });
+
+    // Handle attributes with data-i18n-attr
+    const attrElements = document.querySelectorAll("[data-i18n-attr]");
+    attrElements.forEach((element) => {
+      const attrConfig = element.getAttribute("data-i18n-attr");
+      const attrPairs = attrConfig.split("|");
+
+      attrPairs.forEach((pair) => {
+        const [attr, key] = pair.split(":");
+        if (attr && key) {
+          const translation = this.getTranslation(key.trim());
+          element.setAttribute(attr.trim(), translation);
+        }
+      });
+    });
+
+    // Handle data-hover attributes (for hover effects)
+    const hoverElements = document.querySelectorAll("[data-i18n-hover]");
+    hoverElements.forEach((element) => {
+      const key = element.getAttribute("data-i18n-hover");
+      const translation = this.getTranslation(key);
+      element.setAttribute("data-hover", translation);
+    });
+
+    // Update meta tags
+    this.updateMetaTags();
+  }
+
+  /**
+   * Apply translations instantly without logging (for initial load)
+   */
+  applyTranslationsInstant() {
+    // Handle text content with data-i18n
+    const elements = document.querySelectorAll("[data-i18n]");
+
+    elements.forEach((element) => {
+      const key = element.getAttribute("data-i18n");
+      const translation = this.getTranslation(key);
+
+      // Handle different element types
+      if (element.tagName === "INPUT" && element.type === "submit") {
+        element.value = translation;
+      } else if (
+        element.tagName === "INPUT" ||
+        element.tagName === "TEXTAREA"
+      ) {
+        element.textContent = translation;
+      } else {
+        element.textContent = translation;
+      }
+
+      // Mark element as translated to remove CSS overlay
+      element.classList.add("i18n-ready");
     });
 
     // Handle attributes with data-i18n-attr
