@@ -259,6 +259,9 @@ class I18n {
       // Update language selector UI
       this.updateLanguageSelector();
 
+      // Hide modal after language change
+      this.hideLanguageModal();
+
       console.log(`Language successfully changed to ${newLanguage}`);
     } catch (error) {
       console.error(`Failed to change language to ${newLanguage}:`, error);
@@ -271,59 +274,185 @@ class I18n {
   initLanguageSelector() {
     // Wait a bit to ensure DOM is fully ready
     setTimeout(() => {
-      const languageButtons = document.querySelectorAll("[data-language]");
-      console.log("Found language buttons:", languageButtons.length);
-      console.log("Buttons:", languageButtons);
-
-      if (languageButtons.length === 0) {
-        console.warn("No language buttons found! Retrying...");
-        setTimeout(() => this.initLanguageSelector(), 500);
-        return;
-      }
-
-      languageButtons.forEach((button) => {
-        const language = button.getAttribute("data-language");
-        console.log("Setting up button for language:", language);
-
-        // Remove existing listeners first
-        button.removeEventListener("click", this.handleLanguageClick);
-
-        // Add click event listener
-        const clickHandler = (e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          console.log("Language button clicked:", language);
-          this.changeLanguage(language);
-        };
-
-        button.addEventListener("click", clickHandler);
-
-        // Store reference for cleanup
-        button._i18nClickHandler = clickHandler;
-      });
-
-      // Update initial state
-      this.updateLanguageSelector();
+      this.initModernLanguageSelector();
     }, 100);
+  }
+
+  /**
+   * Initialize modern language selector with modal - FIX: Event Delegation kullanarak
+   */
+  initModernLanguageSelector() {
+    const toggleBtn = document.getElementById("languageToggle");
+    const modal = document.getElementById("languageModal");
+
+    console.log("Setting up modern language selector");
+    console.log("Toggle button:", toggleBtn);
+    console.log("Modal:", modal);
+
+    if (!toggleBtn || !modal) {
+      console.warn("Language selector elements not found! Retrying...");
+      setTimeout(() => this.initLanguageSelector(), 500);
+      return;
+    }
+
+    // Remove existing event listeners to avoid duplicates
+    const oldToggleBtn = toggleBtn.cloneNode(true);
+    toggleBtn.parentNode.replaceChild(oldToggleBtn, toggleBtn);
+
+    // Toggle modal on button click
+    const newToggleBtn = document.getElementById("languageToggle");
+    console.log("Adding click listener to toggle button");
+
+    newToggleBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      console.log("Toggle button clicked! Opening modal...");
+      this.toggleLanguageModal();
+    });
+
+    // FIX: Event delegation kullanarak language option click'lerini handle et
+    // Modal container'a tek bir listener ekle
+    modal.addEventListener("click", (e) => {
+      console.log("Modal clicked, target:", e.target);
+
+      // En yakın .language-option elementini bul
+      const languageOption = e.target.closest(".language-option");
+
+      if (languageOption) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const language = languageOption.getAttribute("data-language");
+        console.log("Language option clicked via delegation:", language);
+
+        if (language && this.supportedLanguages.includes(language)) {
+          this.changeLanguage(language);
+        } else {
+          console.error("Invalid language selected:", language);
+        }
+      }
+    });
+
+    // Prepare document click handler but don't add it yet
+    this.documentClickHandler = (e) => {
+      // Only close if modal is active and click is outside
+      const modal = document.getElementById("languageModal");
+      if (modal && modal.classList.contains("active")) {
+        if (!e.target.closest(".language-selector-modern")) {
+          console.log("Clicking outside modal, closing...");
+          this.hideLanguageModal();
+        }
+      }
+    };
+
+    // Close modal on escape key
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        this.hideLanguageModal();
+      }
+    });
+
+    // Update initial state
+    this.updateLanguageSelector();
+
+    console.log(
+      "Modern language selector setup completed with event delegation"
+    );
+  }
+
+  /**
+   * Toggle language modal visibility
+   */
+  toggleLanguageModal() {
+    console.log("toggleLanguageModal called");
+    const modal = document.getElementById("languageModal");
+    console.log("Modal element:", modal);
+
+    if (modal) {
+      const isActive = modal.classList.contains("active");
+      console.log("Modal is currently active:", isActive);
+
+      if (isActive) {
+        this.hideLanguageModal();
+      } else {
+        this.showLanguageModal();
+      }
+    } else {
+      console.error("Modal element not found!");
+    }
+  }
+
+  /**
+   * Show language modal
+   */
+  showLanguageModal() {
+    console.log("showLanguageModal called");
+    const modal = document.getElementById("languageModal");
+    if (modal) {
+      modal.classList.add("active");
+      console.log("Language modal shown - active class added");
+      console.log("Modal classes:", modal.classList.toString());
+
+      // Add document click listener in next event loop to avoid immediate triggering
+      setTimeout(() => {
+        document.addEventListener("click", this.documentClickHandler);
+        console.log("Document click listener added (delayed)");
+      }, 0);
+    } else {
+      console.error("Modal element not found in showLanguageModal!");
+    }
+  }
+
+  /**
+   * Hide language modal
+   */
+  hideLanguageModal() {
+    console.log("hideLanguageModal called");
+    const modal = document.getElementById("languageModal");
+    if (modal) {
+      modal.classList.remove("active");
+      console.log("Language modal hidden - active class removed");
+
+      // Remove document click listener
+      document.removeEventListener("click", this.documentClickHandler);
+      console.log("Document click listener removed");
+    } else {
+      console.error("Modal element not found in hideLanguageModal!");
+    }
   }
 
   /**
    * Update language selector visual state
    */
   updateLanguageSelector() {
-    const languageButtons = document.querySelectorAll("[data-language]");
+    // Update current flag in toggle button
+    const currentFlag = document.getElementById("currentFlag");
+    if (currentFlag) {
+      currentFlag.src = `assets/countryImages/${this.currentLanguage}.svg`;
+      currentFlag.alt = this.currentLanguage === "tr" ? "Türkçe" : "English";
+    }
 
-    languageButtons.forEach((button) => {
-      const language = button.getAttribute("data-language");
-
+    // Update active state in modal options
+    const languageOptions = document.querySelectorAll(".language-option");
+    languageOptions.forEach((option) => {
+      const language = option.getAttribute("data-language");
       if (language === this.currentLanguage) {
-        button.classList.add("active");
-        button.setAttribute("aria-pressed", "true");
+        option.classList.add("active");
       } else {
-        button.classList.remove("active");
-        button.setAttribute("aria-pressed", "false");
+        option.classList.remove("active");
       }
     });
+
+    // Add animation to flag change
+    const toggleBtn = document.getElementById("languageToggle");
+    if (toggleBtn) {
+      toggleBtn.classList.add("language-changing");
+      setTimeout(() => {
+        toggleBtn.classList.remove("language-changing");
+      }, 400);
+    }
+
+    console.log("Language selector updated for:", this.currentLanguage);
   }
 
   /**
@@ -350,7 +479,17 @@ class I18n {
       "Language buttons:",
       document.querySelectorAll("[data-language]")
     );
+    console.log("Toggle button:", document.getElementById("languageToggle"));
+    console.log("Modal:", document.getElementById("languageModal"));
     return this;
+  }
+
+  /**
+   * Manual modal toggle for testing
+   */
+  testModal() {
+    console.log("Manual modal test");
+    this.toggleLanguageModal();
   }
 }
 
