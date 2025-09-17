@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-i18n-lang="en">
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script>
@@ -27,11 +27,14 @@
       ga("send", "pageview");
     </script>
 
-    <title>Bennet Website - A Creative Portfolio Template</title>
+    <title data-i18n="meta.title">
+      Bennet Website - A Creative Portfolio Template
+    </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
       content="Download the best Creative Portfolio HTML Template in 2025"
+      data-i18n-attr="content:meta.description"
     />
     <meta name="author" content="ClaPat Studio" />
     <meta
@@ -42,6 +45,7 @@
     <link rel="icon" type="image/ico" href="favicon.ico" />
     <link href="style.css" rel="stylesheet" />
     <link href="css/all.min.css" rel="stylesheet" />
+    <link href="assets/css/i18n.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -56,7 +60,11 @@
   >
     <main>
       <!-- Preloader -->
-      <div class="preloader-wrap" data-centerLine="Loading">
+      <div
+        class="preloader-wrap"
+        data-centerLine="Loading"
+        data-i18n-attr="data-centerLine:preloader.loading"
+      >
         <div class="percentage-wrapper">
           <div class="percentage" id="precent">
             <span class="number number_2">
@@ -70,7 +78,9 @@
               ><span>8</span><span>9</span><span>0</span>
             </span>
           </div>
-          <div class="percentage-first"><span>wait, wait..</span></div>
+          <div class="percentage-first">
+            <span data-i18n="preloader.wait">wait, wait..</span>
+          </div>
           <div class="percentage-last"><span>100</span></div>
         </div>
       </div>
@@ -124,14 +134,24 @@
                         data-type="page-transition"
                         href="index.html"
                         ><div class="before-span">
-                          <span data-hover="Index">Index</span>
+                          <span
+                            data-hover="Index"
+                            data-i18n="nav.index"
+                            data-i18n-hover="nav.index"
+                            >Index</span
+                          >
                         </div></a
                       >
                     </li>
                     <li class="menu-timeline link">
                       <a class="ajax-link" data-type="page-transition" href="#"
                         ><div class="before-span">
-                          <span data-hover="Projects">Projects</span>
+                          <span
+                            data-hover="Projects"
+                            data-i18n="nav.projects"
+                            data-i18n-hover="nav.projects"
+                            >Projects</span
+                          >
                         </div></a
                       >
                       <ul>
@@ -140,6 +160,7 @@
                             class="ajax-link"
                             href="index-highlights.html"
                             data-type="page-transition"
+                            data-i18n="nav.highlights"
                             >Highlights</a
                           >
                         </li>
@@ -148,6 +169,7 @@
                             class="ajax-link"
                             href="index-portfolio.html"
                             data-type="page-transition"
+                            data-i18n="nav.portfolio"
                             >Portfolio</a
                           >
                         </li>
@@ -156,6 +178,7 @@
                             class="ajax-link"
                             href="index-playground.html"
                             data-type="page-transition"
+                            data-i18n="nav.playground"
                             >Playground</a
                           >
                         </li>
@@ -167,7 +190,12 @@
                         data-type="page-transition"
                         href="about.html"
                         ><div class="before-span">
-                          <span data-hover="Agency">Agency</span>
+                          <span
+                            data-hover="Agency"
+                            data-i18n="nav.about"
+                            data-i18n-hover="nav.about"
+                            >Agency</span
+                          >
                         </div></a
                       >
                     </li>
@@ -177,7 +205,12 @@
                         data-type="page-transition"
                         href="resources.html"
                         ><div class="before-span">
-                          <span data-hover="Resources">Resources</span>
+                          <span
+                            data-hover="Resources"
+                            data-i18n="nav.resources"
+                            data-i18n-hover="nav.resources"
+                            >Resources</span
+                          >
                         </div></a
                       >
                     </li>
@@ -186,45 +219,78 @@
               </nav>
               <!--/Navigation -->
 
-              <!-- Header Button -->
-              <a
-                class="header-button ajax-link"
-                data-type="page-transition"
-                href="contact.html"
-              >
-                <div class="button-icon-link right">
-                  <div class="icon-wrap-scale">
-                    <div class="icon-wrap parallax-wrap">
-                      <div class="button-icon parallax-element">
-                        <i class="fa-solid fa-arrow-right"></i>
+              <!-- Header Right Section -->
+              <div class="header-right">
+                <!-- Language Selector -->
+                <div class="language-selector">
+                  <button
+                    class="language-btn"
+                    data-language="en"
+                    aria-pressed="false"
+                    title="Switch to English"
+                    onclick="console.log('EN clicked'); window.i18n && window.i18n.changeLanguage('en')"
+                  >
+                    EN
+                  </button>
+                  <span class="language-separator">/</span>
+                  <button
+                    class="language-btn"
+                    data-language="tr"
+                    aria-pressed="false"
+                    title="Türkçe'ye geç"
+                    onclick="console.log('TR clicked'); window.i18n && window.i18n.changeLanguage('tr')"
+                  >
+                    TR
+                  </button>
+                </div>
+                <!--/Language Selector -->
+
+                <!-- Header Button -->
+                <a
+                  class="header-button ajax-link"
+                  data-type="page-transition"
+                  href="contact.html"
+                >
+                  <div class="button-icon-link right">
+                    <div class="icon-wrap-scale">
+                      <div class="icon-wrap parallax-wrap">
+                        <div class="button-icon parallax-element">
+                          <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="button-text sticky right">
+                      <span
+                        data-hover="Let's Talk"
+                        data-i18n="buttons.letstalk"
+                        data-i18n-hover="buttons.letstalk"
+                        >Let's Talk</span
+                      >
+                    </div>
+                  </div>
+                </a>
+                <!--/Header Button -->
+
+                <!-- Menu Burger -->
+                <div class="button-wrap right menu burger-lines">
+                  <div class="icon-wrap parallax-wrap">
+                    <div class="button-icon parallax-element">
+                      <div id="burger-wrapper">
+                        <div id="menu-burger">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                        </div>
                       </div>
                     </div>
                   </div>
                   <div class="button-text sticky right">
-                    <span data-hover="Let's Talk">Let's Talk</span>
+                    <span data-hover="Menu">Menu</span>
                   </div>
                 </div>
-              </a>
-              <!--/Header Button -->
-
-              <!-- Menu Burger -->
-              <div class="button-wrap right menu burger-lines">
-                <div class="icon-wrap parallax-wrap">
-                  <div class="button-icon parallax-element">
-                    <div id="burger-wrapper">
-                      <div id="menu-burger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="button-text sticky right">
-                  <span data-hover="Menu">Menu</span>
-                </div>
+                <!--/Menu Burger -->
               </div>
-              <!--/Menu Burger -->
+              <!--/Header Right Section -->
             </div>
           </header>
           <!--/Header -->
@@ -252,9 +318,15 @@
                       <div
                         class="hero-subtitle caption-timeline onload-shuffle"
                       >
-                        <div><span>Bringing brands to life through</span></div>
+                        <div>
+                          <span data-i18n="hero.title"
+                            >Bringing brands to life through</span
+                          >
+                        </div>
                         <div class="secondary-font">
-                          <span>creative web solutions</span>
+                          <span data-i18n="hero.subtitle"
+                            >creative web solutions</span
+                          >
                         </div>
                       </div>
                     </div>
@@ -268,14 +340,19 @@
                           </div>
                         </div>
                         <div class="button-text sticky left">
-                          <span data-hover="Scroll to Explore"
+                          <span
+                            data-hover="Scroll to Explore"
+                            data-i18n="hero.scroll"
+                            data-i18n-hover="hero.scroll"
                             >Scroll to Explore</span
                           >
                         </div>
                       </div>
                     </div>
                     <div class="hero-footer-right">
-                      <div id="info-text"><span>Featured Projects</span></div>
+                      <div id="info-text">
+                        <span data-i18n="hero.featured">Featured Projects</span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -886,5 +963,8 @@
     <script src="js/common.js"></script>
     <script src="js/contact.js"></script>
     <script src="js/scripts.js"></script>
+
+    <!-- I18n System -->
+    <script src="assets/js/i18n.js"></script>
   </body>
 </html>

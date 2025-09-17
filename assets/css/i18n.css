@@ -1,0 +1,179 @@
+/* I18n Language Selector Styles */
+
+/* Right side elements container */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.language-selector {
+  display: flex;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  position: relative;
+  z-index: 10;
+}
+
+.language-btn {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 8px 12px;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  outline: none;
+  border-radius: 4px;
+  z-index: 11;
+  pointer-events: auto;
+}
+
+.language-btn:hover {
+  color: #fa821d;
+  transform: translateY(-2px);
+}
+
+.language-btn.active {
+  color: #fa821d;
+  font-weight: 600;
+}
+
+.language-btn:focus {
+  outline: 2px solid #fa821d;
+  outline-offset: 2px;
+}
+
+.language-separator {
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 4px;
+  font-weight: 300;
+}
+
+/* Dark theme adjustments */
+.invert-header .language-btn {
+  color: #0c0c0c;
+}
+
+.invert-header .language-btn:hover {
+  color: #fa821d;
+}
+
+.invert-header .language-btn.active {
+  color: #fa821d;
+}
+
+.invert-header .language-separator {
+  color: rgba(12, 12, 12, 0.5);
+}
+
+/* Animation for language change */
+.language-btn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #fa821d;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform: translateX(-50%);
+}
+
+.language-btn.active::after {
+  width: 80%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .header-right {
+    gap: 15px;
+  }
+
+  .language-btn {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-right {
+    gap: 10px;
+  }
+
+  .language-btn {
+    padding: 5px 8px;
+    font-size: 12px;
+  }
+}
+
+/* Header integration */
+#header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.clapat-nav-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* Right side elements container */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Language selector positioning in header */
+.language-selector {
+  order: 1;
+}
+
+.header-button {
+  order: 2;
+}
+
+.button-wrap.menu {
+  order: 3;
+}
+
+/* Smooth transitions for text changes */
+[data-i18n] {
+  transition: opacity 0.2s ease-in-out;
+}
+
+[data-i18n].changing {
+  opacity: 0;
+}
+
+/* Loading state for language change */
+.language-loading .language-btn {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Accessibility improvements */
+.language-btn[aria-pressed="true"] {
+  background-color: rgba(250, 130, 29, 0.1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .language-btn,
+  .language-btn::after,
+  [data-i18n] {
+    transition: none;
+  }
+}

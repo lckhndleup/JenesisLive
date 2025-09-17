@@ -1,0 +1,36 @@
+{
+    "nav": {
+        "index": "Anasayfa",
+        "projects": "Projeler",
+        "highlights": "Öne Çıkanlar",
+        "portfolio": "Portföy",
+        "playground": "Oyun Alanı",
+        "about": "Hakkımızda",
+        "contact": "İletişim",
+        "resources": "Kaynaklar",
+        "shortcodes": "Kısa Kodlar"
+    },
+    "hero": {
+        "title": "Markaları yaşam gücüyle buluşturuyoruz",
+        "subtitle": "yaratıcı web çözümleri",
+        "scroll": "Keşfetmek için Kaydır",
+        "featured": "Öne Çıkan Projeler"
+    },
+    "buttons": {
+        "letstalk": "Konuşalım",
+        "language": "Dil"
+    },
+    "footer": {
+        "copyright": "© 2024 ClaPat Studio. Tüm hakları saklıdır.",
+        "terms": "Hizmet Şartları",
+        "privacy": "Gizlilik Politikası"
+    },
+    "meta": {
+        "title": "Bennet Websitesi - Yaratıcı Portföy Şablonu",
+        "description": "2025'in en iyi Yaratıcı Portföy HTML Şablonunu indirin"
+    },
+    "preloader": {
+        "loading": "Yükleniyor",
+        "wait": "bekleyin, bekleyin.."
+    }
+}

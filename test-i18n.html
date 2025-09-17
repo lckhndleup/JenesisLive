@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>i18n Test</title>
+    <link href="assets/css/i18n.css" rel="stylesheet" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        padding: 20px;
+      }
+      .test-container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .language-selector {
+        margin-bottom: 20px;
+        padding: 10px;
+        background: #f5f5f5;
+        border-radius: 5px;
+      }
+      .test-text {
+        margin: 10px 0;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+      }
+      button {
+        margin: 5px;
+        padding: 10px 15px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="test-container">
+      <h1>i18n Test Sayfası</h1>
+
+      <div class="language-selector">
+        <h2>Dil Seçici:</h2>
+        <button
+          class="language-btn"
+          data-language="en"
+          onclick="testLanguageChange('en')"
+        >
+          EN
+        </button>
+        <button
+          class="language-btn"
+          data-language="tr"
+          onclick="testLanguageChange('tr')"
+        >
+          TR
+        </button>
+      </div>
+
+      <div class="test-text">
+        <h3>Test Metinleri:</h3>
+        <p data-i18n="nav.index">Index</p>
+        <p data-i18n="nav.projects">Projects</p>
+        <p data-i18n="hero.title">Bringing brands to life through</p>
+        <p data-i18n="hero.subtitle">creative web solutions</p>
+        <p data-i18n="buttons.letstalk">Let's Talk</p>
+      </div>
+
+      <div class="test-controls">
+        <h3>Test Kontrolleri:</h3>
+        <button onclick="testSystem()">Sistem Durumunu Kontrol Et</button>
+        <button onclick="manualChangeToTR()">Manuel TR</button>
+        <button onclick="manualChangeToEN()">Manuel EN</button>
+      </div>
+
+      <div id="debug-info">
+        <h3>Debug Bilgisi:</h3>
+        <pre id="debug-output"></pre>
+      </div>
+    </div>
+
+    <script src="assets/js/i18n.js"></script>
+    <script>
+      function testLanguageChange(lang) {
+        console.log("Test function called with:", lang);
+        if (window.i18n) {
+          window.i18n.changeLanguage(lang);
+        } else {
+          console.error("i18n not available");
+          updateDebug("i18n not available");
+        }
+      }
+
+      function manualChangeToTR() {
+        if (window.i18n) {
+          window.i18n.changeLanguage("tr");
+        }
+      }
+
+      function manualChangeToEN() {
+        if (window.i18n) {
+          window.i18n.changeLanguage("en");
+        }
+      }
+
+      function testSystem() {
+        const info = {
+          i18nExists: !!window.i18n,
+          currentLanguage: window.i18n
+            ? window.i18n.getCurrentLanguage()
+            : "N/A",
+          translations: window.i18n
+            ? Object.keys(window.i18n.translations)
+            : "N/A",
+          buttons: document.querySelectorAll("[data-language]").length,
+        };
+        updateDebug(JSON.stringify(info, null, 2));
+        console.log("System info:", info);
+      }
+
+      function updateDebug(text) {
+        const output = document.getElementById("debug-output");
+        output.textContent = text;
+      }
+
+      // Wait for i18n to be ready
+      setTimeout(() => {
+        testSystem();
+      }, 1000);
+    </script>
+  </body>
+</html>

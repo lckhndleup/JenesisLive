@@ -1,0 +1,36 @@
+{
+    "nav": {
+        "index": "Index",
+        "projects": "Projects",
+        "highlights": "Highlights",
+        "portfolio": "Portfolio",
+        "playground": "Playground",
+        "about": "About",
+        "contact": "Contact",
+        "resources": "Resources",
+        "shortcodes": "Shortcodes"
+    },
+    "hero": {
+        "title": "Bringing brands to life through",
+        "subtitle": "creative web solutions",
+        "scroll": "Scroll to Explore",
+        "featured": "Featured Projects"
+    },
+    "buttons": {
+        "letstalk": "Let's Talk",
+        "language": "Language"
+    },
+    "footer": {
+        "copyright": "© 2024 ClaPat Studio. All rights reserved.",
+        "terms": "Terms of Service",
+        "privacy": "Privacy Policy"
+    },
+    "meta": {
+        "title": "Bennet Website - A Creative Portfolio Template",
+        "description": "Download the best Creative Portfolio HTML Template in 2025"
+    },
+    "preloader": {
+        "loading": "Loading",
+        "wait": "wait, wait.."
+    }
+}
