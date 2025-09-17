@@ -36,6 +36,9 @@ class I18n {
       // Initialize language selector
       this.initLanguageSelector();
 
+      // Initialize AJAX navigation listeners
+      this.initAjaxNavigationListeners();
+
       console.log("i18n system initialization completed successfully");
     } catch (error) {
       console.error("Failed to initialize i18n:", error);
@@ -512,6 +515,105 @@ class I18n {
   }
 
   /**
+   * Initialize AJAX navigation listeners for page transitions
+   */
+  initAjaxNavigationListeners() {
+    console.log("Setting up AJAX navigation listeners...");
+
+    // Listen for URL changes (history.pushState/replaceState)
+    let lastUrl = location.href;
+    new MutationObserver(() => {
+      const url = location.href;
+      if (url !== lastUrl) {
+        lastUrl = url;
+        console.log("URL changed to:", url);
+        // Delay to ensure new content is loaded
+        setTimeout(() => this.handlePageTransition(), 300);
+      }
+    }).observe(document, { subtree: true, childList: true });
+
+    // Listen for popstate events (back/forward button)
+    window.addEventListener("popstate", () => {
+      console.log("Popstate event triggered");
+      setTimeout(() => this.handlePageTransition(), 300);
+    });
+
+    // Listen for custom page transition events (if the theme uses them)
+    document.addEventListener("pageTransitionComplete", () => {
+      console.log("Page transition complete event triggered");
+      this.handlePageTransition();
+    });
+
+    // Listen for hash changes
+    window.addEventListener("hashchange", () => {
+      console.log("Hash change detected");
+      setTimeout(() => this.handlePageTransition(), 100);
+    });
+
+    // Observe DOM changes to detect new content
+    const observer = new MutationObserver((mutations) => {
+      let shouldReapply = false;
+      mutations.forEach((mutation) => {
+        if (mutation.type === "childList" && mutation.addedNodes.length > 0) {
+          // Check if new nodes contain translatable content
+          mutation.addedNodes.forEach((node) => {
+            if (node.nodeType === Node.ELEMENT_NODE) {
+              if (
+                node.querySelector &&
+                (node.querySelector("[data-i18n]") ||
+                  (node.hasAttribute && node.hasAttribute("data-i18n")))
+              ) {
+                shouldReapply = true;
+              }
+            }
+          });
+        }
+      });
+
+      if (shouldReapply) {
+        console.log(
+          "New translatable content detected, reapplying translations"
+        );
+        setTimeout(() => this.applyTranslations(), 100);
+      }
+    });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+    });
+
+    console.log("AJAX navigation listeners initialized");
+  }
+
+  /**
+   * Handle page transitions
+   */
+  handlePageTransition() {
+    console.log("Handling page transition...");
+
+    // Reapply translations to new content
+    this.applyTranslations();
+
+    // Update HTML lang attribute
+    this.updateHtmlLang();
+
+    // Reinitialize language selector if needed
+    const toggleBtn = document.getElementById("languageToggle");
+    if (toggleBtn && !toggleBtn.hasAttribute("data-i18n-initialized")) {
+      console.log(
+        "Language selector not found or not initialized, reinitializing..."
+      );
+      this.initLanguageSelector();
+    } else {
+      // Just update the visual state
+      this.updateLanguageSelector();
+    }
+
+    console.log("Page transition handled successfully");
+  }
+
+  /**
    * Get current language
    */
   getCurrentLanguage() {
@@ -594,6 +696,55 @@ setTimeout(() => {
   }
 }, 3000);
 
+// Periodic check for AJAX content updates
+setInterval(() => {
+  if (window.i18n && window.i18n.currentLanguage !== "en") {
+    // Check if we have untranslated content
+    const untranslatedElements = document.querySelectorAll("[data-i18n]");
+    let hasUntranslated = false;
+
+    untranslatedElements.forEach((el) => {
+      const key = el.getAttribute("data-i18n");
+      const currentText = el.textContent.trim();
+
+      // Check if element shows English text when language is not English
+      if (
+        key === "nav.index" &&
+        currentText === "Index" &&
+        window.i18n.currentLanguage === "tr"
+      ) {
+        hasUntranslated = true;
+      }
+      if (
+        key === "nav.projects" &&
+        currentText === "Projects" &&
+        window.i18n.currentLanguage === "tr"
+      ) {
+        hasUntranslated = true;
+      }
+      if (
+        key === "nav.about" &&
+        currentText === "Agency" &&
+        window.i18n.currentLanguage === "tr"
+      ) {
+        hasUntranslated = true;
+      }
+      if (
+        key === "nav.resources" &&
+        currentText === "Resources" &&
+        window.i18n.currentLanguage === "tr"
+      ) {
+        hasUntranslated = true;
+      }
+    });
+
+    if (hasUntranslated) {
+      console.log("Detected untranslated content, reapplying translations...");
+      window.i18n.applyTranslations();
+    }
+  }
+}, 2000); // Check every 2 seconds
+
 // Global click handler for debugging
 document.addEventListener("click", function (e) {
   if (e.target.closest("#languageToggle")) {
@@ -630,6 +781,23 @@ observer.observe(document.body, {
   childList: true,
   subtree: true,
 });
+
+// Global function to force reapply translations (useful for AJAX pages)
+window.reapplyTranslations = function () {
+  if (window.i18n) {
+    console.log("Force reapplying translations via global function");
+    window.i18n.applyTranslations();
+    window.i18n.updateLanguageSelector();
+  }
+};
+
+// Global function to handle page transitions manually
+window.handlePageTransition = function () {
+  if (window.i18n) {
+    console.log("Manual page transition trigger via global function");
+    window.i18n.handlePageTransition();
+  }
+};
 
 // Export for module usage if needed
 if (typeof module !== "undefined" && module.exports) {
