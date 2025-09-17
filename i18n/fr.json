@@ -1,0 +1,36 @@
+{
+    "nav": {
+        "index": "Accueil",
+        "projects": "Projets",
+        "highlights": "Points forts",
+        "portfolio": "Portfolio",
+        "playground": "Terrain de jeu",
+        "about": "À propos",
+        "contact": "Contact",
+        "resources": "Ressources",
+        "shortcodes": "Codes courts"
+    },
+    "hero": {
+        "title": "Donner vie aux marques grâce à",
+        "subtitle": "des solutions web créatives",
+        "scroll": "Faites défiler pour explorer",
+        "featured": "Projets en vedette"
+    },
+    "buttons": {
+        "letstalk": "Parlons",
+        "language": "Langue"
+    },
+    "footer": {
+        "copyright": "© 2024 ClaPat Studio. Tous droits réservés.",
+        "terms": "Conditions de service",
+        "privacy": "Politique de confidentialité"
+    },
+    "meta": {
+        "title": "Site web Bennet - Un modèle de portfolio créatif",
+        "description": "Téléchargez le meilleur modèle HTML de portfolio créatif de 2025"
+    },
+    "preloader": {
+        "loading": "Chargement",
+        "wait": "attends, attends.."
+    }
+}

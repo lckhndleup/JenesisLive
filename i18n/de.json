@@ -1,0 +1,36 @@
+{
+    "nav": {
+        "index": "Startseite",
+        "projects": "Projekte",
+        "highlights": "Highlights",
+        "portfolio": "Portfolio",
+        "playground": "Spielplatz",
+        "about": "Über uns",
+        "contact": "Kontakt",
+        "resources": "Ressourcen",
+        "shortcodes": "Kurzcodes"
+    },
+    "hero": {
+        "title": "Marken zum Leben erwecken durch",
+        "subtitle": "kreative Web-Lösungen",
+        "scroll": "Scrollen zum Erkunden",
+        "featured": "Ausgewählte Projekte"
+    },
+    "buttons": {
+        "letstalk": "Sprechen wir",
+        "language": "Sprache"
+    },
+    "footer": {
+        "copyright": "© 2024 ClaPat Studio. Alle Rechte vorbehalten.",
+        "terms": "Nutzungsbedingungen",
+        "privacy": "Datenschutzrichtlinie"
+    },
+    "meta": {
+        "title": "Bennet Website - Eine kreative Portfolio-Vorlage",
+        "description": "Laden Sie die beste kreative Portfolio-HTML-Vorlage für 2025 herunter"
+    },
+    "preloader": {
+        "loading": "Wird geladen",
+        "wait": "warten, warten.."
+    }
+}

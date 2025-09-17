@@ -8,7 +8,7 @@ class I18n {
     this.currentLanguage = "en";
     this.translations = {};
     this.fallbackLanguage = "en";
-    this.supportedLanguages = ["en", "tr"];
+    this.supportedLanguages = ["en", "tr", "ru", "de", "es", "sa", "fr"];
 
     // Initialize the system
     this.init();
@@ -41,6 +41,9 @@ class I18n {
 
       // Initialize language selector
       this.initLanguageSelector();
+
+      // Update language selector visual state (flag and active states)
+      this.updateLanguageSelector();
 
       // Initialize AJAX navigation listeners
       this.initAjaxNavigationListeners();
@@ -547,11 +550,37 @@ class I18n {
    * Update language selector visual state
    */
   updateLanguageSelector() {
+    // Language names mapping
+    const languageNames = {
+      en: "English",
+      tr: "Türkçe",
+      ru: "Русский",
+      de: "Deutsch",
+      es: "Español",
+      sa: "العربية",
+      fr: "Français",
+    };
+
     // Update current flag in toggle button
     const currentFlag = document.getElementById("currentFlag");
     if (currentFlag) {
-      currentFlag.src = `assets/countryImages/${this.currentLanguage}.svg`;
-      currentFlag.alt = this.currentLanguage === "tr" ? "Türkçe" : "English";
+      const newSrc = `assets/countryImages/${this.currentLanguage}.svg`;
+      currentFlag.src = newSrc;
+      currentFlag.alt = languageNames[this.currentLanguage] || "English";
+
+      // Force image reload to ensure it displays correctly
+      currentFlag.onerror = () => {
+        console.error(`Failed to load flag: ${newSrc}`);
+      };
+      currentFlag.onload = () => {
+        console.log(`✅ Flag loaded successfully: ${newSrc}`);
+      };
+
+      console.log(
+        `Flag updated to: ${this.currentLanguage} (${
+          languageNames[this.currentLanguage]
+        })`
+      );
     }
 
     // Update active state in modal options
@@ -560,6 +589,7 @@ class I18n {
       const language = option.getAttribute("data-language");
       if (language === this.currentLanguage) {
         option.classList.add("active");
+        console.log(`Added active class to: ${language}`);
       } else {
         option.classList.remove("active");
       }
@@ -657,6 +687,12 @@ class I18n {
 
     // Reapply translations to new content
     this.applyTranslations();
+
+    // Update language selector visual state (flag and active states)
+    this.updateLanguageSelector();
+
+    // Re-initialize language selector if needed
+    this.initLanguageSelector();
 
     // Update HTML lang attribute
     this.updateHtmlLang();

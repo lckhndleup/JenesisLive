@@ -8,16 +8,21 @@
 
   // Early language detection
   function detectLanguageEarly() {
+    const supportedLanguages = ["en", "tr", "ru", "de", "es", "sa", "fr"];
+
     // Check localStorage first
     const savedLanguage = localStorage.getItem("language");
-    if (savedLanguage && ["en", "tr"].includes(savedLanguage)) {
+    if (savedLanguage && supportedLanguages.includes(savedLanguage)) {
       return savedLanguage;
     }
 
     // Check browser language
     const browserLang = navigator.language || navigator.userLanguage;
-    if (browserLang && browserLang.toLowerCase().startsWith("tr")) {
-      return "tr";
+    if (browserLang) {
+      const langCode = browserLang.toLowerCase().substr(0, 2);
+      if (supportedLanguages.includes(langCode)) {
+        return langCode;
+      }
     }
 
     // Default to English
