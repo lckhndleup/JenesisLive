@@ -382,14 +382,6 @@ class I18n {
       this.toggleLanguageModal();
     });
 
-    // Add explicit button debugging
-    newToggleBtn.style.border = "2px solid red"; // Debug border
-    setTimeout(() => {
-      if (newToggleBtn.style.border) {
-        newToggleBtn.style.border = "";
-      }
-    }, 3000);
-
     // FIX: Event delegation kullanarak language option click'lerini handle et
     // Modal ve modal content'e listener ekle
     modal.addEventListener("click", (e) => {
