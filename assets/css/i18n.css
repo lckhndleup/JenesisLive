@@ -112,6 +112,8 @@
   cursor: pointer;
   transition: all 0.2s ease;
   color: #333;
+  pointer-events: auto !important;
+  cursor: pointer !important;
 }
 
 .language-option:hover {
@@ -199,6 +201,7 @@
 
   .language-modal {
     right: -10px;
+    pointer-events: auto !important;
   }
 }
 

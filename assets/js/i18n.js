@@ -311,12 +311,14 @@ class I18n {
     });
 
     // FIX: Event delegation kullanarak language option click'lerini handle et
-    // Modal container'a tek bir listener ekle
+    // Modal ve modal content'e listener ekle
     modal.addEventListener("click", (e) => {
       console.log("Modal clicked, target:", e.target);
+      console.log("Target classes:", e.target.classList);
 
       // En yakın .language-option elementini bul
       const languageOption = e.target.closest(".language-option");
+      console.log("Found language option:", languageOption);
 
       if (languageOption) {
         e.preventDefault();
@@ -331,6 +333,49 @@ class I18n {
           console.error("Invalid language selected:", language);
         }
       }
+    });
+
+    // BACKUP: Modal content'e de listener ekle (CSS pointer-events sorunu varsa)
+    const modalContent = modal.querySelector(".language-modal-content");
+    if (modalContent) {
+      modalContent.addEventListener("click", (e) => {
+        console.log("Modal content clicked, target:", e.target);
+
+        const languageOption = e.target.closest(".language-option");
+        if (languageOption) {
+          e.preventDefault();
+          e.stopPropagation();
+
+          const language = languageOption.getAttribute("data-language");
+          console.log("Language option clicked from modal content:", language);
+
+          if (language && this.supportedLanguages.includes(language)) {
+            this.changeLanguage(language);
+          }
+        }
+      });
+    }
+
+    // BACKUP 2: Direkt language option'lara da listener ekle
+    const languageOptions = modal.querySelectorAll(".language-option");
+    console.log(
+      "Found language options for direct binding:",
+      languageOptions.length
+    );
+
+    languageOptions.forEach((option, index) => {
+      console.log(`Adding direct listener to option ${index}:`, option);
+      option.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const language = option.getAttribute("data-language");
+        console.log("Direct language option clicked:", language);
+
+        if (language && this.supportedLanguages.includes(language)) {
+          this.changeLanguage(language);
+        }
+      });
     });
 
     // Prepare document click handler but don't add it yet
