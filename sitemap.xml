@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Ana Sayfa -->
+  <url>
+    <loc>https://yoursite.vercel.app/</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Ana Sayfa Varyasyonları -->
+  <url>
+    <loc>https://yoursite.vercel.app/index-highlights.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://yoursite.vercel.app/index-playground.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://yoursite.vercel.app/index-portfolio.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Hakkında ve İletişim -->
+  <url>
+    <loc>https://yoursite.vercel.app/about.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://yoursite.vercel.app/contact.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Projeler -->
+  <url>
+    <loc>https://yoursite.vercel.app/project01.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://yoursite.vercel.app/project02.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://yoursite.vercel.app/project03.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://yoursite.vercel.app/project04.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://yoursite.vercel.app/project05.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://yoursite.vercel.app/project06.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://yoursite.vercel.app/project07.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://yoursite.vercel.app/project08.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Diğer Sayfalar -->
+  <url>
+    <loc>https://yoursite.vercel.app/multimedia.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yoursite.vercel.app/resources.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yoursite.vercel.app/shortcodes.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+</urlset>
