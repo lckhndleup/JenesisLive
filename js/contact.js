@@ -130,15 +130,16 @@ function ContactForm() {
 } //End ContactForm
 
 /*--------------------------------------------------
-Function Contact Map (Google Maps)
+Function Contact Map - İSTANBUL İKİTELLİ OSB
 ---------------------------------------------------*/
 function ContactMap() {
   if (jQuery("#map_canvas").length > 0) {
-    var latlng = new google.maps.LatLng(43.270441, 6.640888);
+    // İSTANBUL İKİTELLİ OSB KOORDİNATLARI (DOĞRU LOKASYON)
+    var latlng = new google.maps.LatLng(41.08015985557919, 28.811415826196423);
     var settings = {
-      zoom: 15,
+      zoom: 16, // Daha yakın görüntü için zoom artırıldı
       disableDefaultUI: true,
-      center: new google.maps.LatLng(43.270441, 6.640888),
+      center: new google.maps.LatLng(41.08015985557919, 28.811415826196423), // İstanbul koordinatları
       mapTypeControl: false,
       scrollwheel: false,
       draggable: true,
@@ -340,20 +341,25 @@ function ContactMap() {
       map.setCenter(center);
     });
 
+    // GÜNCELLENMIŞ İŞLETME BİLGİLERİ
     var contentString =
       '<div id="content-map-marker" style="text-align:center; padding-top:10px; padding-left:10px">' +
       '<div id="siteNotice">' +
       "</div>" +
-      '<h4 id="firstHeading" class="firstHeading" style="color:#000!important; font-weight:600; margin-bottom:0px;">Hello Friend!</h4>' +
+      '<h4 id="firstHeading" class="firstHeading" style="color:#000!important; font-weight:600; margin-bottom:5px;">Jenesis Buhar Teknolojileri</h4>' +
       '<div id="bodyContent">' +
-      '<p color:#999; font-size:14px; margin-bottom:10px">Here we are. Come to drink a coffee!</p>' +
+      '<p style="color:#666; font-size:13px; margin-bottom:8px; line-height:1.4;">İkitelli OSB Eski Turgut Özal Cad.<br>No:40/1 Z-03 Başakşehir İstanbul</p>' +
+      '<p style="color:#333; font-size:12px; margin-bottom:5px;"><strong>Tel:</strong> +90 (212) 595 16 56</p>' +
+      '<p style="color:#333; font-size:12px; margin-bottom:10px;"><strong>Email:</strong> info@jenesis.com.tr</p>' +
       "</div>" +
       "</div>";
 
     var infowindow = new google.maps.InfoWindow({
       content: contentString,
+      maxWidth: 300,
     });
 
+    // Özel marker (eğer images/marker.png dosyası varsa)
     var companyImage = new google.maps.MarkerImage(
       "images/marker.png",
       new google.maps.Size(58, 63), // Width and height of the marker
@@ -361,19 +367,29 @@ function ContactMap() {
       new google.maps.Point(35, 20) //Position of the marker
     );
 
-    var companyPos = new google.maps.LatLng(43.270441, 6.640888);
+    // İSTANBUL İKİTELLİ OSB KOORDİNATLARI (DOĞRU LOKASYON)
+    var companyPos = new google.maps.LatLng(
+      41.08015985557919,
+      28.811415826196423
+    );
     var companyMarker = new google.maps.Marker({
       position: companyPos,
       map: map,
-      icon: companyImage,
-      title: "Our Office",
+      icon: companyImage, // Eğer marker.png yoksa bu satırı silin
+      title: "Jenesis Buhar Teknolojileri - İkitelli OSB",
       zIndex: 3,
     });
 
+    // Marker'a tıklandığında bilgi kutusu açılır
     google.maps.event.addListener(companyMarker, "click", function () {
       infowindow.open(map, companyMarker);
     });
+
+    // Sayfa yüklendiğinde otomatik olarak bilgi kutusunu göster
+    setTimeout(function () {
+      infowindow.open(map, companyMarker);
+    }, 1000);
   }
 
   return false;
-} //End ContactMa
+} //End ContactMap
