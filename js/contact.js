@@ -376,7 +376,7 @@ function ContactMap() {
       position: companyPos,
       map: map,
       icon: companyImage, // Eğer marker.png yoksa bu satırı silin
-      title: "Jenesis Buhar Teknolojileri - İkitelli OSB",
+      title: "JENESIS BUHAR JENERATÖRLERİ",
       zIndex: 3,
     });
 
