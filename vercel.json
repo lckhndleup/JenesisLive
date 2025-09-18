@@ -1,12 +1,4 @@
 {
-    "functions": {
-        "api/contact.js": {
-            "runtime": "nodejs18.x"
-        },
-        "api/sitemap.js": {
-            "runtime": "nodejs18.x"
-        }
-    },
     "rewrites": [
         {
             "source": "/contact.php",
