@@ -346,7 +346,7 @@ function ContactMap() {
       '<div id="content-map-marker" style="text-align:center; padding-top:10px; padding-left:10px">' +
       '<div id="siteNotice">' +
       "</div>" +
-      '<h4 id="firstHeading" class="firstHeading" style="color:#000!important; font-weight:600; margin-bottom:5px;">Jenesis Buhar Teknolojileri</h4>' +
+      '<h4 id="firstHeading" class="firstHeading" style="color:#000!important; font-weight:600; margin-bottom:5px;">JENESIS BUHAR JENERATÖRLERİ</h4>' +
       '<div id="bodyContent">' +
       '<p style="color:#666; font-size:13px; margin-bottom:8px; line-height:1.4;">İkitelli OSB Eski Turgut Özal Cad.<br>No:40/1 Z-03 Başakşehir İstanbul</p>' +
       '<p style="color:#333; font-size:12px; margin-bottom:5px;"><strong>Tel:</strong> +90 (212) 595 16 56</p>' +
