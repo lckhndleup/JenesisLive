@@ -43,6 +43,12 @@
     <link href="css/all.min.css" rel="stylesheet" />
     <link href="assets/css/i18n.css" rel="stylesheet" />
 
+    <!-- EmailJS CDN - Backend'siz Mail Gönderimi İçin -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+
     <!-- Early Language Detection to Prevent FOUC -->
     <script src="assets/js/i18n-early.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -397,7 +403,7 @@
                       </div>
                     </div>
                     <div class="hero-footer-right">
-                      <div id="info-text"><span>office@bennet.com</span></div>
+                      <div id="info-text"><span>info@jenesis.com.tr</span></div>
                     </div>
                   </div>
                 </div>
@@ -455,9 +461,9 @@
                         <div id="contact-formular">
                           <div id="message"></div>
 
+                          <!-- EmailJS Form - action kaldırıldı -->
                           <form
                             method="post"
-                            action="contact.php"
                             name="contactform"
                             id="contactform"
                           >
@@ -469,16 +475,18 @@
                                 size="30"
                                 value=""
                                 placeholder="What's Your Name"
+                                required
                               /><label class="input_label"></label>
                             </div>
                             <div class="email-box">
                               <input
                                 name="email"
-                                type="text"
+                                type="email"
                                 id="email"
                                 size="30"
                                 value=""
                                 placeholder="Your Email"
+                                required
                               /><label class="input_label"></label>
                             </div>
                             <div class="message-box">
@@ -488,6 +496,7 @@
                                 rows="4"
                                 id="comments"
                                 placeholder="Tell Us About Your Project"
+                                required
                               ></textarea
                               ><label class="input_label slow"></label>
                             </div>
@@ -505,6 +514,7 @@
                                 id="verify"
                                 size="4"
                                 value=""
+                                required
                               />
                               <p class="required">
                                 <span>*</span> Captcha Validation
@@ -551,7 +561,8 @@
                             </div>
                             <div class="box-icon-content">
                               <h6 class="no-margins">
-                                35 M Str, New York, USA
+                                İkitelli OSB Eski Turgut Özal Cad. No:40/1 Z-03
+                                Başakşehir İstanbul
                               </h6>
                               <p>Address</p>
                             </div>
@@ -575,7 +586,8 @@
                               ></i>
                             </div>
                             <div class="box-icon-content">
-                              <h6 class="no-margins">0040 (7763) 574-8901</h6>
+                              <h6 class="no-margins">+90 (212) 595 16 56</h6>
+                              <h6 class="no-margins">+90 (212) 671 81 78</h6>
                               <p>Phone</p>
                             </div>
                           </div>
@@ -596,7 +608,7 @@
                           data-hover-message="Copy Mail"
                           data-clicked-message="Copied"
                         >
-                          <span>office@bennet.com</span>
+                          <span>info@jenesis.com.tr</span>
                         </div>
                       </div>
                       <!--/Row -->
@@ -718,6 +730,7 @@
     </div>
     <div id="rotate-device"></div>
 
+    <!-- JavaScript Files -->
     <script src="js/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
@@ -729,7 +742,6 @@
 
     <script src="js/clapat.js"></script>
     <script src="js/plugins.js"></script>
-
     <script src="js/common.js"></script>
     <script src="js/contact.js"></script>
     <script src="js/scripts.js"></script>
