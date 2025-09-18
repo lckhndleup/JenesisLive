@@ -1,0 +1,75 @@
+{
+    "rewrites": [
+        {
+            "source": "/contact.php",
+            "destination": "/api/contact"
+        },
+        {
+            "source": "/sitemap.xml",
+            "destination": "/api/sitemap"
+        }
+    ],
+    "redirects": [
+        {
+            "source": "/old-page.html",
+            "destination": "/new-page.html",
+            "permanent": true
+        }
+    ],
+    "headers": [
+        {
+            "source": "/(.*)",
+            "headers": [
+                {
+                    "key": "X-Content-Type-Options",
+                    "value": "nosniff"
+                },
+                {
+                    "key": "X-Frame-Options",
+                    "value": "SAMEORIGIN"
+                },
+                {
+                    "key": "X-XSS-Protection",
+                    "value": "1; mode=block"
+                },
+                {
+                    "key": "Referrer-Policy",
+                    "value": "strict-origin-when-cross-origin"
+                },
+                {
+                    "key": "Content-Security-Policy",
+                    "value": "default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.googleapis.com *.gstatic.com cdn.emailjs.com api.emailjs.com; style-src 'self' 'unsafe-inline' *.googleapis.com fonts.googleapis.com; img-src 'self' data: blob: *; font-src 'self' *.googleapis.com *.gstatic.com fonts.gstatic.com; connect-src 'self' *.emailjs.com api.emailjs.com *.googleapis.com; frame-src 'self' *.youtube.com *.vimeo.com; media-src 'self' data: blob:"
+                }
+            ]
+        },
+        {
+            "source": "/images/(.*)",
+            "headers": [
+                {
+                    "key": "Cache-Control",
+                    "value": "public, max-age=31536000, immutable"
+                }
+            ]
+        },
+        {
+            "source": "/css/(.*)",
+            "headers": [
+                {
+                    "key": "Cache-Control",
+                    "value": "public, max-age=31536000, immutable"
+                }
+            ]
+        },
+        {
+            "source": "/js/(.*)",
+            "headers": [
+                {
+                    "key": "Cache-Control",
+                    "value": "public, max-age=31536000, immutable"
+                }
+            ]
+        }
+    ],
+    "trailingSlash": false,
+    "cleanUrls": true
+}
