@@ -8,7 +8,11 @@
         "about": "Hakkımızda",
         "contact": "İletişim",
         "resources": "Kaynaklar",
-        "shortcodes": "Kısa Kodlar"
+        "shortcodes": "Kısa Kodlar",
+        "services": "Hizmetler",
+        "team": "Ekip",
+        "blog": "Blog",
+        "gallery": "Galeri"
     },
     "hero": {
         "title": "Markaları yaşam gücüyle buluşturuyoruz",

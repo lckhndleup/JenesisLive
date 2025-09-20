@@ -8,7 +8,11 @@
         "about": "À propos",
         "contact": "Contact",
         "resources": "Ressources",
-        "shortcodes": "Codes courts"
+        "shortcodes": "Codes courts",
+        "services": "Services",
+        "team": "Équipe",
+        "blog": "Blog",
+        "gallery": "Galerie"
     },
     "hero": {
         "title": "Donner vie aux marques grâce à",

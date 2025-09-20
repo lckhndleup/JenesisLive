@@ -8,7 +8,11 @@
         "about": "О нас",
         "contact": "Контакты",
         "resources": "Ресурсы",
-        "shortcodes": "Короткие коды"
+        "shortcodes": "Короткие коды",
+        "services": "Услуги",
+        "team": "Команда",
+        "blog": "Блог",
+        "gallery": "Галерея"
     },
     "hero": {
         "title": "Оживляем бренды через",

@@ -3,12 +3,16 @@
         "index": "الرئيسية",
         "projects": "المشاريع",
         "highlights": "المميزات",
-        "portfolio": "الأعمال",
-        "playground": "ساحة التجريب",
+        "portfolio": "المعرض",
+        "playground": "ساحة اللعب",
         "about": "حولنا",
         "contact": "اتصل بنا",
         "resources": "الموارد",
-        "shortcodes": "الرموز المختصرة"
+        "shortcodes": "الرموز القصيرة",
+        "services": "الخدمات",
+        "team": "الفريق",
+        "blog": "المدونة",
+        "gallery": "المعرض"
     },
     "hero": {
         "title": "إحياء العلامات التجارية من خلال",

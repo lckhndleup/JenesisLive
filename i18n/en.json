@@ -8,7 +8,11 @@
         "about": "About",
         "contact": "Contact",
         "resources": "Resources",
-        "shortcodes": "Shortcodes"
+        "shortcodes": "Shortcodes",
+        "services": "Services",
+        "team": "Team",
+        "blog": "Blog",
+        "gallery": "Gallery"
     },
     "hero": {
         "title": "Bringing brands to life through",

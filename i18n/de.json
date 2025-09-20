@@ -8,7 +8,11 @@
         "about": "Über uns",
         "contact": "Kontakt",
         "resources": "Ressourcen",
-        "shortcodes": "Kurzcodes"
+        "shortcodes": "Kurzcodes",
+        "services": "Dienstleistungen",
+        "team": "Team",
+        "blog": "Blog",
+        "gallery": "Galerie"
     },
     "hero": {
         "title": "Marken zum Leben erwecken durch",
