@@ -2,7 +2,7 @@
     "nav": {
         "index": "Anasayfa",
         "projects": "Projeler",
-        "highlights": "Öne Çıkanlar",
+        "highlights": "Hub sistemi nedir?",
         "portfolio": "Portföy",
         "playground": "Oyun Alanı",
         "about": "Hakkımızda",
@@ -12,7 +12,7 @@
     },
     "hero": {
         "title": "Markaları yaşam gücüyle buluşturuyoruz",
-        "subtitle": "yaratıcı web çözümleri",
+        "subtitle": "Yüksek teknoloji kazan daireleri",
         "scroll": "Keşfetmek için Kaydır",
         "featured": "Öne Çıkan Projeler"
     },
