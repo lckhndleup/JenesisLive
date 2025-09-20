@@ -4404,15 +4404,15 @@ p .link-text {
 /* WhatsApp Floating Button */
 .whatsapp-float {
   position: fixed;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   bottom: 70px;
   right: 60px;
   background-color: #25d366;
   color: #fff;
   border-radius: 50px;
   text-align: center;
-  font-size: 30px;
+  font-size: 20px;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
   z-index: 100;
   transition: all 0.3s ease;
