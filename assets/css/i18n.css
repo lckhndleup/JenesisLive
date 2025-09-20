@@ -20,13 +20,16 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding: 4px;
-  border-radius: 50%;
+  padding: 4px 8px;
+  border-radius: 25px;
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   outline: none;
   position: relative;
   z-index: 1001;
   pointer-events: auto !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .language-toggle-btn:hover {
@@ -37,6 +40,21 @@
 .language-toggle-btn:focus {
   outline: 2px solid #fa821d;
   outline-offset: 2px;
+}
+
+/* Language Text */
+.language-text {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  pointer-events: none;
+  transition: color 0.3s ease;
+}
+
+.language-toggle-btn:hover .language-text {
+  color: #fa821d;
 }
 
 /* Flag Circle */

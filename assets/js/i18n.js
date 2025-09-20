@@ -575,6 +575,15 @@ class I18n {
       );
     }
 
+    // Update language text
+    const languageText = document.querySelector(".language-text");
+    if (languageText && this.translations?.buttons?.language) {
+      languageText.textContent = this.translations.buttons.language;
+      console.log(
+        `Language text updated to: ${this.translations.buttons.language}`
+      );
+    }
+
     // Update active state in modal options
     const languageOptions = document.querySelectorAll(".language-option");
     languageOptions.forEach((option) => {
