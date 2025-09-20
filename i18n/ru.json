@@ -1,27 +1,26 @@
 {
     "nav": {
-        "index": "Главная",
-        "projects": "Проекты",
+        "index": "Корпоративный",
+        "projects": "Продукты",
         "highlights": "Основные моменты",
         "portfolio": "Портфолио",
         "playground": "Площадка",
-        "about": "О нас",
+        "about": "Документы",
         "contact": "Контакты",
-        "resources": "Ресурсы",
+        "resources": "Ссылки",
         "shortcodes": "Короткие коды",
-        "services": "Услуги",
-        "team": "Команда",
-        "blog": "Блог",
-        "gallery": "Галерея"
+        "services": "Ч.З.В.",
+        "team": "Медиа",
+        "blog": "Контакты"
     },
     "hero": {
         "title": "Оживляем бренды через",
         "subtitle": "креативные веб-решения",
         "scroll": "Прокрутите для изучения",
-        "featured": "Избранные проекты"
+        "featured": "Что такое система HUB?"
     },
     "buttons": {
-        "letstalk": "Давайте поговорим",
+        "letstalk": "Контакт",
         "language": "Язык"
     },
     "footer": {

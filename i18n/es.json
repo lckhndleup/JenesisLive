@@ -1,27 +1,26 @@
 {
     "nav": {
-        "index": "Inicio",
-        "projects": "Proyectos",
+        "index": "Corporativo",
+        "projects": "Productos",
         "highlights": "Destacados",
         "portfolio": "Portafolio",
         "playground": "Zona de juegos",
-        "about": "Acerca de",
+        "about": "Documentos",
         "contact": "Contacto",
-        "resources": "Recursos",
+        "resources": "Referencias",
         "shortcodes": "Códigos cortos",
-        "services": "Servicios",
-        "team": "Equipo",
-        "blog": "Blog",
-        "gallery": "Galería"
+        "services": "P.F.",
+        "team": "Medios",
+        "blog": "Contacto"
     },
     "hero": {
         "title": "Dando vida a las marcas a través de",
         "subtitle": "soluciones web creativas",
         "scroll": "Desplázate para explorar",
-        "featured": "Proyectos destacados"
+        "featured": "¿Qué es el sistema HUB?"
     },
     "buttons": {
-        "letstalk": "Hablemos",
+        "letstalk": "Contacto",
         "language": "Idioma"
     },
     "footer": {

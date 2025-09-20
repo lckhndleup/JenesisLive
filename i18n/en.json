@@ -1,27 +1,26 @@
 {
     "nav": {
-        "index": "Index",
-        "projects": "Projects",
+        "index": "Corporate",
+        "projects": "Products",
         "highlights": "Highlights",
         "portfolio": "Portfolio",
         "playground": "Playground",
-        "about": "About",
+        "about": "Documents",
         "contact": "Contact",
-        "resources": "Resources",
+        "resources": "References",
         "shortcodes": "Shortcodes",
-        "services": "Services",
-        "team": "Team",
-        "blog": "Blog",
-        "gallery": "Gallery"
+        "services": "F.A.Q",
+        "team": "Media",
+        "blog": "Contact"
     },
     "hero": {
         "title": "Bringing brands to life through",
         "subtitle": "creative web solutions",
         "scroll": "Scroll to Explore",
-        "featured": "Featured Projects"
+        "featured": "What is HUB system?"
     },
     "buttons": {
-        "letstalk": "Let's Talk",
+        "letstalk": "Contact",
         "language": "Language"
     },
     "footer": {

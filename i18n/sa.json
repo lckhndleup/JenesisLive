@@ -1,27 +1,26 @@
 {
     "nav": {
-        "index": "الرئيسية",
-        "projects": "المشاريع",
+        "index": "الشركة",
+        "projects": "المنتجات",
         "highlights": "المميزات",
         "portfolio": "المعرض",
         "playground": "ساحة اللعب",
-        "about": "حولنا",
+        "about": "الوثائق",
         "contact": "اتصل بنا",
-        "resources": "الموارد",
+        "resources": "المراجع",
         "shortcodes": "الرموز القصيرة",
-        "services": "الخدمات",
-        "team": "الفريق",
-        "blog": "المدونة",
-        "gallery": "المعرض"
+        "services": "الأسئلة الشائعة",
+        "team": "الإعلام",
+        "blog": "اتصل بنا"
     },
     "hero": {
         "title": "إحياء العلامات التجارية من خلال",
         "subtitle": "حلول الويب الإبداعية",
         "scroll": "مرر للاستكشاف",
-        "featured": "المشاريع المميزة"
+        "featured": "ما هو نظام HUB؟"
     },
     "buttons": {
-        "letstalk": "فلنتحدث",
+        "letstalk": "اتصال",
         "language": "اللغة"
     },
     "footer": {

@@ -1,27 +1,26 @@
 {
     "nav": {
-        "index": "Anasayfa",
-        "projects": "Projeler",
+        "index": "Kurumsal",
+        "projects": "Ürünler",
         "highlights": "Hub sistemi nedir?",
         "portfolio": "Portföy",
         "playground": "Oyun Alanı",
-        "about": "Hakkımızda",
+        "about": "Dökümanlar",
         "contact": "İletişim",
-        "resources": "Kaynaklar",
+        "resources": "Referanslar",
         "shortcodes": "Kısa Kodlar",
-        "services": "Hizmetler",
-        "team": "Ekip",
-        "blog": "Blog",
-        "gallery": "Galeri"
+        "services": "S.S.S",
+        "team": "Medya",
+        "blog": "İletişim"
     },
     "hero": {
         "title": "Markaları yaşam gücüyle buluşturuyoruz",
         "subtitle": "Yüksek teknoloji kazan daireleri",
         "scroll": "Keşfetmek için Kaydır",
-        "featured": "Öne Çıkan Projeler"
+        "featured": "HUB sistemi nedir?"
     },
     "buttons": {
-        "letstalk": "Konuşalım",
+        "letstalk": "İletişim",
         "language": "Dil"
     },
     "footer": {

@@ -1,27 +1,26 @@
 {
     "nav": {
-        "index": "Startseite",
-        "projects": "Projekte",
+        "index": "Unternehmen",
+        "projects": "Produkte",
         "highlights": "Highlights",
         "portfolio": "Portfolio",
         "playground": "Spielplatz",
-        "about": "Über uns",
+        "about": "Dokumente",
         "contact": "Kontakt",
-        "resources": "Ressourcen",
+        "resources": "Referenzen",
         "shortcodes": "Kurzcodes",
-        "services": "Dienstleistungen",
-        "team": "Team",
-        "blog": "Blog",
-        "gallery": "Galerie"
+        "services": "F.A.Q.",
+        "team": "Medien",
+        "blog": "Kontakt"
     },
     "hero": {
         "title": "Marken zum Leben erwecken durch",
         "subtitle": "kreative Web-Lösungen",
         "scroll": "Scrollen zum Erkunden",
-        "featured": "Ausgewählte Projekte"
+        "featured": "Was ist HUB-System?"
     },
     "buttons": {
-        "letstalk": "Sprechen wir",
+        "letstalk": "Kontakt",
         "language": "Sprache"
     },
     "footer": {

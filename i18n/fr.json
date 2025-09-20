@@ -1,27 +1,26 @@
 {
     "nav": {
-        "index": "Accueil",
-        "projects": "Projets",
+        "index": "Entreprise",
+        "projects": "Produits",
         "highlights": "Points forts",
         "portfolio": "Portfolio",
         "playground": "Terrain de jeu",
-        "about": "À propos",
+        "about": "Documents",
         "contact": "Contact",
-        "resources": "Ressources",
+        "resources": "Références",
         "shortcodes": "Codes courts",
-        "services": "Services",
-        "team": "Équipe",
-        "blog": "Blog",
-        "gallery": "Galerie"
+        "services": "F.A.Q.",
+        "team": "Médias",
+        "blog": "Contact"
     },
     "hero": {
         "title": "Donner vie aux marques grâce à",
         "subtitle": "des solutions web créatives",
         "scroll": "Faites défiler pour explorer",
-        "featured": "Projets en vedette"
+        "featured": "Qu'est-ce que le système HUB?"
     },
     "buttons": {
-        "letstalk": "Parlons",
+        "letstalk": "Contact",
         "language": "Langue"
     },
     "footer": {
