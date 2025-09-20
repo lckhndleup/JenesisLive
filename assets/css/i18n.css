@@ -21,7 +21,7 @@
   border: none;
   cursor: pointer;
   padding: 4px 8px;
-  border-radius: 25px;
+  border-radius: 22px;
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   outline: none;
   position: relative;
@@ -30,6 +30,8 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  height: 44px;
+  box-sizing: border-box;
 }
 
 .language-toggle-btn:hover {
@@ -38,7 +40,7 @@
 }
 
 .language-toggle-btn:focus {
-  outline: 2px solid #fa821d;
+  outline: 2px solid #000;
   outline-offset: 2px;
 }
 
@@ -54,16 +56,16 @@
 }
 
 .language-toggle-btn:hover .language-text {
-  color: #fa821d;
+  color: #000;
 }
 
 /* Flag Circle */
 .flag-circle {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   overflow: hidden;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid #000;
   transition: all 0.3s ease;
   background: #fff;
   display: flex;
@@ -81,7 +83,7 @@
 }
 
 .language-toggle-btn:hover .flag-circle {
-  border-color: #fa821d;
+  border-color: #000;
   transform: scale(1.05);
 }
 
