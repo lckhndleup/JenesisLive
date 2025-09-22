@@ -328,6 +328,61 @@
   padding-right: 30px;
 }
 
+/* Jenesis sayfası için özel hero-title ayarları */
+.jenesis-hero-title::before,
+.jenesis-hero-title::after {
+  top: calc(50% - 0px); /* Her ikisini de aynı hizada tut */
+}
+
+.jenesis-hero-title::after {
+  right: -200px; /* Daha sağa kaydır */
+}
+
+.caption-animated .jenesis-hero-title::before,
+.caption-animated .jenesis-hero-title::after {
+  top: calc(50% - 0px); /* Animasyonlu durumda da aynı hizada */
+}
+
+.caption-animated .jenesis-hero-title::after {
+  right: -180px; /* Animasyon durumunda da sağa kaydır */
+}
+
+/* Responsive ayarları */
+@media only screen and (max-width: 1024px) {
+  .jenesis-hero-title::after {
+    right: -150px;
+  }
+
+  .caption-animated .jenesis-hero-title::after {
+    right: -130px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .jenesis-hero-title::before {
+    left: 0;
+    top: -45px; /* Mobilde üstte */
+  }
+
+  .jenesis-hero-title::after {
+    right: 0;
+    bottom: -50px; /* Mobilde altta */
+    top: auto;
+    width: 100%;
+  }
+
+  .caption-animated .jenesis-hero-title::before {
+    left: 0;
+    top: -20px;
+  }
+
+  .caption-animated .jenesis-hero-title::after {
+    right: 0;
+    bottom: -25px;
+    top: auto;
+  }
+}
+
 #hero-interaction {
   position: fixed;
   width: 100%;
