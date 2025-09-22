@@ -1,3 +1,52 @@
+/* Space Colony Font Family - Gerçek TTF dosyaları */
+@font-face {
+  font-family: "Space Colony";
+  src: url("../webfonts/SpaceColony-UltraLight.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Colony";
+  src: url("../webfonts/SpaceColony-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Colony";
+  src: url("../webfonts/SpaceColony-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Colony";
+  src: url("../webfonts/SpaceColony-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Colony";
+  src: url("../webfonts/SpaceColony-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Colony";
+  src: url("../webfonts/SpaceColony-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 /*--------------------------------------------------
 	Hero Section
 ---------------------------------------------------*/
@@ -329,6 +378,65 @@
 }
 
 /* Jenesis sayfası için özel hero-title ayarları */
+
+/* Space Colony Font uygulaması - Ana hero title */
+.jenesis-hero-title {
+  font-family: "Space Colony", sans-serif !important;
+  font-weight: 600 !important;
+  font-size: calc(1rem + 8vw) !important; /* Daha küçük boyut */
+  line-height: calc(1rem + 9vw) !important;
+}
+
+/* JENESİS yazısını daha da küçültmek için özel span kuralı */
+.jenesis-hero-title span {
+  font-family: "Space Colony", sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 0.8em !important; /* Ana boyutun %80'i */
+  display: block !important;
+}
+
+/* Space Colony Font uygulaması - Before ve After pseudo-elementleri */
+.jenesis-hero-title::before,
+.jenesis-hero-title::after {
+  font-family: "Space Colony", sans-serif !important;
+  font-weight: 400 !important;
+  top: calc(50% - 0px); /* Her ikisini de aynı hizada tut */
+}
+
+/* Mobil cihazlarda daha küçük boyut */
+@media only screen and (max-width: 767px) {
+  .jenesis-hero-title {
+    font-size: calc(1rem + 6vw) !important;
+    line-height: calc(1rem + 7vw) !important;
+  }
+
+  .jenesis-hero-title span {
+    font-size: 0.7em !important; /* Mobilde daha küçük */
+  }
+}
+
+/* Tüm hero title elementleri için Space Colony font */
+#hero .hero-title::before,
+#hero .hero-title::after,
+#hero-caption .hero-title::before,
+#hero-caption .hero-title::after {
+  font-family: "Space Colony", sans-serif !important;
+  font-weight: 400 !important;
+}
+
+#hero .hero-title span,
+#hero-caption .hero-title span,
+#hero .hero-title div span,
+#hero-caption .hero-title div span {
+  font-family: "Space Colony", sans-serif !important;
+  font-weight: 600 !important;
+}
+
+#hero .hero-title,
+#hero-caption .hero-title {
+  font-family: "Space Colony", sans-serif !important;
+  font-weight: 600 !important;
+}
 .jenesis-hero-title::before,
 .jenesis-hero-title::after {
   top: calc(50% - 0px); /* Her ikisini de aynı hizada tut */
@@ -1824,4 +1932,38 @@
     padding-left: 20px;
     padding-right: 20px;
   }
+}
+
+/* ============================================
+   SPACE COLONY FONT OVERRIDE - GÜÇLÜ KURALLAR
+   ============================================ */
+
+/* En yüksek öncelikli Space Colony font override kuralları */
+*[class*="hero-title"]::before,
+*[class*="hero-title"]::after {
+  font-family: "Space Colony", sans-serif !important;
+  font-weight: 400 !important;
+}
+
+*[class*="hero-title"] span,
+*[class*="hero-title"] > div > span {
+  font-family: "Space Colony", sans-serif !important;
+  font-weight: 600 !important;
+}
+
+/* En spesifik override kuralları */
+body #hero-caption .hero-title::before,
+body #hero-caption .hero-title::after,
+body #hero .hero-title::before,
+body #hero .hero-title::after {
+  font-family: "Space Colony", sans-serif !important;
+  font-weight: 400 !important;
+}
+
+body #hero-caption .hero-title span,
+body #hero .hero-title span,
+body #hero-caption .hero-title div span,
+body #hero .hero-title div span {
+  font-family: "Space Colony", sans-serif !important;
+  font-weight: 600 !important;
 }
