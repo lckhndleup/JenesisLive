@@ -34,14 +34,8 @@
   box-sizing: border-box;
 }
 
-.language-toggle-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
 .language-toggle-btn:focus {
-  outline: 2px solid #000;
-  outline-offset: 2px;
+  outline: none;
 }
 
 /* Language Text */
@@ -65,7 +59,7 @@
   height: 28px;
   border-radius: 50%;
   overflow: hidden;
-  border: 2px solid #000;
+  border: 2px solid transparent;
   transition: all 0.3s ease;
   background: #fff;
   display: flex;
@@ -80,11 +74,6 @@
   object-fit: cover;
   display: block;
   pointer-events: none;
-}
-
-.language-toggle-btn:hover .flag-circle {
-  border-color: #000;
-  transform: scale(1.05);
 }
 
 /* Language Modal */
