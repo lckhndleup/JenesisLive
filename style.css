@@ -4523,3 +4523,89 @@ p .link-text {
     height: 50px !important;
   }
 }
+
+/* Custom styles for long navigation texts */
+.next-hero-title-long::before {
+  font-size: 12px !important;
+  line-height: 14px !important;
+  left: -250px !important;
+  white-space: normal !important;
+  max-width: 240px !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+  word-wrap: break-word !important;
+  hyphens: auto !important;
+}
+
+.next-hero-title-long::after {
+  font-size: 12px !important;
+  line-height: 14px !important;
+  right: -250px !important;
+  white-space: normal !important;
+  max-width: 240px !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+  word-wrap: break-word !important;
+  hyphens: auto !important;
+}
+
+/* Fix center text font size for long titles */
+.next-hero-title-long span {
+  font-size: calc(1rem + 6vw) !important;
+  line-height: calc(1rem + 9vw) !important;
+  white-space: nowrap !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+  letter-spacing: -0.2vw !important;
+}
+
+/* Adjust positioning to align with side texts */
+.next-hero-title-long::before {
+  top: calc(50% - 10px) !important;
+  transform: translateY(-50%) !important;
+}
+
+.next-hero-title-long::after {
+  top: calc(50% - 10px) !important;
+  transform: translateY(-50%) !important;
+}
+
+@media screen and (max-width: 1200px) {
+  .next-hero-title-long::before {
+    left: -200px !important;
+    max-width: 190px !important;
+    font-size: 11px !important;
+  }
+
+  .next-hero-title-long::after {
+    right: -200px !important;
+    max-width: 190px !important;
+    font-size: 11px !important;
+  }
+
+  .next-hero-title-long span {
+    font-size: calc(1rem + 6vw) !important;
+    line-height: calc(1rem + 7vw) !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .next-hero-title-long::before {
+    left: -150px !important;
+    max-width: 140px !important;
+    font-size: 10px !important;
+    line-height: 12px !important;
+  }
+
+  .next-hero-title-long::after {
+    right: -150px !important;
+    max-width: 140px !important;
+    font-size: 10px !important;
+    line-height: 12px !important;
+  }
+
+  .next-hero-title-long span {
+    font-size: calc(1rem + 4vw) !important;
+    line-height: calc(1rem + 5vw) !important;
+  }
+}
