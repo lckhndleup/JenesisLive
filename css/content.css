@@ -387,6 +387,7 @@
   font-weight: 600 !important;
   font-size: calc(1rem + 8vw) !important; /* Daha küçük boyut */
   line-height: calc(1rem + 9vw) !important;
+  color: #f95806 !important; /* JENESIS yazısının rengi */
 }
 
 /* Jenesis için ::after pseudo-elementini gizle */
