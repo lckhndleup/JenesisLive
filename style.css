@@ -4627,7 +4627,7 @@ p .link-text {
   position: absolute !important;
   font-size: 14px !important;
   line-height: 16px !important;
-  left: -480px !important;
+  left: -320px !important;
   white-space: normal !important;
   max-width: 260px !important;
   overflow: visible !important;
@@ -4647,7 +4647,7 @@ p .link-text {
   position: absolute !important;
   font-size: 14px !important;
   line-height: 16px !important;
-  right: -550px !important;
+  right: -380px !important;
   white-space: normal !important;
   max-width: 260px !important;
   overflow: visible !important;
