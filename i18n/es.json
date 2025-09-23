@@ -17,16 +17,24 @@
         "title": "Dando vida a las marcas a través de",
         "subtitle": "soluciones web creativas",
         "scroll": "Desplázate para explorar",
-        "featured": "¿Qué es el sistema HUB?"
+        "featured": "¿Qué es el sistema HUB?",
+        "infoBefore": "Desde 1984",
+        "infoAfter": "GENERADOR DE VAPOR"
     },
     "buttons": {
         "letstalk": "Contacto",
-        "language": "Idioma"
+        "language": "Idioma",
+        "more": "Más información",
+        "media": "Medios",
+        "menu": "Menú"
     },
     "footer": {
         "copyright": "© 2024 ClaPat Studio. Todos los derechos reservados.",
         "terms": "Términos de servicio",
-        "privacy": "Política de privacidad"
+        "privacy": "Política de privacidad",
+        "backTop": "Volver arriba",
+        "follow": "Síguenos",
+        "rights": "Todos los derechos reservados."
     },
     "meta": {
         "title": "Jenesis - Generador de vapor | Caldera de vapor | Producción de vapor eficiente",
@@ -35,5 +43,58 @@
     "preloader": {
         "loading": "Cargando",
         "wait": "espera, espera.."
+    },
+    "landing": {
+        "headline": {
+            "base": "En vapor",
+            "develop": "innovando",
+            "produce": "produciendo",
+            "solve": "ofreciendo soluciones"
+        },
+        "description": "Generadores de vapor de 100 a 30.000 kg/h, 1–100 barg, 90–99 % de eficiencia, disponibles en versiones fijas, móviles y en cascada.",
+        "premium": "Para quienes buscan lo mejor",
+        "promise": {
+            "title": "Tú pides, nosotros lo hacemos",
+            "lines": {
+                "character": "Al carácter de sus procesos",
+                "boiler": "y a su sala de calderas",
+                "solutions": "creemos soluciones a medida",
+                "footprint": "para sus objetivos de huella de carbono",
+                "support": "y aportemos nuestro valor"
+            },
+            "after": {
+                "inspire": "Inspira",
+                "create": "Crea"
+            }
+        },
+        "contact": {
+            "address": "Dirección",
+            "phone": "Teléfono",
+            "prompt": "¿Listos para trabajar juntos?"
+        }
+    },
+    "slider": {
+        "flash": {
+            "title": "Sistema de recuperación de vapor flash",
+            "subtitle": "Convierta el agua vertida en agua caliente gratuita"
+        },
+        "flue": {
+            "title": "Sistema de recuperación de gases de combustión",
+            "subtitle": "La forma de reducir tu huella de carbono y ahorrar dinero"
+        },
+        "jetpack": {
+            "title": "Paquetes Jetpack de producción de agua caliente sin acumulación",
+            "subtitle": "Agua caliente bajo demanda a partir de vapor: sin tanques de almacenamiento ni riesgo de legionela"
+        },
+        "degasser": {
+            "title": "Sistemas de desgasificación y preparación de agua de alimentación",
+            "subtitle": "Larga vida a la sala de calderas con agua de alimentación correctamente tratada"
+        }
+    },
+    "pageNav": {
+        "goto": "IR A",
+        "infoBefore": "Generadores de vapor en cascada",
+        "infoAfter": "Bienvenidos a las salas de calderas del futuro",
+        "title": "SISTEMA HUB"
     }
 }

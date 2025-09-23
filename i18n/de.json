@@ -17,16 +17,24 @@
         "title": "Marken zum Leben erwecken durch",
         "subtitle": "kreative Web-Lösungen",
         "scroll": "Scrollen zum Erkunden",
-        "featured": "Was ist HUB-System?"
+        "featured": "Was ist HUB-System?",
+        "infoBefore": "Seit 1984",
+        "infoAfter": "DAMPFERZEUGER"
     },
     "buttons": {
         "letstalk": "Kontakt",
-        "language": "Sprache"
+        "language": "Sprache",
+        "more": "Weitere Infos",
+        "media": "Medien",
+        "menu": "Menü"
     },
     "footer": {
         "copyright": "© 2024 ClaPat Studio. Alle Rechte vorbehalten.",
         "terms": "Nutzungsbedingungen",
-        "privacy": "Datenschutzrichtlinie"
+        "privacy": "Datenschutzrichtlinie",
+        "backTop": "Nach oben",
+        "follow": "Folgen Sie uns",
+        "rights": "Alle Rechte vorbehalten."
     },
     "meta": {
         "title": "Jenesis - Dampferzeuger | Dampfkessel | Effiziente Dampferzeugung",
@@ -35,5 +43,58 @@
     "preloader": {
         "loading": "Wird geladen",
         "wait": "warten, warten.."
+    },
+    "landing": {
+        "headline": {
+            "base": "Im Dampf",
+            "develop": "innovativ",
+            "produce": "produzierend",
+            "solve": "Lösungen bietend"
+        },
+        "description": "Dampferzeuger von 100 bis 30.000 kg/h, 1–100 barg, 90–99 % Wirkungsgrad, als stationäre, mobile und Kaskadenlösungen.",
+        "premium": "Für alle, die das Beste suchen",
+        "promise": {
+            "title": "Sie wünschen, wir realisieren",
+            "lines": {
+                "character": "Zum Charakter Ihrer Prozesse",
+                "boiler": "und zu Ihrem Kesselhaus",
+                "solutions": "entwickeln wir maßgeschneiderte Lösungen",
+                "footprint": "für Ihre CO₂-Ziele",
+                "support": "und leisten unseren Beitrag"
+            },
+            "after": {
+                "inspire": "Inspirieren",
+                "create": "Gestalten"
+            }
+        },
+        "contact": {
+            "address": "Adresse",
+            "phone": "Telefon",
+            "prompt": "Bereit, gemeinsam durchzustarten?"
+        }
+    },
+    "slider": {
+        "flash": {
+            "title": "Flash-Dampf-Rückgewinnungssystem",
+            "subtitle": "Gewinnen Sie kostenloses Warmwasser aus abgeleitetem Wasser"
+        },
+        "flue": {
+            "title": "Rauchgas-Rückgewinnungssystem",
+            "subtitle": "Der Weg, Ihren CO₂-Fußabdruck zu senken und Geld zu sparen"
+        },
+        "jetpack": {
+            "title": "Jetpack Warmwasserpakete ohne Pufferspeicher",
+            "subtitle": "Bedarfsgerechte Warmwassererzeugung aus Dampf – ohne Speicher, ohne Legionellenrisiko"
+        },
+        "degasser": {
+            "title": "Entgaser- und Speisewasseraufbereitungssysteme",
+            "subtitle": "Längere Lebensdauer des Kesselhauses durch optimal aufbereitetes Speisewasser"
+        }
+    },
+    "pageNav": {
+        "goto": "ZUR SEITE",
+        "infoBefore": "Kaskaden-Dampferzeuger",
+        "infoAfter": "Willkommen in den Kesselhäusern der Zukunft",
+        "title": "HUB-SYSTEM"
     }
 }

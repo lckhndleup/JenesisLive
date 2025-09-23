@@ -17,16 +17,24 @@
         "title": "Bringing brands to life through",
         "subtitle": "creative web solutions",
         "scroll": "Scroll to Explore",
-        "featured": "What is HUB system?"
+        "featured": "What is HUB system?",
+        "infoBefore": "Since 1984",
+        "infoAfter": "STEAM GENERATOR"
     },
     "buttons": {
         "letstalk": "Contact",
-        "language": "Language"
+        "language": "Language",
+        "more": "More Info",
+        "media": "Media",
+        "menu": "Menu"
     },
     "footer": {
         "copyright": "© 2024 ClaPat Studio. All rights reserved.",
         "terms": "Terms of Service",
-        "privacy": "Privacy Policy"
+        "privacy": "Privacy Policy",
+        "backTop": "Back to Top",
+        "follow": "Follow Us",
+        "rights": "All rights reserved."
     },
     "meta": {
         "title": "Jenesis - Steam Generator | Steam Boiler | Efficient Steam Production",
@@ -35,5 +43,58 @@
     "preloader": {
         "loading": "Loading",
         "wait": "wait, wait.."
+    },
+    "landing": {
+        "headline": {
+            "base": "In steam",
+            "develop": "innovating",
+            "produce": "manufacturing",
+            "solve": "delivering solutions"
+        },
+        "description": "Steam generators from 100 to 30,000 kg/h, 1–100 barg, 90–99% efficiency, available in stationary, mobile, and cascade configurations.",
+        "premium": "For those who seek the best",
+        "promise": {
+            "title": "You ask, we deliver",
+            "lines": {
+                "character": "To the nature of your processes",
+                "boiler": "and your boiler room",
+                "solutions": "let’s craft tailored solutions",
+                "footprint": "for your carbon-footprint targets",
+                "support": "and deliver our contribution"
+            },
+            "after": {
+                "inspire": "Inspire",
+                "create": "Create"
+            }
+        },
+        "contact": {
+            "address": "Address",
+            "phone": "Phone",
+            "prompt": "Ready to work together?"
+        }
+    },
+    "slider": {
+        "flash": {
+            "title": "Flash steam recovery system",
+            "subtitle": "Turn discharged water into free hot water"
+        },
+        "flue": {
+            "title": "Flue gas recovery system",
+            "subtitle": "The way to reduce your carbon footprint and earn savings"
+        },
+        "jetpack": {
+            "title": "Jetpack hot-water packages without accumulation tanks",
+            "subtitle": "Produce just-in-time hot water from steam—no storage tanks, no legionella risk"
+        },
+        "degasser": {
+            "title": "Deaerator and feedwater conditioning systems",
+            "subtitle": "Extend boiler house life with properly treated feedwater"
+        }
+    },
+    "pageNav": {
+        "goto": "GO TO",
+        "infoBefore": "Cascade steam generators",
+        "infoAfter": "Welcome to the boiler rooms of the future",
+        "title": "HUB SYSTEM"
     }
 }

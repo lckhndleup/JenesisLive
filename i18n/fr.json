@@ -17,16 +17,24 @@
         "title": "Donner vie aux marques grâce à",
         "subtitle": "des solutions web créatives",
         "scroll": "Faites défiler pour explorer",
-        "featured": "Qu'est-ce que le système HUB?"
+        "featured": "Qu'est-ce que le système HUB?",
+        "infoBefore": "Depuis 1984",
+        "infoAfter": "GÉNÉRATEUR DE VAPEUR"
     },
     "buttons": {
         "letstalk": "Contact",
-        "language": "Langue"
+        "language": "Langue",
+        "more": "En savoir plus",
+        "media": "Médias",
+        "menu": "Menu"
     },
     "footer": {
         "copyright": "© 2024 ClaPat Studio. Tous droits réservés.",
         "terms": "Conditions de service",
-        "privacy": "Politique de confidentialité"
+        "privacy": "Politique de confidentialité",
+        "backTop": "Haut de page",
+        "follow": "Suivez-nous",
+        "rights": "Tous droits réservés."
     },
     "meta": {
         "title": "Jenesis - Générateur de vapeur | Chaudière à vapeur | Production de vapeur efficace",
@@ -35,5 +43,58 @@
     "preloader": {
         "loading": "Chargement",
         "wait": "attends, attends.."
+    },
+    "landing": {
+        "headline": {
+            "base": "Dans la vapeur",
+            "develop": "innovant",
+            "produce": "produisant",
+            "solve": "apportant des solutions"
+        },
+        "description": "Générateurs de vapeur de 100 à 30 000 kg/h, 1–100 barg, rendement de 90 à 99 %, versions fixes, mobiles et en cascade.",
+        "premium": "Pour ceux qui visent l’excellence",
+        "promise": {
+            "title": "Vous demandez, nous réalisons",
+            "lines": {
+                "character": "Au caractère de vos procédés",
+                "boiler": "et à votre chaufferie",
+                "solutions": "créons des solutions sur mesure",
+                "footprint": "pour vos objectifs d’empreinte carbone",
+                "support": "et apportons notre contribution"
+            },
+            "after": {
+                "inspire": "Inspirer",
+                "create": "Créer"
+            }
+        },
+        "contact": {
+            "address": "Adresse",
+            "phone": "Téléphone",
+            "prompt": "Prêts à collaborer ?"
+        }
+    },
+    "slider": {
+        "flash": {
+            "title": "Système de récupération de vapeur flash",
+            "subtitle": "Transformez l’eau rejetée en eau chaude gratuite"
+        },
+        "flue": {
+            "title": "Système de récupération des gaz de fumée",
+            "subtitle": "La solution pour réduire votre empreinte carbone tout en économisant"
+        },
+        "jetpack": {
+            "title": "Packs Jetpack de production d’eau chaude sans accumulation",
+            "subtitle": "Eau chaude à la demande à partir de vapeur – sans ballon ni risque de légionellose"
+        },
+        "degasser": {
+            "title": "Systèmes de dégazage et de préparation de l’eau d’alimentation",
+            "subtitle": "Une chaufferie durable grâce à une eau d’alimentation correctement traitée"
+        }
+    },
+    "pageNav": {
+        "goto": "ACCÉDER",
+        "infoBefore": "Générateurs de vapeur en cascade",
+        "infoAfter": "Bienvenue dans les chaufferies du futur",
+        "title": "SYSTÈME HUB"
     }
 }
