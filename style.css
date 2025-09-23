@@ -2979,6 +2979,7 @@ scale-up .link,
   box-sizing: border-box;
   pointer-events: initial;
   transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  margin-right: 50px;
 }
 
 .light-content .socials-wrap {
