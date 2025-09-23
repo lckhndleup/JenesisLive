@@ -126,13 +126,13 @@
 }
 
 .language-option:hover {
-  background: rgba(250, 130, 29, 0.1);
-  color: #fa821d;
+  background: #fa821d;
+  color: #0c0c0c;
 }
 
 .language-option.active {
-  background: rgba(250, 130, 29, 0.15);
-  color: #fa821d;
+  background: #fa821d;
+  color: #0c0c0c;
 }
 
 .language-option .flag-circle {
@@ -159,8 +159,13 @@
 }
 
 .invert-header .language-option:hover {
-  background: rgba(250, 130, 29, 0.15);
-  color: #fa821d;
+  background: #fa821d;
+  color: #0c0c0c;
+}
+
+.invert-header .language-option.active {
+  background: #fa821d;
+  color: #0c0c0c;
 }
 
 .invert-header .flag-circle {
