@@ -4406,8 +4406,8 @@ p .link-text {
   position: fixed;
   width: 50px;
   height: 50px;
-  bottom: 70px;
-  right: 70px;
+  bottom: 40px;
+  right: 60px;
   background-color: #25d366;
   color: #fff;
   border-radius: 50px;
@@ -4451,7 +4451,7 @@ p .link-text {
   .whatsapp-float {
     width: 50px;
     height: 50px;
-    bottom: 20px;
+    bottom: 30px;
     right: 20px;
   }
   .whatsapp-icon {
