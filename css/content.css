@@ -273,13 +273,21 @@
 
 .landing-video {
   height: auto;
-  width: 100%;
+  width: 140%;
+  max-width: 700px;
   aspect-ratio: 15/9;
   background-color: #000;
   display: block;
   position: relative;
   border-radius: 6px;
   overflow: hidden;
+}
+
+.landing-intro-wrapper .vertical-parallax img.bgvid {
+  width: 120% !important;
+  max-width: none !important;
+  transform: scale(1.05);
+  transform-origin: center;
 }
 
 .new-hero-title {

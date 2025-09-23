@@ -82,6 +82,10 @@ body.hidden {
   font-weight: 400;
 }
 
+.no-wrap {
+  white-space: nowrap !important;
+}
+
 html,
 body,
 div,
