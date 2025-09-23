@@ -4615,3 +4615,79 @@ p .link-text {
     line-height: calc(1rem + 5vw) !important;
   }
 }
+
+/* Custom styles for JENESIS title with side texts */
+.jenesis-hero-title::before {
+  content: attr(data-infoTextBefore) !important;
+  position: absolute !important;
+  font-size: 14px !important;
+  line-height: 16px !important;
+  left: -280px !important;
+  white-space: normal !important;
+  max-width: 260px !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+  word-wrap: break-word !important;
+  hyphens: auto !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #333 !important;
+}
+
+.jenesis-hero-title::after {
+  content: attr(data-infoTextAfter) !important;
+  position: absolute !important;
+  font-size: 14px !important;
+  line-height: 16px !important;
+  right: -550px !important;
+  white-space: normal !important;
+  max-width: 260px !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+  word-wrap: break-word !important;
+  hyphens: auto !important;
+  top: 100% !important;
+  transform: translateY(-50%) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #333 !important;
+}
+
+.jenesis-hero-title {
+  position: relative !important;
+  display: inline-block !important;
+}
+
+@media screen and (max-width: 1200px) {
+  .jenesis-hero-title::before {
+    left: -230px !important;
+    max-width: 220px !important;
+    font-size: 13px !important;
+  }
+
+  .jenesis-hero-title::after {
+    right: -230px !important;
+    max-width: 220px !important;
+    font-size: 13px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .jenesis-hero-title::before {
+    left: -180px !important;
+    max-width: 170px !important;
+    font-size: 12px !important;
+    line-height: 14px !important;
+  }
+
+  .jenesis-hero-title::after {
+    right: -180px !important;
+    max-width: 170px !important;
+    font-size: 12px !important;
+    line-height: 14px !important;
+  }
+}
