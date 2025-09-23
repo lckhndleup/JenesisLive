@@ -2142,6 +2142,10 @@ Function Scroll Effects
     if ($(".text-rotator").length > 0) {
       $(".text-rotator").each(function () {
         var textRotator = $(this);
+
+        if (textRotator.hasClass("text-rotator-static")) {
+          return;
+        }
         var textRotatorWrapper = textRotator.closest(".text-rotator-wrapper");
         var parent = textRotatorWrapper.parent();
         var parentLineHeight = parseFloat(
