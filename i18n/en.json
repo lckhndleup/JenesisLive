@@ -46,10 +46,10 @@
     },
     "landing": {
         "headline": {
-            "base": "In steam",
-            "develop": "innovating",
-            "produce": "manufacturing",
-            "solve": "delivering solutions"
+            "base": "The future of ",
+            "develop": "boiler rooms",
+            "produce": "steam systems",
+            "solve": "steam generators"
         },
         "description": "Steam generators from 100 to 30,000 kg/h, 1–100 barg, 90–99% efficiency, available in stationary, mobile, and cascade configurations.",
         "premium": "For those who seek the best",

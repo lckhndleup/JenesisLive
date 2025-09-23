@@ -46,10 +46,10 @@
     },
     "landing": {
         "headline": {
-            "base": "En vapor",
-            "develop": "innovando",
-            "produce": "produciendo",
-            "solve": "ofreciendo soluciones"
+            "base": "El futuro de ",
+            "develop": "las salas de calderas",
+            "produce": "los sistemas de vapor",
+            "solve": "los generadores de vapor"
         },
         "description": "Generadores de vapor de 100 a 30.000 kg/h, 1–100 barg, 90–99 % de eficiencia, disponibles en versiones fijas, móviles y en cascada.",
         "premium": "Para quienes buscan lo mejor",

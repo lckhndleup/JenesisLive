@@ -46,10 +46,10 @@
     },
     "landing": {
         "headline": {
-            "base": "Dans la vapeur",
-            "develop": "innovant",
-            "produce": "produisant",
-            "solve": "apportant des solutions"
+            "base": "L'avenir des ",
+            "develop": "chaufferies",
+            "produce": "systèmes de vapeur",
+            "solve": "générateurs de vapeur"
         },
         "description": "Générateurs de vapeur de 100 à 30 000 kg/h, 1–100 barg, rendement de 90 à 99 %, versions fixes, mobiles et en cascade.",
         "premium": "Pour ceux qui visent l’excellence",
