@@ -268,6 +268,16 @@
   line-height: 1.2;             /* avoid glyph clipping */
 }
 
+/* Keep left blocks left-aligned and right blocks right-aligned */
+.snap-slider-captions .slide-title,
+.snap-slider-captions .slide-current {
+  justify-content: flex-start;
+}
+.snap-slider-captions .slide-counter,
+.snap-slider-captions .slide-subtitle {
+  justify-content: flex-end;
+}
+
 @media (max-width: 1024px) {
   .snap-slider-captions-wrapper {
     height: 56px;
