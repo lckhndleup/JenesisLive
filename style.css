@@ -4459,3 +4459,26 @@ p .link-text {
     height: 28px;
   }
 }
+
+/* Custom styles for long subtitle text */
+.slide-subtitle-long {
+  font-size: 18px !important;
+  line-height: 28px !important;
+  display: flex !important;
+  align-items: center !important;
+  height: 60px !important;
+  text-align: right !important;
+}
+
+.slide-subtitle-long span {
+  display: block !important;
+  width: 100% !important;
+}
+
+@media screen and (max-width: 768px) {
+  .slide-subtitle-long {
+    font-size: 16px !important;
+    line-height: 20px !important;
+    height: 50px !important;
+  }
+}
