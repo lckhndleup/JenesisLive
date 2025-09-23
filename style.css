@@ -4475,10 +4475,51 @@ p .link-text {
   width: 100% !important;
 }
 
+/* Custom styles for long title text */
+.slide-title-long {
+  font-size: 20px !important;
+  line-height: 26px !important;
+  display: flex !important;
+  align-items: center !important;
+  height: 60px !important;
+}
+
+.slide-title-long span {
+  display: block !important;
+  width: 100% !important;
+}
+
+/* Custom styles for extra long subtitle text */
+.slide-subtitle-extra-long {
+  font-size: 16px !important;
+  line-height: 20px !important;
+  display: flex !important;
+  align-items: center !important;
+  height: 60px !important;
+  text-align: right !important;
+}
+
+.slide-subtitle-extra-long span {
+  display: block !important;
+  width: 100% !important;
+}
+
 @media screen and (max-width: 768px) {
   .slide-subtitle-long {
     font-size: 16px !important;
     line-height: 20px !important;
+    height: 50px !important;
+  }
+
+  .slide-title-long {
+    font-size: 18px !important;
+    line-height: 22px !important;
+    height: 50px !important;
+  }
+
+  .slide-subtitle-extra-long {
+    font-size: 14px !important;
+    line-height: 18px !important;
     height: 50px !important;
   }
 }
