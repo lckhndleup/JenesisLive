@@ -70,7 +70,9 @@
         "contact": {
             "address": "Dirección",
             "phone": "Teléfono",
-            "prompt": "¿Listos para trabajar juntos?"
+            "prompt": "¿Listos para trabajar juntos?",
+            "copyHover": "Copiar",
+            "copyClicked": "Copiado"
         }
     },
     "slider": {
