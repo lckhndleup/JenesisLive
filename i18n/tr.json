@@ -1,29 +1,39 @@
 {
     "nav": {
-        "index": "Anasayfa",
-        "projects": "Projeler",
-        "highlights": "Öne Çıkanlar",
+        "index": "Kurumsal",
+        "projects": "Ürünler",
+        "highlights": "Hub sistemi nedir?",
         "portfolio": "Portföy",
         "playground": "Oyun Alanı",
-        "about": "Hakkımızda",
+        "about": "Dökümanlar",
         "contact": "İletişim",
-        "resources": "Kaynaklar",
-        "shortcodes": "Kısa Kodlar"
+        "resources": "Referanslar",
+        "shortcodes": "Kısa Kodlar",
+        "services": "S.S.S",
+        "team": "Medya",
+        "blog": "İletişim"
     },
     "hero": {
-        "title": "Markaları yaşam gücüyle buluşturuyoruz",
-        "subtitle": "yaratıcı web çözümleri",
+        "subtitle": "Yüksek teknoloji kazan daireleri",
         "scroll": "Keşfetmek için Kaydır",
-        "featured": "Öne Çıkan Projeler"
+        "featured": "HUB sistemi nedir?",
+        "infoBefore": "1984'ten bugüne",
+        "infoAfter": "BUHAR JENERATÖRÜ"
     },
     "buttons": {
-        "letstalk": "Konuşalım",
-        "language": "Dil"
+        "letstalk": "İletişim",
+        "language": "Dil",
+        "more": "Ek bilgiler",
+        "media": "Medya",
+        "menu": "Menü"
     },
     "footer": {
         "copyright": "© 2024 ClaPat Studio. Tüm hakları saklıdır.",
         "terms": "Hizmet Şartları",
-        "privacy": "Gizlilik Politikası"
+        "privacy": "Gizlilik Politikası",
+        "backTop": "Başa dön",
+        "follow": "Bizi takip edin",
+        "rights": "Tüm hakları saklıdır."
     },
     "meta": {
         "title": "Jenesis - Buhar Jeneratörü | Buhar Kazanı | Verimli Buhar Üretimi",
@@ -32,5 +42,58 @@
     "preloader": {
         "loading": "Yükleniyor",
         "wait": "bekleyin, bekleyin.."
+    },
+    "landing": {
+        "headline": {
+            "base": "Geleceğin",
+            "develop": "kazan daireleri",
+            "produce": "kazan daireleri",
+            "solve": "kazan daireleri"
+        },
+        "description": "100 - 30.000 kg/h kapasite 1-100 barg basınçlı %90-%99 verimli Sabit, mobil ve kaskat Buhar Jeneratörleri",
+        "premium": "En iyisini arayanlara",
+        "promise": {
+            "title": "Siz isteyin, Biz yapalım",
+            "lines": {
+                "character": "Proseslerin karakterine",
+                "boiler": "ve kazan dairenize",
+                "solutions": "özel çözümler üretelim",
+                "footprint": "karbon ayak izi hedeflerinize",
+                "support": "katkı sağlayalım"
+            },
+            "after": {
+                "inspire": "İlham",
+                "create": "Üret"
+            }
+        },
+        "contact": {
+            "address": "Adres",
+            "phone": "Telefon",
+            "prompt": "Beraber çalışmaya hazır mısınız?"
+        }
+    },
+    "slider": {
+        "flash": {
+            "title": "Flaş buhar geri kazanım sistemi",
+            "subtitle": "Attığınız sudan bedava sıcak su üretin"
+        },
+        "flue": {
+            "title": "Baca gazı geri kazanım sistemi",
+            "subtitle": "Karbon ayak izinizi düşürürken para kazanmanın yolu"
+        },
+        "jetpack": {
+            "title": "Jetpack akümülasyonsuz sıcak su üretim paketleri",
+            "subtitle": "Gerektiği zaman gerektiği kadar buhardan sıcak su üretimi akümülasyon tanklarına ve lejyonellaya son"
+        },
+        "degasser": {
+            "title": "Degazör ve besi suyu hazırlama sistemleri",
+            "subtitle": "Doğru besi suyu ile uzun ömürlü kazan daireleri"
+        }
+    },
+    "pageNav": {
+        "goto": "GİT",
+        "infoBefore": "Kaskat buhar jeneratörleri",
+        "infoAfter": "Geleceğin kazan dairelerine hoş geldiniz",
+        "title": "HUB SİSTEMİ"
     }
 }

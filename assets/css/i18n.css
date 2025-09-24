@@ -20,32 +20,46 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding: 4px;
-  border-radius: 50%;
+  padding: 4px 8px;
+  border-radius: 22px;
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   outline: none;
   position: relative;
   z-index: 1001;
   pointer-events: auto !important;
-}
-
-.language-toggle-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 44px;
+  box-sizing: border-box;
 }
 
 .language-toggle-btn:focus {
-  outline: 2px solid #fa821d;
-  outline-offset: 2px;
+  outline: none;
+}
+
+/* Language Text */
+.language-text {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  pointer-events: none;
+  transition: color 0.3s ease;
+}
+
+.language-toggle-btn:hover .language-text {
+  color: #000;
 }
 
 /* Flag Circle */
 .flag-circle {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   overflow: hidden;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid transparent;
   transition: all 0.3s ease;
   background: #fff;
   display: flex;
@@ -60,11 +74,6 @@
   object-fit: cover;
   display: block;
   pointer-events: none;
-}
-
-.language-toggle-btn:hover .flag-circle {
-  border-color: #fa821d;
-  transform: scale(1.05);
 }
 
 /* Language Modal */
@@ -117,13 +126,13 @@
 }
 
 .language-option:hover {
-  background: rgba(250, 130, 29, 0.1);
-  color: #fa821d;
+  background: #fa821d;
+  color: #0c0c0c;
 }
 
 .language-option.active {
-  background: rgba(250, 130, 29, 0.15);
-  color: #fa821d;
+  background: #fa821d;
+  color: #0c0c0c;
 }
 
 .language-option .flag-circle {
@@ -150,8 +159,13 @@
 }
 
 .invert-header .language-option:hover {
-  background: rgba(250, 130, 29, 0.15);
-  color: #fa821d;
+  background: #fa821d;
+  color: #0c0c0c;
+}
+
+.invert-header .language-option.active {
+  background: #fa821d;
+  color: #0c0c0c;
 }
 
 .invert-header .flag-circle {
@@ -204,6 +218,172 @@
     pointer-events: auto !important;
   }
 }
+
+/* --------------------------------------------------
+   Slider Caption – Language-Specific Fit Rules
+   Goal: Make translated titles/subtitles fit on one slide
+   Notes:
+   - Turkish (tr) and Arabic (sa) are OK → no overrides
+   - For other languages we slightly reduce sizes and
+     allow wrapping + hyphenation inside the 60px row.
+   - We only target items that are NOT already marked
+     with the explicit long-text helpers to avoid
+     fighting those specific adjustments.
+--------------------------------------------------- */
+
+/* Shared helpers: allow long words to break/hyphenate */
+.snap-slider-captions .slide-title span,
+.snap-slider-captions .slide-subtitle span {
+  overflow-wrap: anywhere;
+  word-break: normal;
+  hyphens: auto;
+}
+
+/* Global fix: prevent top/bottom clipping and align numbers with text */
+.snap-slider-captions-wrapper {
+  height: 64px; /* a little taller for ascenders/diacritics */
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 8%,
+    rgba(0, 0, 0, 1) 92%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 8%,
+    rgba(0, 0, 0, 1) 92%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.snap-slider-captions .slide-title,
+.snap-slider-captions .slide-subtitle,
+.snap-slider-captions .slide-current,
+.snap-slider-captions .slide-counter {
+  display: flex;
+  align-items: center;          /* vertical align numbers and text */
+  height: 64px;
+  line-height: 1.2;             /* avoid glyph clipping */
+}
+
+/* Keep left blocks left-aligned and right blocks right-aligned */
+.snap-slider-captions .slide-title,
+.snap-slider-captions .slide-current {
+  justify-content: flex-start;
+}
+.snap-slider-captions .slide-counter,
+.snap-slider-captions .slide-subtitle {
+  justify-content: flex-end;
+}
+
+@media (max-width: 1024px) {
+  .snap-slider-captions-wrapper {
+    height: 56px;
+    mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 6%,
+      rgba(0, 0, 0, 1) 94%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 6%,
+      rgba(0, 0, 0, 1) 94%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+
+  .snap-slider-captions .slide-title,
+  .snap-slider-captions .slide-subtitle,
+  .snap-slider-captions .slide-current,
+  .snap-slider-captions .slide-counter {
+    height: 56px;
+  }
+}
+
+/* English */
+html[lang="en"] .snap-slider-captions .slide-title:not(.slide-title-long) {
+  font-size: 20px;
+  line-height: 28px;
+}
+html[lang="en"] .snap-slider-captions .slide-subtitle:not(.slide-subtitle-long):not(.slide-subtitle-extra-long) {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+/* German */
+html[lang="de"] .snap-slider-captions .slide-title:not(.slide-title-long) {
+  font-size: 18px;
+  line-height: 26px;
+}
+html[lang="de"] .snap-slider-captions .slide-subtitle:not(.slide-subtitle-long):not(.slide-subtitle-extra-long) {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* French */
+html[lang="fr"] .snap-slider-captions .slide-title:not(.slide-title-long) {
+  font-size: 20px;
+  line-height: 28px;
+}
+html[lang="fr"] .snap-slider-captions .slide-subtitle:not(.slide-subtitle-long):not(.slide-subtitle-extra-long) {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+/* Spanish */
+html[lang="es"] .snap-slider-captions .slide-title:not(.slide-title-long) {
+  font-size: 20px;
+  line-height: 28px;
+}
+html[lang="es"] .snap-slider-captions .slide-subtitle:not(.slide-subtitle-long):not(.slide-subtitle-extra-long) {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+/* Russian */
+html[lang="ru"] .snap-slider-captions .slide-title:not(.slide-title-long) {
+  font-size: 18px;
+  line-height: 26px;
+}
+html[lang="ru"] .snap-slider-captions .slide-subtitle:not(.slide-subtitle-long):not(.slide-subtitle-extra-long) {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* Make sure tiny screens keep things readable */
+@media (max-width: 1024px) {
+  html[lang="en"] .snap-slider-captions .slide-title:not(.slide-title-long),
+  html[lang="fr"] .snap-slider-captions .slide-title:not(.slide-title-long),
+  html[lang="es"] .snap-slider-captions .slide-title:not(.slide-title-long) {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  html[lang="de"] .snap-slider-captions .slide-title:not(.slide-title-long),
+  html[lang="ru"] .snap-slider-captions .slide-title:not(.slide-title-long) {
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  html[lang="en"] .snap-slider-captions .slide-subtitle:not(.slide-subtitle-long):not(.slide-subtitle-extra-long),
+  html[lang="fr"] .snap-slider-captions .slide-subtitle:not(.slide-subtitle-long):not(.slide-subtitle-extra-long),
+  html[lang="es"] .snap-slider-captions .slide-subtitle:not(.slide-subtitle-long):not(.slide-subtitle-extra-long) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  html[lang="de"] .snap-slider-captions .slide-subtitle:not(.slide-subtitle-long):not(.slide-subtitle-extra-long),
+  html[lang="ru"] .snap-slider-captions .slide-subtitle:not(.slide-subtitle-long):not(.slide-subtitle-extra-long) {
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
+
 
 /* Loading state */
 .language-loading .language-toggle-btn {

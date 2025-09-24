@@ -1,29 +1,40 @@
 {
     "nav": {
-        "index": "Accueil",
-        "projects": "Projets",
-        "highlights": "Points forts",
+        "index": "Entreprise",
+        "projects": "Produits",
+        "highlights": "Qu'est-ce que le système HUB ?",
         "portfolio": "Portfolio",
         "playground": "Terrain de jeu",
-        "about": "À propos",
+        "about": "Documents",
         "contact": "Contact",
-        "resources": "Ressources",
-        "shortcodes": "Codes courts"
+        "resources": "Références",
+        "shortcodes": "Codes courts",
+        "services": "F.A.Q.",
+        "team": "Médias",
+        "blog": "Contact"
     },
     "hero": {
-        "title": "Donner vie aux marques grâce à",
-        "subtitle": "des solutions web créatives",
+        "title": "Nous réunissons les marques avec l’énergie vitale",
+        "subtitle": "Chaufferies haute technologie",
         "scroll": "Faites défiler pour explorer",
-        "featured": "Projets en vedette"
+        "featured": "Qu'est-ce que le système HUB ?",
+        "infoBefore": "Depuis 1984",
+        "infoAfter": "GÉNÉRATEUR DE VAPEUR"
     },
     "buttons": {
-        "letstalk": "Parlons",
-        "language": "Langue"
+        "letstalk": "Contact",
+        "language": "Langue",
+        "more": "Informations supplémentaires",
+        "media": "Médias",
+        "menu": "Menu"
     },
     "footer": {
         "copyright": "© 2024 ClaPat Studio. Tous droits réservés.",
         "terms": "Conditions de service",
-        "privacy": "Politique de confidentialité"
+        "privacy": "Politique de confidentialité",
+        "backTop": "Haut de page",
+        "follow": "Suivez-nous",
+        "rights": "Tous droits réservés."
     },
     "meta": {
         "title": "Jenesis - Générateur de vapeur | Chaudière à vapeur | Production de vapeur efficace",
@@ -31,6 +42,59 @@
     },
     "preloader": {
         "loading": "Chargement",
-        "wait": "attends, attends.."
+        "wait": "veuillez patienter.."
+    },
+    "landing": {
+        "headline": {
+            "base": "L'avenir des",
+            "develop": "chaufferies",
+            "produce": "chaufferies",
+            "solve": "chaufferies"
+        },
+        "description": "Générateurs de vapeur d’une capacité de 100 à 30 000 kg/h, pression de 1 à 100 barg et rendement de 90 à 99 %. Disponibles en versions fixes, mobiles et en cascade.",
+        "premium": "Pour ceux qui visent l’excellence",
+        "promise": {
+            "title": "Vous demandez, nous construisons",
+            "lines": {
+                "character": "Pour le caractère de vos procédés",
+                "boiler": "et votre chaufferie",
+                "solutions": "créons des solutions sur mesure",
+                "footprint": "pour vos objectifs d’empreinte carbone",
+                "support": "et apportons notre contribution"
+            },
+            "after": {
+                "inspire": "Inspiration",
+                "create": "Créer"
+            }
+        },
+        "contact": {
+            "address": "Adresse",
+            "phone": "Téléphone",
+            "prompt": "Prêts à travailler ensemble ?"
+        }
+    },
+    "slider": {
+        "flash": {
+            "title": "Système de récupération de vapeur flash",
+            "subtitle": "Produisez de l’eau chaude gratuite à partir de l’eau rejetée"
+        },
+        "flue": {
+            "title": "Système de récupération des gaz de fumée",
+            "subtitle": "La solution pour réduire votre empreinte carbone tout en économisant"
+        },
+        "jetpack": {
+            "title": "Packs Jetpack d’eau chaude sans accumulation",
+            "subtitle": "Eau chaude à la demande à partir de vapeur – sans ballon ni risque de légionellose"
+        },
+        "degasser": {
+            "title": "Systèmes de dégazage et de préparation de l’eau d’alimentation",
+            "subtitle": "Une chaufferie durable grâce à une eau d’alimentation correctement traitée"
+        }
+    },
+    "pageNav": {
+        "goto": "ALLER",
+        "infoBefore": "Générateurs de vapeur en cascade",
+        "infoAfter": "Bienvenue dans les chaufferies du futur",
+        "title": "SYSTÈME HUB"
     }
 }
