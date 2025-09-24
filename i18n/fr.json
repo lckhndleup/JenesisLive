@@ -2,7 +2,7 @@
     "nav": {
         "index": "Entreprise",
         "projects": "Produits",
-        "highlights": "Points forts",
+        "highlights": "Qu'est-ce que le système HUB ?",
         "portfolio": "Portfolio",
         "playground": "Terrain de jeu",
         "about": "Documents",
@@ -14,17 +14,17 @@
         "blog": "Contact"
     },
     "hero": {
-        "title": "Donner vie aux marques grâce à",
-        "subtitle": "des solutions web créatives",
+        "title": "Nous réunissons les marques avec l’énergie vitale",
+        "subtitle": "Chaufferies haute technologie",
         "scroll": "Faites défiler pour explorer",
-        "featured": "Qu'est-ce que le système HUB?",
+        "featured": "Qu'est-ce que le système HUB ?",
         "infoBefore": "Depuis 1984",
         "infoAfter": "GÉNÉRATEUR DE VAPEUR"
     },
     "buttons": {
         "letstalk": "Contact",
         "language": "Langue",
-        "more": "En savoir plus",
+        "more": "Informations supplémentaires",
         "media": "Médias",
         "menu": "Menu"
     },
@@ -42,48 +42,48 @@
     },
     "preloader": {
         "loading": "Chargement",
-        "wait": "attends, attends.."
+        "wait": "veuillez patienter.."
     },
     "landing": {
         "headline": {
-            "base": "L'avenir des ",
+            "base": "L'avenir des",
             "develop": "chaufferies",
-            "produce": "systèmes de vapeur",
-            "solve": "générateurs de vapeur"
+            "produce": "chaufferies",
+            "solve": "chaufferies"
         },
-        "description": "Générateurs de vapeur de 100 à 30 000 kg/h, 1–100 barg, rendement de 90 à 99 %, versions fixes, mobiles et en cascade.",
+        "description": "Générateurs de vapeur d’une capacité de 100 à 30 000 kg/h, pression de 1 à 100 barg et rendement de 90 à 99 %. Disponibles en versions fixes, mobiles et en cascade.",
         "premium": "Pour ceux qui visent l’excellence",
         "promise": {
-            "title": "Vous demandez, nous réalisons",
+            "title": "Vous demandez, nous construisons",
             "lines": {
-                "character": "Au caractère de vos procédés",
-                "boiler": "et à votre chaufferie",
+                "character": "Pour le caractère de vos procédés",
+                "boiler": "et votre chaufferie",
                 "solutions": "créons des solutions sur mesure",
                 "footprint": "pour vos objectifs d’empreinte carbone",
                 "support": "et apportons notre contribution"
             },
             "after": {
-                "inspire": "Inspirer",
+                "inspire": "Inspiration",
                 "create": "Créer"
             }
         },
         "contact": {
             "address": "Adresse",
             "phone": "Téléphone",
-            "prompt": "Prêts à collaborer ?"
+            "prompt": "Prêts à travailler ensemble ?"
         }
     },
     "slider": {
         "flash": {
             "title": "Système de récupération de vapeur flash",
-            "subtitle": "Transformez l’eau rejetée en eau chaude gratuite"
+            "subtitle": "Produisez de l’eau chaude gratuite à partir de l’eau rejetée"
         },
         "flue": {
             "title": "Système de récupération des gaz de fumée",
             "subtitle": "La solution pour réduire votre empreinte carbone tout en économisant"
         },
         "jetpack": {
-            "title": "Packs Jetpack de production d’eau chaude sans accumulation",
+            "title": "Packs Jetpack d’eau chaude sans accumulation",
             "subtitle": "Eau chaude à la demande à partir de vapeur – sans ballon ni risque de légionellose"
         },
         "degasser": {
@@ -92,7 +92,7 @@
         }
     },
     "pageNav": {
-        "goto": "ACCÉDER",
+        "goto": "ALLER",
         "infoBefore": "Générateurs de vapeur en cascade",
         "infoAfter": "Bienvenue dans les chaufferies du futur",
         "title": "SYSTÈME HUB"

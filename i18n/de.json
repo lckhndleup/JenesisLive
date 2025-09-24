@@ -2,7 +2,7 @@
     "nav": {
         "index": "Unternehmen",
         "projects": "Produkte",
-        "highlights": "Highlights",
+        "highlights": "Was ist das HUB-System?",
         "portfolio": "Portfolio",
         "playground": "Spielplatz",
         "about": "Dokumente",
@@ -14,17 +14,17 @@
         "blog": "Kontakt"
     },
     "hero": {
-        "title": "Marken zum Leben erwecken durch",
-        "subtitle": "kreative Web-Lösungen",
+        "title": "Wir vereinen Marken mit Lebensenergie",
+        "subtitle": "Hochtechnologische Kesselhäuser",
         "scroll": "Scrollen zum Erkunden",
-        "featured": "Was ist HUB-System?",
+        "featured": "Was ist das HUB-System?",
         "infoBefore": "Seit 1984",
         "infoAfter": "DAMPFERZEUGER"
     },
     "buttons": {
         "letstalk": "Kontakt",
         "language": "Sprache",
-        "more": "Weitere Infos",
+        "more": "Weitere Informationen",
         "media": "Medien",
         "menu": "Menü"
     },
@@ -42,57 +42,57 @@
     },
     "preloader": {
         "loading": "Wird geladen",
-        "wait": "warten, warten.."
+        "wait": "bitte warten.."
     },
     "landing": {
         "headline": {
-            "base": "Die Zukunft der ",
+            "base": "Die Zukunft der",
             "develop": "Kesselhäuser",
-            "produce": "Dampfsysteme",
-            "solve": "Dampferzeuger"
+            "produce": "Kesselhäuser",
+            "solve": "Kesselhäuser"
         },
-        "description": "Dampferzeuger von 100 bis 30.000 kg/h, 1–100 barg, 90–99 % Wirkungsgrad, als stationäre, mobile und Kaskadenlösungen.",
+        "description": "Dampferzeuger mit 100–30.000 kg/h Kapazität, 1–100 barg Druck und 90–99 % Wirkungsgrad. Erhältlich als stationäre, mobile und Kaskadenlösungen.",
         "premium": "Für alle, die das Beste suchen",
         "promise": {
-            "title": "Sie wünschen, wir realisieren",
+            "title": "Sie wünschen, wir bauen",
             "lines": {
-                "character": "Zum Charakter Ihrer Prozesse",
-                "boiler": "und zu Ihrem Kesselhaus",
+                "character": "Für den Charakter Ihrer Prozesse",
+                "boiler": "und Ihr Kesselhaus",
                 "solutions": "entwickeln wir maßgeschneiderte Lösungen",
                 "footprint": "für Ihre CO₂-Ziele",
                 "support": "und leisten unseren Beitrag"
             },
             "after": {
-                "inspire": "Inspirieren",
+                "inspire": "Inspiration",
                 "create": "Gestalten"
             }
         },
         "contact": {
             "address": "Adresse",
             "phone": "Telefon",
-            "prompt": "Bereit, gemeinsam durchzustarten?"
+            "prompt": "Bereit, gemeinsam zu arbeiten?"
         }
     },
     "slider": {
         "flash": {
             "title": "Flash-Dampf-Rückgewinnungssystem",
-            "subtitle": "Gewinnen Sie kostenloses Warmwasser aus abgeleitetem Wasser"
+            "subtitle": "Erzeugen Sie kostenloses Warmwasser aus abgeleitetem Wasser"
         },
         "flue": {
             "title": "Rauchgas-Rückgewinnungssystem",
-            "subtitle": "Der Weg, Ihren CO₂-Fußabdruck zu senken und Geld zu sparen"
+            "subtitle": "Der Weg, Ihren CO₂-Fußabdruck zu senken und gleichzeitig Geld zu sparen"
         },
         "jetpack": {
             "title": "Jetpack Warmwasserpakete ohne Pufferspeicher",
-            "subtitle": "Bedarfsgerechte Warmwassererzeugung aus Dampf – ohne Speicher, ohne Legionellenrisiko"
+            "subtitle": "Warmwasser nach Bedarf aus Dampf – ohne Speicher, ohne Legionellenrisiko"
         },
         "degasser": {
             "title": "Entgaser- und Speisewasseraufbereitungssysteme",
-            "subtitle": "Längere Lebensdauer des Kesselhauses durch optimal aufbereitetes Speisewasser"
+            "subtitle": "Verlängern Sie die Lebensdauer Ihres Kesselhauses mit optimal aufbereitetem Speisewasser"
         }
     },
     "pageNav": {
-        "goto": "ZUR SEITE",
+        "goto": "LOS",
         "infoBefore": "Kaskaden-Dampferzeuger",
         "infoAfter": "Willkommen in den Kesselhäusern der Zukunft",
         "title": "HUB-SYSTEM"

@@ -2,7 +2,7 @@
     "nav": {
         "index": "Corporate",
         "projects": "Products",
-        "highlights": "Highlights",
+        "highlights": "What is the HUB system?",
         "portfolio": "Portfolio",
         "playground": "Playground",
         "about": "Documents",
@@ -14,17 +14,17 @@
         "blog": "Contact"
     },
     "hero": {
-        "title": "Bringing brands to life through",
-        "subtitle": "creative web solutions",
+        "title": "We unite brands with vital energy",
+        "subtitle": "High-tech boiler rooms",
         "scroll": "Scroll to Explore",
-        "featured": "What is HUB system?",
+        "featured": "What is the HUB system?",
         "infoBefore": "Since 1984",
         "infoAfter": "STEAM GENERATOR"
     },
     "buttons": {
         "letstalk": "Contact",
         "language": "Language",
-        "more": "More Info",
+        "more": "Additional Info",
         "media": "Media",
         "menu": "Menu"
     },
@@ -42,57 +42,57 @@
     },
     "preloader": {
         "loading": "Loading",
-        "wait": "wait, wait.."
+        "wait": "please wait.."
     },
     "landing": {
         "headline": {
-            "base": "The future of ",
+            "base": "The future of",
             "develop": "boiler rooms",
-            "produce": "steam systems",
-            "solve": "steam generators"
+            "produce": "boiler rooms",
+            "solve": "boiler rooms"
         },
-        "description": "Steam generators from 100 to 30,000 kg/h, 1–100 barg, 90–99% efficiency, available in stationary, mobile, and cascade configurations.",
-        "premium": "For those who seek the best",
+        "description": "Steam generators with 100–30,000 kg/h capacity, 1–100 barg pressure and 90–99% efficiency. Available as stationary, mobile and cascade units.",
+        "premium": "For those seeking the best",
         "promise": {
-            "title": "You ask, we deliver",
+            "title": "You request, we build",
             "lines": {
-                "character": "To the nature of your processes",
+                "character": "For the character of your processes",
                 "boiler": "and your boiler room",
-                "solutions": "let’s craft tailored solutions",
-                "footprint": "for your carbon-footprint targets",
-                "support": "and deliver our contribution"
+                "solutions": "let us craft bespoke solutions",
+                "footprint": "for your carbon footprint goals",
+                "support": "and provide our contribution"
             },
             "after": {
-                "inspire": "Inspire",
+                "inspire": "Inspiration",
                 "create": "Create"
             }
         },
         "contact": {
             "address": "Address",
             "phone": "Phone",
-            "prompt": "Ready to work together?"
+            "prompt": "Are you ready to work together?"
         }
     },
     "slider": {
         "flash": {
             "title": "Flash steam recovery system",
-            "subtitle": "Turn discharged water into free hot water"
+            "subtitle": "Produce free hot water from discharged water"
         },
         "flue": {
             "title": "Flue gas recovery system",
-            "subtitle": "The way to reduce your carbon footprint and earn savings"
+            "subtitle": "The way to cut your carbon footprint while saving money"
         },
         "jetpack": {
-            "title": "Jetpack hot-water packages without accumulation tanks",
-            "subtitle": "Produce just-in-time hot water from steam—no storage tanks, no legionella risk"
+            "title": "Jetpack hot-water packages without accumulation",
+            "subtitle": "Generate on-demand hot water from steam—no storage tanks, no legionella"
         },
         "degasser": {
             "title": "Deaerator and feedwater conditioning systems",
-            "subtitle": "Extend boiler house life with properly treated feedwater"
+            "subtitle": "Extend boiler-room life with properly treated feedwater"
         }
     },
     "pageNav": {
-        "goto": "GO TO",
+        "goto": "GO",
         "infoBefore": "Cascade steam generators",
         "infoAfter": "Welcome to the boiler rooms of the future",
         "title": "HUB SYSTEM"
