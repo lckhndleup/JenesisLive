@@ -82,6 +82,10 @@ body.hidden {
   font-weight: 400;
 }
 
+.no-wrap {
+  white-space: nowrap !important;
+}
+
 html,
 body,
 div,
@@ -2979,6 +2983,7 @@ scale-up .link,
   box-sizing: border-box;
   pointer-events: initial;
   transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  margin-right: 50px;
 }
 
 .light-content .socials-wrap {
@@ -4404,15 +4409,15 @@ p .link-text {
 /* WhatsApp Floating Button */
 .whatsapp-float {
   position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 70px;
+  width: 50px;
+  height: 50px;
+  bottom: 40px;
   right: 60px;
   background-color: #25d366;
   color: #fff;
   border-radius: 50px;
   text-align: center;
-  font-size: 30px;
+  font-size: 20px;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
   z-index: 100;
   transition: all 0.3s ease;
@@ -4451,11 +4456,243 @@ p .link-text {
   .whatsapp-float {
     width: 50px;
     height: 50px;
-    bottom: 20px;
+    bottom: 30px;
     right: 20px;
   }
   .whatsapp-icon {
     width: 28px;
     height: 28px;
+  }
+}
+
+/* Custom styles for long subtitle text */
+.slide-subtitle-long {
+  font-size: 18px !important;
+  line-height: 28px !important;
+  display: flex !important;
+  align-items: center !important;
+  height: 60px !important;
+  text-align: right !important;
+}
+
+.slide-subtitle-long span {
+  display: block !important;
+  width: 100% !important;
+}
+
+/* Custom styles for long title text */
+.slide-title-long {
+  font-size: 20px !important;
+  line-height: 26px !important;
+  display: flex !important;
+  align-items: center !important;
+  height: 60px !important;
+}
+
+.slide-title-long span {
+  display: block !important;
+  width: 100% !important;
+}
+
+/* Custom styles for extra long subtitle text */
+.slide-subtitle-extra-long {
+  font-size: 16px !important;
+  line-height: 20px !important;
+  display: flex !important;
+  align-items: center !important;
+  height: 60px !important;
+  text-align: right !important;
+}
+
+.slide-subtitle-extra-long span {
+  display: block !important;
+  width: 100% !important;
+}
+
+@media screen and (max-width: 768px) {
+  .slide-subtitle-long {
+    font-size: 16px !important;
+    line-height: 20px !important;
+    height: 50px !important;
+  }
+
+  .slide-title-long {
+    font-size: 18px !important;
+    line-height: 22px !important;
+    height: 50px !important;
+  }
+
+  .slide-subtitle-extra-long {
+    font-size: 14px !important;
+    line-height: 18px !important;
+    height: 50px !important;
+  }
+}
+
+/* Custom styles for long navigation texts */
+.next-hero-title-long::before {
+  font-size: 12px !important;
+  line-height: 14px !important;
+  left: -250px !important;
+  white-space: normal !important;
+  max-width: 240px !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+  word-wrap: break-word !important;
+  hyphens: auto !important;
+}
+
+.next-hero-title-long::after {
+  font-size: 12px !important;
+  line-height: 14px !important;
+  right: -250px !important;
+  white-space: normal !important;
+  max-width: 240px !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+  word-wrap: break-word !important;
+  hyphens: auto !important;
+}
+
+/* Fix center text font size for long titles */
+.next-hero-title-long span {
+  font-size: calc(1rem + 6vw) !important;
+  line-height: calc(1rem + 9vw) !important;
+  white-space: nowrap !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+  letter-spacing: -0.2vw !important;
+}
+
+/* Adjust positioning to align with side texts */
+.next-hero-title-long::before {
+  top: 55% !important;
+  transform: translateY(-50%) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.next-hero-title-long::after {
+  top: 55% !important;
+  transform: translateY(-50%) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+@media screen and (max-width: 1200px) {
+  .next-hero-title-long::before {
+    left: -200px !important;
+    max-width: 190px !important;
+    font-size: 11px !important;
+  }
+
+  .next-hero-title-long::after {
+    right: -200px !important;
+    max-width: 190px !important;
+    font-size: 11px !important;
+  }
+
+  .next-hero-title-long span {
+    font-size: calc(1rem + 6vw) !important;
+    line-height: calc(1rem + 7vw) !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .next-hero-title-long::before {
+    left: -150px !important;
+    max-width: 140px !important;
+    font-size: 10px !important;
+    line-height: 12px !important;
+  }
+
+  .next-hero-title-long::after {
+    right: -150px !important;
+    max-width: 140px !important;
+    font-size: 10px !important;
+    line-height: 12px !important;
+  }
+
+  .next-hero-title-long span {
+    font-size: calc(1rem + 4vw) !important;
+    line-height: calc(1rem + 5vw) !important;
+  }
+}
+
+/* Custom styles for JENESIS title with side texts */
+.jenesis-hero-title::before {
+  content: attr(data-infoTextBefore) !important;
+  position: absolute !important;
+  font-size: 14px !important;
+  line-height: 16px !important;
+  left: -320px !important;
+  white-space: normal !important;
+  max-width: 260px !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+  word-wrap: break-word !important;
+  hyphens: auto !important;
+  top: 100% !important;
+  transform: translateY(-50%) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #333 !important;
+}
+
+.jenesis-hero-title::after {
+  content: attr(data-infoTextAfter) !important;
+  position: absolute !important;
+  font-size: 14px !important;
+  line-height: 16px !important;
+  right: -400px !important;
+  white-space: normal !important;
+  max-width: 260px !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+  word-wrap: break-word !important;
+  hyphens: auto !important;
+  top: 100% !important;
+  transform: translateY(-50%) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #333 !important;
+}
+
+.jenesis-hero-title {
+  position: relative !important;
+  display: inline-block !important;
+}
+
+@media screen and (max-width: 1200px) {
+  .jenesis-hero-title::before {
+    left: -230px !important;
+    max-width: 220px !important;
+    font-size: 13px !important;
+  }
+
+  .jenesis-hero-title::after {
+    right: -230px !important;
+    max-width: 220px !important;
+    font-size: 13px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .jenesis-hero-title::before {
+    left: -180px !important;
+    max-width: 170px !important;
+    font-size: 12px !important;
+    line-height: 14px !important;
+  }
+
+  .jenesis-hero-title::after {
+    right: -180px !important;
+    max-width: 170px !important;
+    font-size: 12px !important;
+    line-height: 14px !important;
   }
 }

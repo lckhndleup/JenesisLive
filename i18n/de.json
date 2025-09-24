@@ -1,29 +1,40 @@
 {
     "nav": {
-        "index": "Startseite",
-        "projects": "Projekte",
-        "highlights": "Highlights",
+        "index": "Unternehmen",
+        "projects": "Produkte",
+        "highlights": "Was ist das HUB-System?",
         "portfolio": "Portfolio",
         "playground": "Spielplatz",
-        "about": "Über uns",
+        "about": "Dokumente",
         "contact": "Kontakt",
-        "resources": "Ressourcen",
-        "shortcodes": "Kurzcodes"
+        "resources": "Referenzen",
+        "shortcodes": "Kurzcodes",
+        "services": "F.A.Q.",
+        "team": "Medien",
+        "blog": "Kontakt"
     },
     "hero": {
-        "title": "Marken zum Leben erwecken durch",
-        "subtitle": "kreative Web-Lösungen",
+        "title": "Wir vereinen Marken mit Lebensenergie",
+        "subtitle": "Hochtechnologische Kesselhäuser",
         "scroll": "Scrollen zum Erkunden",
-        "featured": "Ausgewählte Projekte"
+        "featured": "Was ist das HUB-System?",
+        "infoBefore": "Seit 1984",
+        "infoAfter": "DAMPFERZEUGER"
     },
     "buttons": {
-        "letstalk": "Sprechen wir",
-        "language": "Sprache"
+        "letstalk": "Kontakt",
+        "language": "Sprache",
+        "more": "Weitere Informationen",
+        "media": "Medien",
+        "menu": "Menü"
     },
     "footer": {
         "copyright": "© 2024 ClaPat Studio. Alle Rechte vorbehalten.",
         "terms": "Nutzungsbedingungen",
-        "privacy": "Datenschutzrichtlinie"
+        "privacy": "Datenschutzrichtlinie",
+        "backTop": "Nach oben",
+        "follow": "Folgen Sie uns",
+        "rights": "Alle Rechte vorbehalten."
     },
     "meta": {
         "title": "Jenesis - Dampferzeuger | Dampfkessel | Effiziente Dampferzeugung",
@@ -31,6 +42,59 @@
     },
     "preloader": {
         "loading": "Wird geladen",
-        "wait": "warten, warten.."
+        "wait": "bitte warten.."
+    },
+    "landing": {
+        "headline": {
+            "base": "Die Zukunft der",
+            "develop": "Kesselhäuser",
+            "produce": "Kesselhäuser",
+            "solve": "Kesselhäuser"
+        },
+        "description": "Dampferzeuger mit 100–30.000 kg/h Kapazität, 1–100 barg Druck und 90–99 % Wirkungsgrad. Erhältlich als stationäre, mobile und Kaskadenlösungen.",
+        "premium": "Für alle, die das Beste suchen",
+        "promise": {
+            "title": "Sie wünschen, wir bauen",
+            "lines": {
+                "character": "Für den Charakter Ihrer Prozesse",
+                "boiler": "und Ihr Kesselhaus",
+                "solutions": "entwickeln wir maßgeschneiderte Lösungen",
+                "footprint": "für Ihre CO₂-Ziele",
+                "support": "und leisten unseren Beitrag"
+            },
+            "after": {
+                "inspire": "Inspiration",
+                "create": "Gestalten"
+            }
+        },
+        "contact": {
+            "address": "Adresse",
+            "phone": "Telefon",
+            "prompt": "Bereit, gemeinsam zu arbeiten?"
+        }
+    },
+    "slider": {
+        "flash": {
+            "title": "Flash-Dampf-Rückgewinnungssystem",
+            "subtitle": "Erzeugen Sie kostenloses Warmwasser aus abgeleitetem Wasser"
+        },
+        "flue": {
+            "title": "Rauchgas-Rückgewinnungssystem",
+            "subtitle": "Der Weg, Ihren CO₂-Fußabdruck zu senken und gleichzeitig Geld zu sparen"
+        },
+        "jetpack": {
+            "title": "Jetpack Warmwasserpakete ohne Pufferspeicher",
+            "subtitle": "Warmwasser nach Bedarf aus Dampf – ohne Speicher, ohne Legionellenrisiko"
+        },
+        "degasser": {
+            "title": "Entgaser- und Speisewasseraufbereitungssysteme",
+            "subtitle": "Verlängern Sie die Lebensdauer Ihres Kesselhauses mit optimal aufbereitetem Speisewasser"
+        }
+    },
+    "pageNav": {
+        "goto": "LOS",
+        "infoBefore": "Kaskaden-Dampferzeuger",
+        "infoAfter": "Willkommen in den Kesselhäusern der Zukunft",
+        "title": "HUB-SYSTEM"
     }
 }

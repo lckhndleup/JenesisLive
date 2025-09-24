@@ -1,29 +1,40 @@
 {
     "nav": {
-        "index": "Inicio",
-        "projects": "Proyectos",
-        "highlights": "Destacados",
+        "index": "Corporativo",
+        "projects": "Productos",
+        "highlights": "¿Qué es el sistema HUB?",
         "portfolio": "Portafolio",
         "playground": "Zona de juegos",
-        "about": "Acerca de",
+        "about": "Documentos",
         "contact": "Contacto",
-        "resources": "Recursos",
-        "shortcodes": "Códigos cortos"
+        "resources": "Referencias",
+        "shortcodes": "Códigos cortos",
+        "services": "Preguntas frecuentes",
+        "team": "Medios",
+        "blog": "Contacto"
     },
     "hero": {
-        "title": "Dando vida a las marcas a través de",
-        "subtitle": "soluciones web creativas",
+        "title": "Unimos las marcas con la energía vital",
+        "subtitle": "Salas de calderas de alta tecnología",
         "scroll": "Desplázate para explorar",
-        "featured": "Proyectos destacados"
+        "featured": "¿Qué es el sistema HUB?",
+        "infoBefore": "Desde 1984",
+        "infoAfter": "GENERADOR DE VAPOR"
     },
     "buttons": {
-        "letstalk": "Hablemos",
-        "language": "Idioma"
+        "letstalk": "Contacto",
+        "language": "Idioma",
+        "more": "Información adicional",
+        "media": "Medios",
+        "menu": "Menú"
     },
     "footer": {
         "copyright": "© 2024 ClaPat Studio. Todos los derechos reservados.",
         "terms": "Términos de servicio",
-        "privacy": "Política de privacidad"
+        "privacy": "Política de privacidad",
+        "backTop": "Volver arriba",
+        "follow": "Síguenos",
+        "rights": "Todos los derechos reservados."
     },
     "meta": {
         "title": "Jenesis - Generador de vapor | Caldera de vapor | Producción de vapor eficiente",
@@ -31,6 +42,59 @@
     },
     "preloader": {
         "loading": "Cargando",
-        "wait": "espera, espera.."
+        "wait": "por favor espera.."
+    },
+    "landing": {
+        "headline": {
+            "base": "El futuro de",
+            "develop": "las salas de calderas",
+            "produce": "las salas de calderas",
+            "solve": "las salas de calderas"
+        },
+        "description": "Generadores de vapor con capacidad de 100 a 30.000 kg/h, presión de 1 a 100 barg y una eficiencia del 90 al 99 %. Disponibles en versiones fijas, móviles y en cascada.",
+        "premium": "Para quienes buscan lo mejor",
+        "promise": {
+            "title": "Tú pides, nosotros construimos",
+            "lines": {
+                "character": "Al carácter de tus procesos",
+                "boiler": "y a tu sala de calderas",
+                "solutions": "creemos soluciones a medida",
+                "footprint": "para tus metas de huella de carbono",
+                "support": "y aportemos nuestra contribución"
+            },
+            "after": {
+                "inspire": "Inspiración",
+                "create": "Crear"
+            }
+        },
+        "contact": {
+            "address": "Dirección",
+            "phone": "Teléfono",
+            "prompt": "¿Listos para trabajar juntos?"
+        }
+    },
+    "slider": {
+        "flash": {
+            "title": "Sistema de recuperación de vapor flash",
+            "subtitle": "Obtén agua caliente gratuita del agua vertida"
+        },
+        "flue": {
+            "title": "Sistema de recuperación de gases de combustión",
+            "subtitle": "La forma de reducir tu huella de carbono mientras ahorras dinero"
+        },
+        "jetpack": {
+            "title": "Paquetes Jetpack de agua caliente sin acumulación",
+            "subtitle": "Agua caliente bajo demanda a partir de vapor: sin tanques de almacenamiento ni riesgo de legionela"
+        },
+        "degasser": {
+            "title": "Sistemas de desgasificación y preparación de agua de alimentación",
+            "subtitle": "Prolonga la vida de la sala de calderas con agua de alimentación tratada correctamente"
+        }
+    },
+    "pageNav": {
+        "goto": "IR",
+        "infoBefore": "Generadores de vapor en cascada",
+        "infoAfter": "Bienvenidos a las salas de calderas del futuro",
+        "title": "SISTEMA HUB"
     }
 }

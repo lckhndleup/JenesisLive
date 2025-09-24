@@ -1,29 +1,40 @@
 {
     "nav": {
-        "index": "Index",
-        "projects": "Projects",
-        "highlights": "Highlights",
+        "index": "Corporate",
+        "projects": "Products",
+        "highlights": "What is the HUB system?",
         "portfolio": "Portfolio",
         "playground": "Playground",
-        "about": "About",
+        "about": "Documents",
         "contact": "Contact",
-        "resources": "Resources",
-        "shortcodes": "Shortcodes"
+        "resources": "References",
+        "shortcodes": "Shortcodes",
+        "services": "F.A.Q",
+        "team": "Media",
+        "blog": "Contact"
     },
     "hero": {
-        "title": "Bringing brands to life through",
-        "subtitle": "creative web solutions",
+        "title": "We unite brands with vital energy",
+        "subtitle": "High-tech boiler rooms",
         "scroll": "Scroll to Explore",
-        "featured": "Featured Projects"
+        "featured": "What is the HUB system?",
+        "infoBefore": "Since 1984",
+        "infoAfter": "STEAM GENERATOR"
     },
     "buttons": {
-        "letstalk": "Let's Talk",
-        "language": "Language"
+        "letstalk": "Contact",
+        "language": "Language",
+        "more": "Additional Info",
+        "media": "Media",
+        "menu": "Menu"
     },
     "footer": {
         "copyright": "© 2024 ClaPat Studio. All rights reserved.",
         "terms": "Terms of Service",
-        "privacy": "Privacy Policy"
+        "privacy": "Privacy Policy",
+        "backTop": "Back to Top",
+        "follow": "Follow Us",
+        "rights": "All rights reserved."
     },
     "meta": {
         "title": "Jenesis - Steam Generator | Steam Boiler | Efficient Steam Production",
@@ -31,6 +42,59 @@
     },
     "preloader": {
         "loading": "Loading",
-        "wait": "wait, wait.."
+        "wait": "please wait.."
+    },
+    "landing": {
+        "headline": {
+            "base": "The future of",
+            "develop": "boiler rooms",
+            "produce": "boiler rooms",
+            "solve": "boiler rooms"
+        },
+        "description": "Steam generators with 100–30,000 kg/h capacity, 1–100 barg pressure and 90–99% efficiency. Available as stationary, mobile and cascade units.",
+        "premium": "For those seeking the best",
+        "promise": {
+            "title": "You request, we build",
+            "lines": {
+                "character": "For the character of your processes",
+                "boiler": "and your boiler room",
+                "solutions": "let us craft bespoke solutions",
+                "footprint": "for your carbon footprint goals",
+                "support": "and provide our contribution"
+            },
+            "after": {
+                "inspire": "Inspiration",
+                "create": "Create"
+            }
+        },
+        "contact": {
+            "address": "Address",
+            "phone": "Phone",
+            "prompt": "Are you ready to work together?"
+        }
+    },
+    "slider": {
+        "flash": {
+            "title": "Flash steam recovery system",
+            "subtitle": "Produce free hot water from discharged water"
+        },
+        "flue": {
+            "title": "Flue gas recovery system",
+            "subtitle": "The way to cut your carbon footprint while saving money"
+        },
+        "jetpack": {
+            "title": "Jetpack hot-water packages without accumulation",
+            "subtitle": "Generate on-demand hot water from steam—no storage tanks, no legionella"
+        },
+        "degasser": {
+            "title": "Deaerator and feedwater conditioning systems",
+            "subtitle": "Extend boiler-room life with properly treated feedwater"
+        }
+    },
+    "pageNav": {
+        "goto": "GO",
+        "infoBefore": "Cascade steam generators",
+        "infoAfter": "Welcome to the boiler rooms of the future",
+        "title": "HUB SYSTEM"
     }
 }

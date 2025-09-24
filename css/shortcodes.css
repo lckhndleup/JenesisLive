@@ -4089,7 +4089,7 @@ span.text-rotator {
 span.text-rotator > span {
   position: relative;
   display: inline-block;
-  color: currentColor;
+  color: black;
   left: 0;
   margin: 0;
   padding: 0;
