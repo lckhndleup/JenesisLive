@@ -69,7 +69,9 @@
         "contact": {
             "address": "Adres",
             "phone": "Telefon",
-            "prompt": "Beraber çalışmaya hazır mısınız?"
+            "prompt": "Beraber çalışmaya hazır mısınız?",
+            "copyHover": "Kopyala",
+            "copyClicked": "Kopyalandı"
         }
     },
     "slider": {

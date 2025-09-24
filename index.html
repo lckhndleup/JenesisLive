@@ -473,18 +473,18 @@
                 <div id="hero-interaction">
                   <div class="hero-column col-left">
                     <div class="col-img-wrapper small-img">
-                      <img src="images/01hero1.jpg" alt="" />
+                      <img src="images/bacasiz.png" alt="" />
                     </div>
                     <div class="col-img-wrapper large-img">
-                      <img src="images/01hero.jpg" alt="" />
+                      <img src="images/noneBg1.png" alt="" />
                     </div>
                   </div>
                   <div class="hero-column col-right">
                     <div class="col-img-wrapper large-img">
-                      <img src="images/02hero.jpg" alt="" />
+                      <img src="images/noneBg2.png" alt="" />
                     </div>
                     <div class="col-img-wrapper small-img">
-                      <img src="images/02hero1.jpg" alt="" />
+                      <img src="images/noneBg3.png" alt="" />
                     </div>
                   </div>
                 </div>
@@ -955,8 +955,13 @@
                           class="bigger has-shuffle no-margins secondary-font"
                           data-i18n="landing.contact.prompt"
                         ></p>
-                        <div id="copy-email">
-                          <a href="mailto:info@jenesis.com.tr" target="_blank"
+                        <div
+                          id="copy-email"
+                          data-hover-message="Copy"
+                          data-clicked-message="Copied"
+                          data-i18n-attr="data-hover-message:landing.contact.copyHover|data-clicked-message:landing.contact.copyClicked"
+                        >
+                          <a href="mailto:info@jenesis.com.tr"
                             >info@jenesis.com.tr</a
                           >
                         </div>
@@ -981,14 +986,14 @@
                           data-centerline="GO TO"
                           data-i18n-attr="data-centerline:pageNav.goto"
                           href="about.html"
+                          aria-label="Jenesis Hub"
                         >
-                          <div
-                            class="next-hero-title caption-timeline next-hero-title-long"
-                            data-infoTextBefore="Kaskat buhar jeneratörleri"
-                            data-infoTextAfter="Geleceğin kazan dairelerine hoşgeldiniz"
-                            data-i18n-attr="data-infoTextBefore:pageNav.infoBefore|data-infoTextAfter:pageNav.infoAfter"
-                          >
-                            <span data-i18n="pageNav.title"></span>
+                          <div class="page-nav-image-container">
+                            <img
+                              src="images/jenesisHub.jpg"
+                              alt="Jenesis Hub"
+                              class="page-nav-image"
+                            />
                           </div>
                         </a>
                       </div>

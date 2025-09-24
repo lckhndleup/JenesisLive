@@ -1110,6 +1110,27 @@
   margin-bottom: 100px;
 }
 
+#page-nav .page-nav-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 40px 0;
+}
+
+#page-nav .page-nav-image {
+  display: block;
+  max-width: 900px;
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  #page-nav .page-nav-image-container {
+    padding: 20px 0;
+  }
+}
+
 .next-hero-title {
   font-size: calc(1rem + 12vw);
   line-height: calc(1rem + 14vw);
