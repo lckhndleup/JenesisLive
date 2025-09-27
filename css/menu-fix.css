@@ -1,0 +1,48 @@
+/*------------------------------------------------------------------
+Menu Hover Fix - Dropdown sadece text üzerinde açılmalı
+-------------------------------------------------------------------*/
+
+/* FlexNav'ın varsayılan hover davranışını iptal et */
+@media (min-width: 1025px) {
+  /* Li hover'ını devre dışı bırak */
+  .clapat-header.classic-menu .flexnav li.item-with-ul:hover ul,
+  .clapat-header.classic-menu .flexnav li.item-with-ul:hover .sub-menu {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    max-height: 0 !important;
+    transform: translateY(-10px) !important;
+  }
+
+  /* Sadece JS ile kontrol edilen açık durumda göster */
+  .clapat-header.classic-menu .flexnav li.item-with-ul ul.flexnav-show,
+  .clapat-header.classic-menu .flexnav li.item-with-ul .sub-menu.flexnav-show {
+    opacity: 1 !important;
+    visibility: visible !important;
+    max-height: 1000px !important;
+    transform: translateY(0) !important;
+    transition: all 0.3s ease !important;
+  }
+
+  /* Dropdown pozisyonu */
+  .clapat-header.classic-menu .flexnav li ul,
+  .clapat-header.classic-menu .flexnav li .sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    margin-top: 5px;
+  }
+}
+
+/* Mobilde normal davranış */
+@media (max-width: 1024px) {
+  .clapat-header.classic-menu .flexnav li.item-with-ul ul,
+  .clapat-header.classic-menu .flexnav li.item-with-ul .sub-menu {
+    opacity: 1 !important;
+    visibility: visible !important;
+    max-height: none !important;
+    transform: none !important;
+    position: static;
+    margin-top: 0;
+  }
+}
