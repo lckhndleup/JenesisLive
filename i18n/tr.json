@@ -2,21 +2,88 @@
     "nav": {
         "index": "Kurumsal",
         "projects": "Ürünler",
-        "highlights": "Hub sistemi nedir?",
-        "portfolio": "Portföy",
-        "playground": "Oyun Alanı",
         "about": "Dökümanlar",
-        "contact": "İletişim",
-        "resources": "Referanslar",
-        "shortcodes": "Kısa Kodlar",
-        "services": "S.S.S",
         "team": "Medya",
-        "blog": "İletişim"
+        "contact": "İletişim",
+        "corporate": {
+            "aboutUs": "Hakkımızda",
+            "humanResources": "İnsan Kaynakları"
+        },
+        "products": {
+            "steamGenerators": "Buhar Jeneratörleri",
+            "steamGeneratorTypes": {
+                "highPressure": "Yatık Tip Buhar Jeneratörleri",
+                "lowPressure": "Dik Tip Buhar Jeneratörleri",
+                "hygienic": "Hijyenik Buhar Jeneratörleri",
+                "condensing": "Yoğuşmalı Buhar Jeneratörleri"
+            },
+            "kaskadHub": "Kaskat HUB Buhar Üretim Sistemi",
+            "energySystems": "Enerji Tasarruf Sistemleri",
+            "energySystemsTypes": {
+                "flueGas": "Baca Gazı Ekonomizerleri",
+                "flashSteam": "Flaş Buhar Geri Kazanım Sistemi",
+                "blownSteam": "Blöften Geri Kazanım Sistemi"
+            },
+            "degazorSystems": "Degazör Sistemleri",
+            "degazorSystemsTypes": {
+                "thermal": "Termik Degazörler",
+                "compact": "Kompakt Degazörler"
+            },
+            "hotWaterPackages": "Paket Sıcak Su Üretim Sistemleri",
+            "hotWaterTypes": {
+                "jetPack": "JetPack",
+                "heatPack": "HeatPack"
+            }
+        },
+        "documents": {
+            "catalogs": "Kataloglar",
+            "catalogTypes": {
+                "steamGenerators": "Buhar Jeneratörleri",
+                "hubKaskat": "HUB Kaskat Buhar Üretim Sistemi",
+                "energySystems": "Enerji Tasarruf Sistemleri",
+                "degazorSystems": "Degazör Sistemleri",
+                "hotWaterSystems": "Paket Sıcak Su Üretim Sistemleri"
+            },
+            "certificates": "Sertifikalar",
+            "certificateTypes": {
+                "ce": "CE / B modülü",
+                "ced": "CE / D Modülü",
+                "tsek": "TSEK",
+                "eac": "EAC",
+                "iso9001": "ISO9001:2015"
+            },
+            "technicalTables": "Teknik Tablolar",
+            "technicalTableTypes": {
+                "steamGeneratorData": "Buhar Jeneratörü Teknik Veri Tablosu",
+                "boilerSelection": "Buhar Borusu Çap Seçimi Tablosu",
+                "condensateTable": "Doymuş Buhar Tablosu",
+                "condensateSelection": "Kondens Borusu Çap Seçimi Tablosu",
+                "pressureConnection": "Basınç/Sıcaklık Bağlantı Normu Tablosu"
+            },
+            "faq": "S.S.S"
+        },
+        "faqQuestions": {
+            "steamGeneratorInfo": "Buhar Jeneratörü nedir?",
+            "explosionRisk": "Patlama riski olmadan buhar üretmek mümkün mü?",
+            "dryWetSteam": "Nasıl kaliteli ve kuru buhar üretebilirim?",
+            "bestWater": "Besi suyu pompasında sıcaklıktan dolayı sorun yaşamamak mümkün müdür?",
+            "drySteam": "Nasıl daha verimli buhar üretebilirim?",
+            "highPressureBoiler": "Mevcut buhar maliyetlerimi ve yakıt giderlerim nasıl düşürebilirim?",
+            "diligence": "Yüksek buhar kapasitelerinde de patlama riski olmadan buhar üretebilir miyim?",
+            "condensateLeakage": "Baca gazı sıcaklığım çok yüksek, ne yapmalıyım?",
+            "feedwater": "Kondens tankı sıcaklığım çok yükseltiyor, ne yapmalıyım?",
+            "steamBoilerUse": "Buhar üreten sistemler için beslenen su kalitesi nasıl olmalıdır?",
+            "hopefulPeaks": "Buhar basıncı set değerini düşürürsem tüketiğim yakıt da düşer mi?",
+            "hotWaterTips": "Kondens tankı sıcaklığım çok yükseltiyor, ne yapmalıyım?",
+            "structureTips": "Hangi endüstri tiplerinde veya proses türlerinde buhar jeneratörü kullanılabilir?",
+            "boilerUseInIndustries": "Buhar basıncı set değerini düşürürsem tüketiğim yakıt da düşer mi?",
+            "steamBoilerEfficiency": "Pik buhar çekişlerinde stoç tipi kazan mı buhar jeneratörü mü daha iyidir?"
+        }
     },
     "hero": {
         "subtitle": "Yüksek teknoloji kazan daireleri",
         "scroll": "Keşfetmek için Kaydır",
-        "featured": "HUB sistemi nedir?",
+        "featured": "Kaskat HUB sistemi nedir?",
         "infoBefore": "1984'ten bugüne",
         "infoAfter": "BUHAR JENERATÖRÜ"
     },
