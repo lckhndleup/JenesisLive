@@ -12,8 +12,8 @@
         "products": {
             "steamGenerators": "Buhar Jeneratörleri",
             "steamGeneratorTypes": {
-                "highPressure": "Yüksek Tip Buhar Jeneratörleri",
-                "lowPressure": "Düşük Tip Buhar Jeneratörleri",
+                "highPressure": "Yatık Tip Buhar Jeneratörleri",
+                "lowPressure": "Dik Tip Buhar Jeneratörleri",
                 "hygienic": "Hijyenik Buhar Jeneratörleri",
                 "condensing": "Yoğuşmalı Buhar Jeneratörleri"
             },
@@ -65,17 +65,19 @@
         "faqQuestions": {
             "steamGeneratorInfo": "Buhar Jeneratörü nedir?",
             "explosionRisk": "Patlama riski olmadan buhar üretmek mümkün mü?",
-            "dryWetSteam": "Nasal kaliteli ve kuru buhar üretebilirim?",
+            "dryWetSteam": "Nasıl kaliteli ve kuru buhar üretebilirim?",
             "bestWater": "Besi suyu pompasında sıcaklıktan dolayı sorun yaşamamak mümkün müdür?",
-            "drySteam": "Nasal daha az buhar maliyetlerim ve yakit giderlerim nasil düşürebilirim?",
-            "highPressureBoiler": "Yüksek buhar kapasitelerinde de patlama riski olmadan buhar üretebilir miyim?",
-            "diligence": "Nasıl gazı sıcaklığım çok yüksek, ne yapmalıyım?",
-            "condensateLeakage": "Kondens tankı sıcaklığım çok yükseltyor, ne yapmalıyım?",
-            "feedwater": "Buhar üreten sistemler için beslenen su kalitesi nasıl olmalıdır?",
-            "steamBoilerUse": "Buhar basıncı set değerini düşürürsem tüketiğim yakıt da düşer mi?",
-            "hopefulPeaks": "Degazör kullanmak zorunda mıyım?",
-            "hotWaterTips": "Hangi endüstri tiplerinde veya proses türlerinde buhar jeneratörü kullanılabilir?",
-            "structureTips": "Pik buhar çekişlerinde sıoç tipi kazan bir buhar jeneratörü mü daha iyidir?"
+            "drySteam": "Nasıl daha verimli buhar üretebilirim?",
+            "highPressureBoiler": "Mevcut buhar maliyetlerimi ve yakıt giderlerim nasıl düşürebilirim?",
+            "diligence": "Yüksek buhar kapasitelerinde de patlama riski olmadan buhar üretebilir miyim?",
+            "condensateLeakage": "Baca gazı sıcaklığım çok yüksek, ne yapmalıyım?",
+            "feedwater": "Kondens tankı sıcaklığım çok yükseltiyor, ne yapmalıyım?",
+            "steamBoilerUse": "Buhar üreten sistemler için beslenen su kalitesi nasıl olmalıdır?",
+            "hopefulPeaks": "Buhar basıncı set değerini düşürürsem tüketiğim yakıt da düşer mi?",
+            "hotWaterTips": "Kondens tankı sıcaklığım çok yükseltiyor, ne yapmalıyım?",
+            "structureTips": "Hangi endüstri tiplerinde veya proses türlerinde buhar jeneratörü kullanılabilir?",
+            "boilerUseInIndustries": "Buhar basıncı set değerini düşürürsem tüketiğim yakıt da düşer mi?",
+            "steamBoilerEfficiency": "Pik buhar çekişlerinde stoç tipi kazan mı buhar jeneratörü mü daha iyidir?"
         }
     },
     "hero": {

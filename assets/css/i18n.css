@@ -263,9 +263,9 @@
 .snap-slider-captions .slide-current,
 .snap-slider-captions .slide-counter {
   display: flex;
-  align-items: center;          /* vertical align numbers and text */
+  align-items: center; /* vertical align numbers and text */
   height: 64px;
-  line-height: 1.2;             /* avoid glyph clipping */
+  line-height: 1.2; /* avoid glyph clipping */
 }
 
 /* Keep left blocks left-aligned and right blocks right-aligned */
@@ -310,7 +310,9 @@ html[lang="en"] .snap-slider-captions .slide-title:not(.slide-title-long) {
   font-size: 20px;
   line-height: 28px;
 }
-html[lang="en"] .snap-slider-captions .slide-subtitle:not(.slide-subtitle-long):not(.slide-subtitle-extra-long) {
+html[lang="en"]
+  .snap-slider-captions
+  .slide-subtitle:not(.slide-subtitle-long):not(.slide-subtitle-extra-long) {
   font-size: 18px;
   line-height: 26px;
 }
@@ -320,7 +322,9 @@ html[lang="de"] .snap-slider-captions .slide-title:not(.slide-title-long) {
   font-size: 18px;
   line-height: 26px;
 }
-html[lang="de"] .snap-slider-captions .slide-subtitle:not(.slide-subtitle-long):not(.slide-subtitle-extra-long) {
+html[lang="de"]
+  .snap-slider-captions
+  .slide-subtitle:not(.slide-subtitle-long):not(.slide-subtitle-extra-long) {
   font-size: 16px;
   line-height: 24px;
 }
@@ -330,7 +334,9 @@ html[lang="fr"] .snap-slider-captions .slide-title:not(.slide-title-long) {
   font-size: 20px;
   line-height: 28px;
 }
-html[lang="fr"] .snap-slider-captions .slide-subtitle:not(.slide-subtitle-long):not(.slide-subtitle-extra-long) {
+html[lang="fr"]
+  .snap-slider-captions
+  .slide-subtitle:not(.slide-subtitle-long):not(.slide-subtitle-extra-long) {
   font-size: 18px;
   line-height: 26px;
 }
@@ -340,7 +346,9 @@ html[lang="es"] .snap-slider-captions .slide-title:not(.slide-title-long) {
   font-size: 20px;
   line-height: 28px;
 }
-html[lang="es"] .snap-slider-captions .slide-subtitle:not(.slide-subtitle-long):not(.slide-subtitle-extra-long) {
+html[lang="es"]
+  .snap-slider-captions
+  .slide-subtitle:not(.slide-subtitle-long):not(.slide-subtitle-extra-long) {
   font-size: 18px;
   line-height: 26px;
 }
@@ -350,7 +358,9 @@ html[lang="ru"] .snap-slider-captions .slide-title:not(.slide-title-long) {
   font-size: 18px;
   line-height: 26px;
 }
-html[lang="ru"] .snap-slider-captions .slide-subtitle:not(.slide-subtitle-long):not(.slide-subtitle-extra-long) {
+html[lang="ru"]
+  .snap-slider-captions
+  .slide-subtitle:not(.slide-subtitle-long):not(.slide-subtitle-extra-long) {
   font-size: 16px;
   line-height: 24px;
 }
@@ -370,20 +380,29 @@ html[lang="ru"] .snap-slider-captions .slide-subtitle:not(.slide-subtitle-long):
     line-height: 24px;
   }
 
-  html[lang="en"] .snap-slider-captions .slide-subtitle:not(.slide-subtitle-long):not(.slide-subtitle-extra-long),
-  html[lang="fr"] .snap-slider-captions .slide-subtitle:not(.slide-subtitle-long):not(.slide-subtitle-extra-long),
-  html[lang="es"] .snap-slider-captions .slide-subtitle:not(.slide-subtitle-long):not(.slide-subtitle-extra-long) {
+  html[lang="en"]
+    .snap-slider-captions
+    .slide-subtitle:not(.slide-subtitle-long):not(.slide-subtitle-extra-long),
+  html[lang="fr"]
+    .snap-slider-captions
+    .slide-subtitle:not(.slide-subtitle-long):not(.slide-subtitle-extra-long),
+  html[lang="es"]
+    .snap-slider-captions
+    .slide-subtitle:not(.slide-subtitle-long):not(.slide-subtitle-extra-long) {
     font-size: 16px;
     line-height: 24px;
   }
 
-  html[lang="de"] .snap-slider-captions .slide-subtitle:not(.slide-subtitle-long):not(.slide-subtitle-extra-long),
-  html[lang="ru"] .snap-slider-captions .slide-subtitle:not(.slide-subtitle-long):not(.slide-subtitle-extra-long) {
+  html[lang="de"]
+    .snap-slider-captions
+    .slide-subtitle:not(.slide-subtitle-long):not(.slide-subtitle-extra-long),
+  html[lang="ru"]
+    .snap-slider-captions
+    .slide-subtitle:not(.slide-subtitle-long):not(.slide-subtitle-extra-long) {
     font-size: 15px;
     line-height: 22px;
   }
 }
-
 
 /* Loading state */
 .language-loading .language-toggle-btn {
@@ -418,6 +437,28 @@ html[lang="ru"] .snap-slider-captions .slide-subtitle:not(.slide-subtitle-long):
   bottom: 0;
   z-index: 999;
   background: transparent;
+}
+
+/* Alt menü öğeleri için özel kurallar - Basit çözüm */
+.classic-menu .flexnav .sub-menu li a,
+.classic-menu .flexnav .sub-sub-menu li a {
+  color: #ffffff !important;
+  background: rgba(0, 0, 0, 0.8) !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.classic-menu .flexnav .sub-menu [data-i18n]:not(.i18n-ready)::after,
+.classic-menu .flexnav .sub-sub-menu [data-i18n]:not(.i18n-ready)::after {
+  display: none !important;
+}
+
+.classic-menu .flexnav .sub-menu [data-i18n],
+.classic-menu .flexnav .sub-sub-menu [data-i18n] {
+  position: relative !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 /* Smooth transitions for text changes */

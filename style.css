@@ -2207,7 +2207,7 @@ scale-up .link,
     text-transform: none;
     font-size: 16px;
     line-height: 24px;
-    color: #ffffff !important;
+    color: currentColor;
     opacity: 1;
     -webkit-transition: all 0.05s ease-in-out;
     -moz-transition: all 0.05s ease-in-out;
@@ -2251,7 +2251,7 @@ scale-up .link,
     visibility: hidden;
     left: 15px;
     top: 45px;
-    background: #000000 !important;
+    background: currentColor;
     border-radius: 3px;
     min-width: 120px;
     width: auto;
@@ -2280,7 +2280,7 @@ scale-up .link,
     height: 0;
     border-style: solid;
     border-width: 0 10px 9px;
-    border-color: transparent transparent #000000;
+    border-color: transparent transparent currentColor;
   }
 
   .classic-menu .flexnav li:last-child ul:after {
@@ -2324,13 +2324,11 @@ scale-up .link,
   }
 
   .classic-menu .flexnav ul li ul li a {
-    background: #000 !important;
-    color: #ffffff !important;
+    background: #000;
   }
 
   .classic-menu .flexnav ul li ul li ul li a {
-    background: #000 !important;
-    color: #ffffff !important;
+    background: #000;
   }
 
   .classic-menu .flexnav li ul.flexnav-show {
@@ -4721,19 +4719,4 @@ FORCE OVERRIDE: Multi-Level Menu Positioning Fix
   right: 100% !important;
   margin-left: 0 !important;
   margin-right: 5px !important;
-}
-
-/* BASIT ÇÖZÜM - MENU TAMAMEN SİYAH */
-.classic-menu .flexnav li ul,
-.classic-menu .flexnav li .sub-menu,
-.classic-menu .flexnav li .sub-sub-menu {
-  background: #000000 !important;
-  background-color: #000000 !important;
-}
-
-.classic-menu .flexnav li ul li,
-.classic-menu .flexnav li .sub-menu li,
-.classic-menu .flexnav li .sub-sub-menu li {
-  background: #000000 !important;
-  background-color: #000000 !important;
 }
