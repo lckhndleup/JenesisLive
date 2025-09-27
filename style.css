@@ -4520,13 +4520,14 @@ FORCE OVERRIDE: Multi-Level Menu Positioning Fix
 }
 
 .flexnav li .sub-menu li a {
-  color: #ffffff !important;
+  color: #ffffff;
   padding: 12px 20px;
   display: block;
   white-space: nowrap;
   transition: background-color 0.2s ease, color 0.2s ease;
   border-radius: 5px;
   font-size: 15px;
+  z-index: 1001;
 }
 
 .flexnav li .sub-menu li a:hover {
@@ -4538,4 +4539,8 @@ FORCE OVERRIDE: Multi-Level Menu Positioning Fix
 .classic-menu .menu-timeline.link {
   padding-bottom: 15px;
   margin-bottom: -15px;
+}
+
+.mali {
+  color: red;
 }
