@@ -4599,3 +4599,243 @@ Function Showcase Snap Slider
 });
 
 var LoadViaAjax = window.LoadViaAjax;
+
+/*--------------------------------------------------
+Multi-Level Menu Navigation JavaScript
+---------------------------------------------------*/
+
+jQuery(document).ready(function ($) {
+  "use strict";
+
+  // PERFECT BLACK DROPDOWN MENU - JAVASCRIPT
+  function initPerfectBlackMenu() {
+    // Ana menü öğelerine class ekleme
+    $(".classic-menu .flexnav li").each(function () {
+      if ($(this).find("ul").length > 0) {
+        $(this).addClass("item-with-ul");
+
+        // Alt menü öğelerine has-submenu class'ı ekle
+        $(this)
+          .find("ul li")
+          .each(function () {
+            if ($(this).find("ul").length > 0) {
+              $(this).addClass("has-submenu");
+            }
+          });
+      }
+    });
+
+    // Ana menü hover olayları - Smooth ve modern
+    $(".classic-menu .flexnav li.item-with-ul")
+      .on("mouseenter", function () {
+        const $submenu = $(this).find("> ul, > .sub-menu");
+        if ($submenu.length) {
+          // Diğer açık menüleri kapat
+          $(".classic-menu .flexnav ul")
+            .not($submenu)
+            .removeClass("flexnav-show");
+          $submenu.addClass("flexnav-show");
+        }
+      })
+      .on("mouseleave", function () {
+        const $submenu = $(this).find("> ul, > .sub-menu");
+        if ($submenu.length) {
+          // Delay ile kapat (cursor geçiş için zaman tanı)
+          setTimeout(() => {
+            if (!$submenu.is(":hover") && !$(this).is(":hover")) {
+              $submenu.removeClass("flexnav-show");
+              $submenu.find(".sub-sub-menu").removeClass("show-sub-sub");
+            }
+          }, 100);
+        }
+      });
+
+    // Alt menü hover olayları
+    $(".classic-menu .flexnav .has-submenu")
+      .on("mouseenter", function () {
+        const $subSubmenu = $(this).find(".sub-sub-menu");
+        if ($subSubmenu.length) {
+          // Diğer alt menüleri kapat
+          $(this).siblings().find(".sub-sub-menu").removeClass("show-sub-sub");
+          $subSubmenu.addClass("show-sub-sub");
+        }
+      })
+      .on("mouseleave", function () {
+        const $subSubmenu = $(this).find(".sub-sub-menu");
+        if ($subSubmenu.length) {
+          setTimeout(() => {
+            if (!$subSubmenu.is(":hover") && !$(this).is(":hover")) {
+              $subSubmenu.removeClass("show-sub-sub");
+            }
+          }, 100);
+        }
+      });
+
+    // Tıklama engelleme (# linkleri için)
+    $(".classic-menu .flexnav a[href='#']").on("click", function (e) {
+      e.preventDefault();
+      return false;
+    });
+
+    // Mobil dokunmatik support
+    if ("ontouchstart" in window) {
+      let touchMenuOpen = false;
+
+      $(".classic-menu .flexnav li.item-with-ul").on(
+        "touchstart",
+        function (e) {
+          const $submenu = $(this).find("> ul, > .sub-menu");
+          if ($submenu.length) {
+            if (!$submenu.hasClass("flexnav-show")) {
+              e.preventDefault();
+              e.stopPropagation();
+              $(".classic-menu .flexnav ul").removeClass("flexnav-show");
+              $submenu.addClass("flexnav-show");
+              touchMenuOpen = true;
+            }
+          }
+        }
+      );
+
+      $(".classic-menu .flexnav .has-submenu").on("touchstart", function (e) {
+        const $subSubmenu = $(this).find(".sub-sub-menu");
+        if ($subSubmenu.length && !$subSubmenu.hasClass("show-sub-sub")) {
+          e.preventDefault();
+          e.stopPropagation();
+          $(this).siblings().find(".sub-sub-menu").removeClass("show-sub-sub");
+          $subSubmenu.addClass("show-sub-sub");
+          touchMenuOpen = true;
+        }
+      });
+
+      // Dış dokunma ile menüleri kapat
+      $(document).on("touchstart", function (e) {
+        if (!$(e.target).closest(".flexnav").length && touchMenuOpen) {
+          $(".classic-menu .flexnav ul").removeClass("flexnav-show");
+          $(".classic-menu .flexnav .sub-sub-menu").removeClass("show-sub-sub");
+          touchMenuOpen = false;
+        }
+      });
+    }
+
+    // Keyboard accessibility
+    $(".classic-menu .flexnav a").on("keydown", function (e) {
+      if (e.key === "Escape") {
+        $(".classic-menu .flexnav ul").removeClass("flexnav-show");
+        $(".classic-menu .flexnav .sub-sub-menu").removeClass("show-sub-sub");
+        $(this).blur();
+      }
+    });
+  }
+
+  // Menü başlatma
+  initPerfectBlackMenu();
+
+  // Ajax yükleme sonrası yeniden başlat
+  $(document).on("ajaxComplete", function () {
+    setTimeout(() => {
+      initPerfectBlackMenu();
+    }, 150);
+  });
+});
+
+// PERFECT BLACK MENU - CSS INJECTION & FORCE STYLES
+jQuery(document).ready(function ($) {
+  $("<style>")
+    .prop("type", "text/css")
+    .html(
+      `
+      /* PERFECT BLACK MENU SHOW STATES */
+      .classic-menu .flexnav .sub-sub-menu.show-sub-sub {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: translateX(0) scale(1) !important;
+      }
+      
+      .classic-menu .flexnav li:last-child .sub-sub-menu.show-sub-sub,
+      .classic-menu .flexnav li:nth-last-child(2) .sub-sub-menu.show-sub-sub {
+        transform: translateX(0) scale(1) !important;
+      }
+
+      /* ULTIMATE BLACK MENU OVERRIDE - JAVASCRIPT POWERED */
+      .classic-menu .flexnav li ul,
+      .classic-menu .flexnav li ul.flexnav-show,
+      .classic-menu .flexnav li .sub-menu,
+      .classic-menu .flexnav li .sub-sub-menu,
+      .classic-menu .flexnav ul,
+      .classic-menu .flexnav ul ul {
+        background: #000000 !important;
+        background-color: #000000 !important;
+        border: none !important;
+      }
+
+      /* PERFECT WHITE TEXT ON BLACK */
+      .classic-menu .flexnav li ul li a,
+      .classic-menu .flexnav li .sub-menu li a,
+      .classic-menu .flexnav li .sub-sub-menu li a {
+        color: #ffffff !important;
+        background: transparent !important;
+      }
+
+      /* PERFECT HOVER EFFECTS */
+      .classic-menu .flexnav li ul li a:hover,
+      .classic-menu .flexnav li .sub-menu li a:hover,
+      .classic-menu .flexnav li .sub-sub-menu li a:hover {
+        background: rgba(255, 255, 255, 0.12) !important;
+        color: #ffffff !important;
+      }
+
+      /* FORCE BLACK ON ALL STATES */
+      .classic-menu .flexnav li ul.open,
+      .classic-menu .flexnav li ul.active,
+      .classic-menu .flexnav li .sub-menu.open,
+      .classic-menu .flexnav li .sub-menu.active {
+        background: #000000 !important;
+        background-color: #000000 !important;
+      }
+    `
+    )
+    .appendTo("head");
+
+  // Force styles after DOM ready
+  setTimeout(() => {
+    // Force black background on all menu containers
+    const menuSelectors = [
+      ".classic-menu .flexnav li ul",
+      ".classic-menu .flexnav li .sub-menu",
+      ".classic-menu .flexnav li .sub-sub-menu",
+    ];
+
+    menuSelectors.forEach((selector) => {
+      $(selector).css({
+        background: "#000000 !important",
+        "background-color": "#000000 !important",
+      });
+    });
+
+    // Force white text on all menu links
+    const linkSelectors = [
+      ".classic-menu .flexnav li ul li a",
+      ".classic-menu .flexnav li .sub-menu li a",
+      ".classic-menu .flexnav li .sub-sub-menu li a",
+    ];
+
+    linkSelectors.forEach((selector) => {
+      $(selector).css({
+        color: "#ffffff !important",
+      });
+    });
+  }, 100);
+
+  // Re-apply styles on menu interactions
+  $(document).on(
+    "mouseenter",
+    ".classic-menu .flexnav li.item-with-ul",
+    function () {
+      $(this).find("ul, .sub-menu, .sub-sub-menu").css({
+        background: "#000000",
+        "background-color": "#000000",
+      });
+    }
+  );
+});
