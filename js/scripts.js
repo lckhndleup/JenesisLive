@@ -4723,7 +4723,7 @@ jQuery(document).ready(function ($) {
   });
 });
 
-// CSS için ek show class'ları
+// CSS için ek show class'ları ve ZORLA SİYAH MENÜ
 jQuery(document).ready(function ($) {
   $("<style>")
     .prop("type", "text/css")
@@ -4739,7 +4739,64 @@ jQuery(document).ready(function ($) {
       .classic-menu .flexnav li:nth-last-child(2) .sub-sub-menu.show-sub-sub {
         transform: translate3d(0, 0, 0) !important;
       }
+
+      /* ULTRA GÜÇLÜ MENÜ SİYAH OVERRIDE - JAVASCRIPT İLE EKLENİYOR */
+      .classic-menu .flexnav li ul,
+      .classic-menu .flexnav li ul.open,
+      .classic-menu .flexnav li ul.flexnav-show,
+      .classic-menu .flexnav li .sub-menu,
+      .classic-menu .flexnav li .sub-sub-menu,
+      .classic-menu .flexnav ul,
+      .classic-menu .flexnav ul ul,
+      .classic-menu .flexnav ul li,
+      .classic-menu .flexnav ul li ul,
+      .classic-menu .flexnav ul li ul ul,
+      .flexnav li ul,
+      .flexnav li ul.open,
+      .flexnav li ul.flexnav-show {
+        background: #000000 !important;
+        background-color: #000000 !important;
+      }
+
+      /* MENÜ LİNKLERİ BEYAZ YAPMAK - JAVASCRIPT İLE EKLENİYOR */
+      .classic-menu .flexnav li ul li a,
+      .classic-menu .flexnav li ul li ul li a,
+      .classic-menu .flexnav li .sub-menu li a,
+      .classic-menu .flexnav li .sub-sub-menu li a,
+      .flexnav li ul li a,
+      .flexnav li ul li ul li a {
+        color: #ffffff !important;
+        background: #000000 !important;
+        background-color: #000000 !important;
+      }
+
+      /* MENÜ HOVER STİLLERİ - JAVASCRIPT İLE EKLENİYOR */
+      .classic-menu .flexnav li ul li a:hover,
+      .classic-menu .flexnav li ul li ul li a:hover,
+      .classic-menu .flexnav li .sub-menu li a:hover,
+      .classic-menu .flexnav li .sub-sub-menu li a:hover {
+        background: #333333 !important;
+        color: #ffffff !important;
+      }
     `
     )
     .appendTo("head");
+
+  // Menü elementleri yüklendikten sonra da zorla siyah yap
+  setTimeout(function() {
+    $('.classic-menu .flexnav li ul, .classic-menu .flexnav li .sub-menu, .classic-menu .flexnav li .sub-sub-menu').each(function() {
+      $(this).css({
+        'background': '#000000',
+        'background-color': '#000000'
+      });
+    });
+    
+    $('.classic-menu .flexnav li ul li a, .classic-menu .flexnav li .sub-menu li a, .classic-menu .flexnav li .sub-sub-menu li a').each(function() {
+      $(this).css({
+        'color': '#ffffff',
+        'background': '#000000',
+        'background-color': '#000000'
+      });
+    });
+  }, 500);
 });
