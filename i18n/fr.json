@@ -1,6 +1,13 @@
 {
     "nav": {
-        "index": "Entreprise",
+    "hero": {
+        "title": "Nous réunissons les marques avec l'énergie vitale",
+        "subtitle": "Chaufferies haute technologie",
+        "scroll": "Faites défiler pour explorer",
+        "featured": "Qu'est-ce que le système HUB en Cascade ?",
+        "infoBefore": "Depuis 1984",
+        "infoAfter": "GÉNÉRATEUR DE VAPEUR"
+    },"index": "Entreprise",
         "projects": "Produits",
         "highlights": "Qu'est-ce que le système HUB ?",
         "portfolio": "Portfolio",
