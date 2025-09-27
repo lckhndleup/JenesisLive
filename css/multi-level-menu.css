@@ -90,7 +90,7 @@ Multi-Level Navigation Menu Styles
 }
 
 .classic-menu .flexnav li .sub-menu .sub-sub-menu {
-  min-width: 220px !important;
+  min-width: 320px !important;
   padding: 15px !important;
   background-color: #0c0c0c !important;
   border-radius: 8px !important;
@@ -107,18 +107,33 @@ Multi-Level Navigation Menu Styles
   color: #ffffff !important;
   padding: 12px 20px !important;
   display: block !important;
-  white-space: nowrap !important;
+  white-space: normal !important;
   transition: background-color 0.2s ease, color 0.2s ease !important;
   border-radius: 5px !important;
   font-size: 15px !important;
   text-decoration: none !important;
   background: transparent !important;
   border: none !important;
+  line-height: 1.4 !important;
+  word-wrap: break-word !important;
 }
 
 .classic-menu .flexnav li .sub-menu .sub-sub-menu li a:hover {
   background-color: #dc530f !important;
   color: #fff !important;
+}
+
+/* S.S.S bölümü için özel genişlik */
+.classic-menu .flexnav li .sub-menu li:last-child .sub-sub-menu {
+  min-width: 450px !important;
+  max-width: 500px !important;
+}
+
+.classic-menu .flexnav li .sub-menu li:last-child .sub-sub-menu li a {
+  white-space: normal !important;
+  padding: 15px 20px !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
 }
 
 /* Ana CSS'yi ezme kuralları */
