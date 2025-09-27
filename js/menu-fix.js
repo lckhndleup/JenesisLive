@@ -15,6 +15,9 @@ Menu Hover Fix JavaScript - Dropdown sadece text üzerinde açılmalı
       // FlexNav'ın orijinal hover eventlerini temizle
       $(".flexnav li.item-with-ul").off("mouseenter mouseleave");
 
+      // Tüm submenu elementlerini event'lerden temizle
+      $(".flexnav .sub-menu, .flexnav ul ul").off("mouseenter mouseleave");
+
       // Her menü öğesi için özel hover logic
       $(".flexnav li.item-with-ul").each(function () {
         var $menuItem = $(this);
@@ -56,17 +59,26 @@ Menu Hover Fix JavaScript - Dropdown sadece text üzerinde açılmalı
           }, 200); // Daha uzun süre ver
         });
 
-        // Dropdown üzerinde hover olduğunda açık tut
-        $submenu.on("mouseenter", function () {
-          clearTimeout(timeout);
-          // Dropdown zaten açık olduğundan emin ol
-          if (!$(this).hasClass("flexnav-show")) {
-            $(this).addClass("flexnav-show");
+        // Dropdown hover kontrolü - ÇOK SIKI KONTROL
+        $submenu.on("mouseenter", function (e) {
+          // SADECE dropdown zaten açıksa işlem yap
+          if ($(this).hasClass("flexnav-show")) {
+            clearTimeout(timeout);
+          } else {
+            // Dropdown kapalıysa event'i durdur ve hiçbir şey yapma
+            e.stopPropagation();
+            e.preventDefault();
+            return false;
           }
         });
 
         // Dropdown'tan çıkıldığında kapat
         $submenu.on("mouseleave", function (e) {
+          // SADECE dropdown açıksa işlem yap
+          if (!$(this).hasClass("flexnav-show")) {
+            return;
+          }
+
           var relatedTarget = e.relatedTarget || e.toElement;
 
           // Eğer mouse ana link'e dönüyorsa kapatma
@@ -84,14 +96,15 @@ Menu Hover Fix JavaScript - Dropdown sadece text üzerinde açılmalı
 
         // Li elementinin boş alanlarında dropdown davranışını kontrol et
         $menuItem.on("mouseenter", function (e) {
+          // Dropdown KAPALIYKEN li elementine hover olunca hiçbir şey yapma
+          if (!$submenu.hasClass("flexnav-show")) {
+            return; // Çık, dropdown açma
+          }
+
           // Eğer event li'nin kendisinden geliyorsa (link veya submenu'den değil)
           if (e.target === this) {
             // Dropdown açıksa ve mouse ne link'te ne de dropdown'ta değilse
-            if (
-              $submenu.hasClass("flexnav-show") &&
-              !$link.is(":hover") &&
-              !$submenu.is(":hover")
-            ) {
+            if (!$link.is(":hover") && !$submenu.is(":hover")) {
               // Dropdown'ı kapat ama gecikmeli
               timeout = setTimeout(function () {
                 if (!$link.is(":hover") && !$submenu.is(":hover")) {
@@ -119,6 +132,17 @@ Menu Hover Fix JavaScript - Dropdown sadece text üzerinde açılmalı
           }
         });
       });
+
+      // Global dropdown event blocker - kapalı dropdown'lara hover olmasın
+      $(document).on(
+        "mouseenter",
+        ".flexnav .sub-menu:not(.flexnav-show), .flexnav ul ul:not(.flexnav-show)",
+        function (e) {
+          e.stopPropagation();
+          e.preventDefault();
+          return false;
+        }
+      );
     }
 
     // Sayfa yüklendiğinde başlat
