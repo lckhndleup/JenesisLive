@@ -4479,6 +4479,13 @@ FORCE OVERRIDE: Multi-Level Menu Positioning Fix
   margin-right: 5px !important;
 }
 
+/* Fix dropdown text colors only */
+@media all and (min-width: 1025px) {
+  .classic-menu .flexnav li > ul li {
+    filter: none !important;
+  }
+}
+
 /* Dropdown Menu Styles */
 .flexnav li .sub-menu {
   display: none;
@@ -4539,8 +4546,4 @@ FORCE OVERRIDE: Multi-Level Menu Positioning Fix
 .classic-menu .menu-timeline.link {
   padding-bottom: 15px;
   margin-bottom: -15px;
-}
-
-.mali {
-  color: red;
 }
