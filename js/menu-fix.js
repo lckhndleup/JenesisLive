@@ -133,10 +133,41 @@ Menu Hover Fix JavaScript - Dropdown sadece text üzerinde açılmalı
         });
       });
 
+      // İkinci seviye menü kontrolleri (sub-sub-menu)
+      $(".flexnav .sub-menu li.has-submenu").each(function () {
+        var $subMenuItem = $(this);
+        var $subLink = $subMenuItem.children("a");
+        var $subSubMenu = $subMenuItem.children(".sub-sub-menu");
+        var subTimeout;
+
+        // Alt menü item'ine hover olduğunda sub-sub-menu'yu göster
+        $subMenuItem.on("mouseenter", function (e) {
+          clearTimeout(subTimeout);
+          $subSubMenu.addClass("flexnav-show");
+        });
+
+        // Alt menü item'ten çıkıldığında sub-sub-menu'yu gizle
+        $subMenuItem.on("mouseleave", function (e) {
+          subTimeout = setTimeout(function () {
+            $subSubMenu.removeClass("flexnav-show");
+          }, 150);
+        });
+
+        // Sub-sub-menu üzerindeyken açık tut
+        $subSubMenu.on("mouseenter", function () {
+          clearTimeout(subTimeout);
+        });
+
+        // Sub-sub-menu'den çıkıldığında kapat
+        $subSubMenu.on("mouseleave", function () {
+          $(this).removeClass("flexnav-show");
+        });
+      });
+
       // Global dropdown event blocker - kapalı dropdown'lara hover olmasın
       $(document).on(
         "mouseenter",
-        ".flexnav .sub-menu:not(.flexnav-show), .flexnav ul ul:not(.flexnav-show)",
+        ".flexnav .sub-menu:not(.flexnav-show), .flexnav .sub-sub-menu:not(.flexnav-show)",
         function (e) {
           e.stopPropagation();
           e.preventDefault();

@@ -29,6 +29,26 @@ Menu Hover Fix - Dropdown sadece text üzerinde açılmalı
     transition: all 0.3s ease !important;
   }
 
+  /* İkinci seviye menüler için özel stiller - ana menü ile aynı görünüm */
+  .clapat-header.classic-menu .flexnav li .sub-menu .sub-sub-menu {
+    position: absolute !important;
+    top: 0 !important;
+    left: 100% !important;
+    z-index: 1000 !important;
+    margin-left: 5px !important;
+    min-width: 220px !important;
+    padding: 15px !important;
+    background-color: #0c0c0c !important;
+    border-radius: 8px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    max-height: 0 !important;
+    transform: translateX(-10px) !important;
+    pointer-events: none !important;
+    transition: all 0.3s ease !important;
+  }
+
   /* Sadece JS ile kontrol edilen açık durumda göster */
   .clapat-header.classic-menu .flexnav li.item-with-ul ul.flexnav-show,
   .clapat-header.classic-menu .flexnav li.item-with-ul .sub-menu.flexnav-show {
@@ -38,17 +58,65 @@ Menu Hover Fix - Dropdown sadece text üzerinde açılmalı
     transform: translateY(0) !important;
     pointer-events: auto !important; /* Açıkken mouse eventlerini aktif et */
   }
+
+  /* İkinci seviye menüler açık durumda */
+  .clapat-header.classic-menu .flexnav li .sub-menu .sub-sub-menu.flexnav-show {
+    opacity: 1 !important;
+    visibility: visible !important;
+    max-height: 1000px !important;
+    transform: translateX(0) !important;
+    pointer-events: auto !important;
+  }
+
+  /* İkinci seviye menü container stilleri - ana menü ile aynı */
+  .clapat-header.classic-menu .flexnav li .sub-menu .sub-sub-menu {
+    min-width: 220px !important;
+    padding: 15px !important;
+    background-color: #0c0c0c !important;
+    border-radius: 8px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+  }
+
+  /* İkinci seviye menü li elementleri */
+  .clapat-header.classic-menu .flexnav li .sub-menu .sub-sub-menu li {
+    position: relative !important;
+    width: 100% !important;
+    padding: 0 !important;
+  }
+
+  /* İkinci seviye menü linklerinin stillerini ana menü ile aynı yap */
+  .clapat-header.classic-menu .flexnav li .sub-menu .sub-sub-menu li a {
+    color: #ffffff !important;
+    padding: 12px 20px !important;
+    display: block !important;
+    white-space: nowrap !important;
+    transition: background-color 0.2s ease, color 0.2s ease !important;
+    border-radius: 5px !important;
+    font-size: 15px !important;
+    text-decoration: none !important;
+    background: transparent !important;
+    border: none !important;
+  }
+
+  /* İkinci seviye menü hover efektleri - ana menü ile aynı */
+  .clapat-header.classic-menu .flexnav li .sub-menu .sub-sub-menu li a:hover {
+    background-color: #fa821d !important;
+    color: #fff !important;
+  }
 }
 
 /* Mobilde normal davranış */
 @media (max-width: 1024px) {
   .clapat-header.classic-menu .flexnav li.item-with-ul ul,
-  .clapat-header.classic-menu .flexnav li.item-with-ul .sub-menu {
+  .clapat-header.classic-menu .flexnav li.item-with-ul .sub-menu,
+  .clapat-header.classic-menu .flexnav li .sub-menu .sub-sub-menu {
     opacity: 1 !important;
     visibility: visible !important;
     max-height: none !important;
     transform: none !important;
     position: static;
     margin-top: 0;
+    margin-left: 0;
+    pointer-events: auto !important;
   }
 }
