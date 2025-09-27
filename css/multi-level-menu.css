@@ -1,0 +1,246 @@
+/*------------------------------------------------------------------
+Multi-Level Navigation Menu Styles
+-------------------------------------------------------------------*/
+
+/* Alt menü genel stilleri */
+.classic-menu .flexnav li .sub-menu {
+  min-width: 240px !important;
+  padding: 10px 0;
+}
+
+.classic-menu .flexnav li .sub-menu li {
+  position: relative;
+  width: 100%;
+  padding: 0;
+}
+
+.classic-menu .flexnav li .sub-menu li a {
+  display: block;
+  padding: 12px 20px;
+  color: currentColor;
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 1.4;
+  opacity: 1;
+  background: transparent;
+  border: none;
+  transition: all 0.3s ease;
+  filter: invert(1);
+}
+
+.classic-menu .flexnav li .sub-menu li a:hover {
+  opacity: 0.7;
+  padding-left: 25px;
+}
+
+/* Alt alt menü (sub-sub-menu) stilleri */
+.classic-menu .flexnav li .sub-menu li.has-submenu {
+  position: relative;
+}
+
+.classic-menu .flexnav li .sub-menu li.has-submenu > a {
+  position: relative;
+  padding-right: 40px;
+}
+
+.classic-menu .flexnav li .sub-menu li.has-submenu > a:after {
+  content: "›";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  font-weight: 600;
+  color: currentColor;
+  filter: invert(1);
+}
+
+.classic-menu .flexnav li .sub-menu .sub-sub-menu {
+  position: absolute !important;
+  top: 0px !important;
+  left: 100% !important;
+  min-width: 280px !important;
+  background: currentColor !important;
+  border-radius: 3px !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transform: translate3d(10px, 0, 0) !important;
+  transition: all 0.3s ease !important;
+  z-index: 1000 !important;
+  margin-left: 5px !important;
+  padding: 10px 0 !important;
+}
+
+.classic-menu .flexnav li .sub-menu .sub-sub-menu:before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: -6px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 6px 6px 0;
+  border-color: transparent currentColor transparent transparent;
+}
+
+.classic-menu .flexnav li .sub-menu li.has-submenu:hover .sub-sub-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translate3d(0, 0, 0);
+}
+
+.classic-menu .flexnav li .sub-menu .sub-sub-menu li {
+  padding: 0;
+}
+
+.classic-menu .flexnav li .sub-menu .sub-sub-menu li a {
+  padding: 10px 20px;
+  font-size: 14px;
+  line-height: 1.3;
+  color: currentColor;
+  filter: invert(1);
+  transition: all 0.3s ease;
+}
+
+.classic-menu .flexnav li .sub-menu .sub-sub-menu li a:hover {
+  opacity: 0.7;
+  padding-left: 25px;
+}
+
+/* Ana CSS'yi ezme kuralları */
+.classic-menu .flexnav li ul ul.sub-sub-menu {
+  left: 100% !important;
+  top: 0px !important;
+  position: absolute !important;
+  z-index: 1001 !important;
+}
+
+/* Sağdaki menüler için özel positioning */
+.classic-menu .flexnav li:last-child .sub-menu .sub-sub-menu,
+.classic-menu .flexnav li:nth-last-child(2) .sub-menu .sub-sub-menu {
+  left: auto !important;
+  right: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 5px !important;
+  top: 0px !important;
+}
+
+.classic-menu .flexnav li:last-child .sub-menu .sub-sub-menu:before,
+.classic-menu .flexnav li:nth-last-child(2) .sub-menu .sub-sub-menu:before {
+  left: auto;
+  right: -6px;
+  top: 25px;
+  border-width: 6px 0 6px 6px;
+  border-color: transparent transparent transparent currentColor;
+}
+
+/* Hover efektleri */
+.classic-menu .flexnav li .sub-menu li.has-submenu:hover > a {
+  opacity: 1;
+  padding-left: 25px;
+}
+
+/* Alt-alt menülerin dinamik pozisyonlaması */
+.classic-menu .flexnav li .sub-menu li.has-submenu {
+  overflow: visible;
+}
+
+.classic-menu .flexnav li .sub-menu li.has-submenu .sub-sub-menu {
+  /* Varsayılan olarak menünün ortasına hizala */
+  top: -15px;
+}
+
+/* İlk menü öğesi için üstten hizala */
+.classic-menu .flexnav li .sub-menu li.has-submenu:first-child .sub-sub-menu {
+  top: 0;
+}
+
+.classic-menu
+  .flexnav
+  li
+  .sub-menu
+  li.has-submenu:first-child
+  .sub-sub-menu:before {
+  top: 15px;
+}
+
+/* Son menü öğesi için alttan hizala */
+.classic-menu .flexnav li .sub-menu li.has-submenu:last-child .sub-sub-menu {
+  top: -200px;
+}
+
+.classic-menu
+  .flexnav
+  li
+  .sub-menu
+  li.has-submenu:last-child
+  .sub-sub-menu:before {
+  top: 215px;
+}
+
+/* Responsive ayarlar */
+@media (max-width: 1024px) {
+  .classic-menu .flexnav li .sub-menu,
+  .classic-menu .flexnav li .sub-menu .sub-sub-menu {
+    min-width: 200px;
+    font-size: 14px;
+  }
+
+  .classic-menu .flexnav li .sub-menu li a,
+  .classic-menu .flexnav li .sub-menu .sub-sub-menu li a {
+    padding: 10px 15px;
+  }
+}
+
+/* Ana CSS'yi ezmek için çok güçlü kurallar */
+.clapat-header.classic-menu .flexnav li ul li ul.sub-sub-menu {
+  position: absolute !important;
+  top: 0px !important;
+  left: 100% !important;
+  margin-left: 5px !important;
+  z-index: 1001 !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+.clapat-header.classic-menu
+  .flexnav
+  li
+  ul
+  li.has-submenu:hover
+  ul.sub-sub-menu {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translate3d(0, 0, 0) !important;
+}
+
+/* Sağdaki menüler için güçlü kurallar */
+.clapat-header.classic-menu .flexnav li:last-child ul li ul.sub-sub-menu,
+.clapat-header.classic-menu
+  .flexnav
+  li:nth-last-child(2)
+  ul
+  li
+  ul.sub-sub-menu {
+  left: auto !important;
+  right: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 5px !important;
+}
+
+/* Mobil responsive için gizleme */
+@media (max-width: 768px) {
+  .classic-menu .flexnav li .sub-menu .sub-sub-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    margin: 0;
+    padding-left: 20px;
+    background: transparent;
+  }
+
+  .classic-menu .flexnav li .sub-menu .sub-sub-menu:before {
+    display: none;
+  }
+}

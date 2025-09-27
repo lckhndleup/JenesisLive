@@ -11,6 +11,7 @@ Primary use:	Showcase Portfolio
 @import url("css/portfolio.css");
 @import url("css/shortcodes.css");
 @import url("css/assets.css");
+@import url("css/multi-level-menu.css");
 
 /*------------------------------------------------------------------
 
@@ -4695,4 +4696,27 @@ p .link-text {
     font-size: 12px !important;
     line-height: 14px !important;
   }
+}
+
+/*------------------------------------------------------------------
+FORCE OVERRIDE: Multi-Level Menu Positioning Fix 
+-------------------------------------------------------------------*/
+
+/* Alt-alt menülerin sağda açılması için GÜÇLÜ override */
+.classic-menu .flexnav li ul li ul {
+  position: absolute !important;
+  top: 0px !important;
+  left: 100% !important;
+  right: auto !important;
+  margin-left: 5px !important;
+  z-index: 1001 !important;
+}
+
+/* Sağdaki menüler için sol tarafa açılım */
+.classic-menu .flexnav li:last-child ul li ul,
+.classic-menu .flexnav li:nth-last-child(2) ul li ul {
+  left: auto !important;
+  right: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 5px !important;
 }

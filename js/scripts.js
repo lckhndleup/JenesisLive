@@ -4599,3 +4599,147 @@ Function Showcase Snap Slider
 });
 
 var LoadViaAjax = window.LoadViaAjax;
+
+/*--------------------------------------------------
+Multi-Level Menu Navigation JavaScript
+---------------------------------------------------*/
+
+jQuery(document).ready(function ($) {
+  "use strict";
+
+  // Multi-level menu functionality
+  function initMultiLevelMenu() {
+    // Ana menü öğelerine class ekleme
+    $(".classic-menu .flexnav li").each(function () {
+      if ($(this).find("ul").length > 0) {
+        $(this).addClass("item-with-ul");
+
+        // Alt menü varsa has-submenu class'ı ekle
+        $(this)
+          .find("ul li")
+          .each(function () {
+            if ($(this).find("ul").length > 0) {
+              $(this).addClass("has-submenu");
+            }
+          });
+      }
+    });
+
+    // Hover olayları
+    $(".classic-menu .flexnav li.item-with-ul")
+      .on("mouseenter", function () {
+        var $submenu = $(this).find("> ul");
+        if ($submenu.length) {
+          $submenu.addClass("flexnav-show");
+        }
+      })
+      .on("mouseleave", function () {
+        var $submenu = $(this).find("> ul");
+        if ($submenu.length) {
+          $submenu.removeClass("flexnav-show");
+        }
+      });
+
+    // Alt alt menüler için hover
+    $(".classic-menu .flexnav .has-submenu")
+      .on("mouseenter", function () {
+        var $subSubmenu = $(this).find(".sub-sub-menu");
+        if ($subSubmenu.length) {
+          // Diğer açık alt menüleri kapat
+          $(this).siblings().find(".sub-sub-menu").removeClass("show-sub-sub");
+          $subSubmenu.addClass("show-sub-sub");
+        }
+      })
+      .on("mouseleave", function () {
+        var $subSubmenu = $(this).find(".sub-sub-menu");
+        if ($subSubmenu.length) {
+          $subSubmenu.removeClass("show-sub-sub");
+        }
+      });
+
+    // Alt menü container'ından çıkılınca kapat
+    $(".classic-menu .flexnav .sub-menu").on("mouseleave", function () {
+      $(this).find(".sub-sub-menu").removeClass("show-sub-sub");
+    });
+
+    // Tıklama olayları (dropdown linkleri için)
+    $(".classic-menu .flexnav .has-submenu > a").on("click", function (e) {
+      // Eğer href "#" ise tıklamayı engelle
+      if ($(this).attr("href") === "#") {
+        e.preventDefault();
+        return false;
+      }
+    });
+
+    // Ana menü dropdown linkleri için
+    $(".classic-menu .flexnav li.item-with-ul > a").on("click", function (e) {
+      if ($(this).attr("href") === "#") {
+        e.preventDefault();
+        return false;
+      }
+    });
+
+    // Mobil uyumluluk için touch olayları
+    if ("ontouchstart" in window) {
+      $(".classic-menu .flexnav li.item-with-ul").on(
+        "touchstart",
+        function (e) {
+          var $submenu = $(this).find("> ul");
+          if ($submenu.length && !$submenu.hasClass("flexnav-show")) {
+            e.preventDefault();
+            $(".classic-menu .flexnav ul").removeClass("flexnav-show");
+            $submenu.addClass("flexnav-show");
+          }
+        }
+      );
+
+      $(".classic-menu .flexnav .has-submenu").on("touchstart", function (e) {
+        var $subSubmenu = $(this).find(".sub-sub-menu");
+        if ($subSubmenu.length && !$subSubmenu.hasClass("show-sub-sub")) {
+          e.preventDefault();
+          $(".classic-menu .flexnav .sub-sub-menu").removeClass("show-sub-sub");
+          $subSubmenu.addClass("show-sub-sub");
+        }
+      });
+
+      // Dış tıklama ile menüleri kapat
+      $(document).on("touchstart", function (e) {
+        if (!$(e.target).closest(".flexnav").length) {
+          $(".flexnav ul").removeClass("flexnav-show");
+          $(".flexnav .sub-sub-menu").removeClass("show-sub-sub");
+        }
+      });
+    }
+  }
+
+  // Menü başlatma
+  initMultiLevelMenu();
+
+  // Ajax yükleme sonrası yeniden başlat
+  $(document).on("ajaxComplete", function () {
+    setTimeout(function () {
+      initMultiLevelMenu();
+    }, 100);
+  });
+});
+
+// CSS için ek show class'ları
+jQuery(document).ready(function ($) {
+  $("<style>")
+    .prop("type", "text/css")
+    .html(
+      `
+      .classic-menu .flexnav .sub-sub-menu.show-sub-sub {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: translate3d(0, 0, 0) !important;
+      }
+      
+      .classic-menu .flexnav li:last-child .sub-sub-menu.show-sub-sub,
+      .classic-menu .flexnav li:nth-last-child(2) .sub-sub-menu.show-sub-sub {
+        transform: translate3d(0, 0, 0) !important;
+      }
+    `
+    )
+    .appendTo("head");
+});
